@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="خدمات ريتاج ستون - توريد وتركيب الحجر الطبيعي. رخام، جرانيت، كوارتز، ترافرتين، واجهات، أرضيات، مطابخ.">
+    <title>خدماتنا | ريتاج ستون — Retag Stone Services</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">ريتاج ستون</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill" id="loadingBar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-label" id="cursorLabel">عرض</div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container visible-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="index.html" class="logo" aria-label="Retag Stone Home">
+            <div class="logo-mark">ر</div>
+            <span data-ar="ريتاج ستون" data-en="Retag Stone">ريتاج ستون</span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="about.html" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+            <a href="services.html" class="nav-link active" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+            <a href="projects.html" class="nav-link" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+            <a href="index.html#contact" class="nav-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+        </div>
+
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+            <span id="langText">EN</span>
+        </button>
+    </nav>
+
+    <!-- Menu Trigger -->
+    <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">القائمة</button>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" id="whatsappBtn" target="_blank" rel="noopener"
+        aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- ==========================================
+         PART 01 — SERVICES HERO / INTRO
+    ========================================== -->
+    <section id="servicesHero" aria-label="Services Hero">
+        <div class="services-hero-bg" id="servicesHeroBg" role="img"
+            aria-label="CNC stone-cutting fabrication workshop"></div>
+        <!-- REPLACE WITH CLIENT PHOTO: Fabrication workshop or CNC stone-cutting background -->
+
+        <div class="services-hero-noise"></div>
+        <div class="services-hero-vignette"></div>
+
+        <div class="services-hero-corner top-left" id="shCornerTL"></div>
+        <div class="services-hero-corner bottom-right" id="shCornerBR"></div>
+
+        <div class="services-hero-vein" id="shVein" aria-hidden="true">
+            <svg viewBox="0 0 10 400" preserveAspectRatio="none">
+                <path d="M5,0 Q2,50 8,100 T2,200 T8,300 T5,400" id="shVeinPath" />
+                <path d="M5,0 Q8,40 3,90 T7,180 T3,270 T5,360" style="stroke-width: 0.8; opacity: 0.4;"
+                    id="shVeinPath2" />
+            </svg>
+        </div>
+
+        <nav class="services-hero-breadcrumb" id="shBreadcrumb" aria-label="Breadcrumb">
+            <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-current" data-ar="خدماتنا" data-en="Services">خدماتنا</span>
+        </nav>
+
+        <div class="services-hero-content">
+            <div class="services-hero-eyebrow" id="shEyebrow" data-ar="خدماتنا" data-en="Our Services">خدماتنا</div>
+
+            <h1 class="services-hero-headline" id="shHeadline">
+                <span class="line"><span class="line-inner" data-ar="من الحجر الخام" data-en="From Raw Slab">من الحجر
+                        الخام</span></span>
+                <span class="line"><span class="line-inner" data-ar="إلى التحفة النهائية"
+                        data-en="to Finished Space.">إلى التحفة النهائية</span></span>
+            </h1>
+
+            <p class="services-hero-subheadline" id="shSubheadline"
+                data-ar="نختار أفضل الخامات من المحاجر العالمية، ونصنعها بأحدث تقنيات التقطيع والتشكيل، ثم نركبها بإتقان في مساحتك — من المصدر إلى المساحة النهائية."
+                data-en="We source the finest raw stone from quarries worldwide, craft it with precision cutting and CNC technology, then install it flawlessly in your space — from quarry to completion.">
+                نختار أفضل الخامات من المحاجر العالمية، ونصنعها بأحدث تقنيات التقطيع والتشكيل، ثم نركبها بإتقان في
+                مساحتك — من المصدر إلى المساحة النهائية.</p>
+
+            <div class="services-hero-ctas" id="shCtas">
+                <a href="index.html#contact" class="services-hero-cta-primary" id="shCtaPrimary"
+                    data-ar-text="احصل على عرض سعر" data-en-text="Get a Quote">
+                    <span>احصل على عرض سعر</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </a>
+                <a href="#servicesOverview" class="services-hero-cta-secondary" id="shCtaSecondary"
+                    data-ar-text="استكشف خدماتنا" data-en-text="Explore Our Services">
+                    <span>استكشف خدماتنا</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="services-hero-scroll" id="shScrollCue">
+            <span class="services-hero-scroll-text" data-ar="اسحب للأسفل" data-en="Scroll Down">اسحب للأسفل</span>
+            <div class="services-hero-scroll-line" id="shScrollCueLine"></div>
+        </div>
+    </section>
+    <!-- ==========================================
+     PART 02 — CAPABILITIES OVERVIEW
+========================================== -->
+    <section id="capabilitiesOverview" aria-label="Capabilities Overview">
+        <div class="capabilities-wrapper">
+            <!-- Image Side -->
+            <div class="capabilities-image-side">
+                <div class="capabilities-image-inner" id="capImageInner" role="img"
+                    aria-label="Stone workshop with precision fabrication equipment"></div>
+                <!-- REPLACE WITH CLIENT PHOTO: Workshop or finished-project image -->
+            </div>
+
+            <!-- Text Side -->
+            <div class="capabilities-text-side">
+                <div class="capabilities-eyebrow" id="capEyebrow" data-ar="قدراتنا" data-en="OUR CAPABILITIES">قدراتنا
+                </div>
+
+                <h2 class="capabilities-heading" id="capHeading">
+                    <span class="line"><span class="line-inner" data-ar="من اختيار الحجر" data-en="From Selection">من
+                            اختيار الحجر</span></span>
+                    <span class="line"><span class="line-inner" data-ar="إلى التنفيذ" data-en="to Installation">إلى
+                            التنفيذ</span></span>
+                </h2>
+
+                <div class="capabilities-body">
+                    <p class="capabilities-paragraph" id="capP1"
+                        data-ar="نختار أفضل أنواع الحجر الطبيعي من المحاجر العالمية — رخام إيطالي، جرانيت برازيلي، ترافرتين تركي — ونقوم بفحص كل لوح بعناية لضمان الجودة والمتانة."
+                        data-en="We source the finest natural stone from quarries worldwide — Italian marble, Brazilian granite, Turkish travertine — inspecting every slab with care to ensure quality and durability.">
+                        نختار أفضل أنواع الحجر الطبيعي من المحاجر العالمية — رخام إيطالي، جرانيت برازيلي، ترافرتين تركي
+                        — ونقوم بفحص كل لوح بعناية لضمان الجودة والمتانة.</p>
+
+                    <p class="capabilities-paragraph" id="capP2"
+                        data-ar="في ورشتنا المجهزة بأحدث ماكينات التقطيع CNC والتشكيل الدقيق، نحول الحجر الخام إلى قطع مصممة بدقة مليمترية — أسطح مطابخ، واجهات خارجية، أرضيات فاخرة."
+                        data-en="In our workshop equipped with the latest CNC cutting and precision profiling machines, we transform raw stone into millimetre-accurate pieces — kitchen surfaces, exterior facades, luxury flooring.">
+                        في ورشتنا المجهزة بأحدث ماكينات التقطيع CNC والتشكيل الدقيق، نحول الحجر الخام إلى قطع مصممة بدقة
+                        مليمترية — أسطح مطابخ، واجهات خارجية، أرضيات فاخرة.</p>
+
+                    <p class="capabilities-paragraph" id="capP3"
+                        data-ar="فريق التركيب المحترف لدينا يضمن وصول كل قطعة إلى مكانها بإتقان تام، مع حماية الموقع والتنظيف بعد الانتهاء — لأن التفاصيل الصغيرة تصنع الفرق."
+                        data-en="Our professional installation team ensures every piece is placed with flawless precision, with site protection and post-completion cleanup — because the small details make the difference.">
+                        فريق التركيب المحترف لدينا يضمن وصول كل قطعة إلى مكانها بإتقان تام، مع حماية الموقع والتنظيف بعد
+                        الانتهاء — لأن التفاصيل الصغيرة تصنع الفرق.</p>
+                </div>
+
+                <a href="#servicesOverview" class="capabilities-cta" id="capCta" data-ar-text="استكشف خدماتنا"
+                    data-en-text="Explore Our Services">
+                    <span>استكشف خدماتنا</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- ==========================================
+     PART 03 — SERVICES IN NUMBERS
+========================================== -->
+<section id="servicesNumbers" aria-label="Services Statistics">
+    <div class="stats-divider" id="statsDividerTop"></div>
+    <div class="stats-wrapper">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number" data-target="850" data-suffix="+">0</div>
+                <div class="stat-label" data-ar="مشروع منفذ" data-en="Projects Delivered">مشروع منفذ</div>
+                <div class="stat-line"></div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="125" data-suffix="K">0</div>
+                <div class="stat-label" data-ar="متر مربع مركب" data-en="Sq Meters Installed">متر مربع مركب</div>
+                <div class="stat-line"></div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="48" data-suffix="">0</div>
+                <div class="stat-label" data-ar="نوع حجر متوفر" data-en="Stone Varieties">نوع حجر متوفر</div>
+                <div class="stat-line"></div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="14" data-suffix="">0</div>
+                <div class="stat-label" data-ar="يوم متوسط التنفيذ" data-en="Days Avg. Turnaround">يوم متوسط التنفيذ</div>
+                <div class="stat-line"></div>
+            </div>
+        </div>
+    </div>
+    <div class="stats-divider" id="statsDividerBottom"></div>
+</section>
+
+<!-- ==========================================
+     PART 04 — WHAT WE OFFER (Bento Grid)
+========================================== -->
+<section id="servicesOverview" aria-label="What We Offer">
+    <div class="bento-section-header">
+        <div class="bento-eyebrow" data-ar="ما نقدمه" data-en="What We Offer">ما نقدمه</div>
+        <h2 class="bento-heading" data-ar="خدمات شاملة لكل مرحلة" data-en="End-to-End Stone Services">خدمات شاملة لكل مرحلة</h2>
+    </div>
+
+    <div class="bento-grid">
+        <!-- Large Tile: Marble & Granite Supply -->
+        <a href="#serviceMarble" class="bento-tile bento-tile-large" id="bentoTile1">
+            <div class="bento-tile-bg" style="background-image: url('https://images.unsplash.com/photo-1565008447742-97f6baa0ac05?q=80&w=1000&auto=format&fit=crop');"></div>
+            <!-- REPLACE WITH CLIENT PHOTO: Marble slab showroom or quarry selection -->
+            <div class="bento-tile-overlay"></div>
+            <div class="bento-tile-content">
+                <span class="bento-tile-num">01</span>
+                <h3 class="bento-tile-title" data-ar="توريد الرخام والجرانيت" data-en="Marble & Granite Supply">توريد الرخام والجرانيت</h3>
+                <p class="bento-tile-desc" data-ar="اختيار اللوحات المثالية من أفضل المحاجر العالمية بجودة تصنيف A." data-en="Hand-selecting the perfect slabs from tier-A quarries worldwide.">اختيار اللوحات المثالية من أفضل المحاجر العالمية بجودة تصنيف A.</p>
+            </div>
+        </a>
+
+        <!-- Tile 2: Quartz & Engineered Stone -->
+        <a href="#serviceQuartz" class="bento-tile" id="bentoTile2">
+            <div class="bento-tile-bg" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=800&auto=format&fit=crop');"></div>
+            <!-- REPLACE WITH CLIENT PHOTO: Quartz countertop surface close-up -->
+            <div class="bento-tile-overlay"></div>
+            <div class="bento-tile-content">
+                <span class="bento-tile-num">02</span>
+                <h3 class="bento-tile-title" data-ar="الكوارتز والحجر المصنع" data-en="Quartz & Engineered Stone">الكوارتز والحجر المصنع</h3>
+                <p class="bento-tile-desc" data-ar="حلول عملية بألوان متناسقة ومقاومة عالية للخدوش والحرارة." data-en="Practical, consistent-color solutions with high scratch and heat resistance.">حلول عملية بألوان متناسقة ومقاومة عالية للخدوش والحرارة.</p>
+            </div>
+        </a>
+
+        <!-- Tile 3: Kitchen Countertops -->
+        <a href="#serviceKitchen" class="bento-tile" id="bentoTile3">
+            <div class="bento-tile-bg" style="background-image: url('https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=800&auto=format&fit=crop');"></div>
+            <!-- REPLACE WITH CLIENT PHOTO: Luxury kitchen island countertop -->
+            <div class="bento-tile-overlay"></div>
+            <div class="bento-tile-content">
+                <span class="bento-tile-num">03</span>
+                <h3 class="bento-tile-title" data-ar="أسطح المطابخ" data-en="Kitchen Countertops">أسطح المطابخ</h3>
+                <p class="bento-tile-desc" data-ar="تصميم وتركيب أسطح مطابخ بمقاسات دقيقة وبروفايلات متنوعة." data-en="Precision-measured kitchen surfaces with custom edge profiles and cutouts.">تصميم وتركيب أسطح مطابخ بمقاسات دقيقة وبروفايلات متنوعة.</p>
+            </div>
+        </a>
+
+        <!-- Tile 4: Bathroom Surfaces & Flooring -->
+        <a href="#serviceBathroom" class="bento-tile" id="bentoTile4">
+            <div class="bento-tile-bg" style="background-image: url('https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=800&auto=format&fit=crop');"></div>
+            <!-- REPLACE WITH CLIENT PHOTO: Bathroom vanity or stone floor tiles -->
+            <div class="bento-tile-overlay"></div>
+            <div class="bento-tile-content">
+                <span class="bento-tile-num">04</span>
+                <h3 class="bento-tile-title" data-ar="أسطح الحمامات والأرضيات" data-en="Bathroom Surfaces & Flooring">أسطح الحمامات والأرضيات</h3>
+                <p class="bento-tile-desc" data-ar="أرضيات وأسطح حمامات مقاومة للانزلاق والرطوبة بأناقة فاخرة." data-en="Slip-resistant, moisture-proof bathroom floors and walls in luxury finishes.">أرضيات وأسطح حمامات مقاومة للانزلاق والرطوبة بأناقة فاخرة.</p>
+            </div>
+        </a>
+
+        <!-- Tile 5: Facade & Exterior Cladding -->
+        <a href="#serviceFacade" class="bento-tile" id="bentoTile5">
+            <div class="bento-tile-bg" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop');"></div>
+            <!-- REPLACE WITH CLIENT PHOTO: Building facade with stone cladding -->
+            <div class="bento-tile-overlay"></div>
+            <div class="bento-tile-content">
+                <span class="bento-tile-num">05</span>
+                <h3 class="bento-tile-title" data-ar="الواجهات والكسوة الخارجية" data-en="Facade & Exterior Cladding">الواجهات والكسوة الخارجية</h3>
+                <p class="bento-tile-desc" data-ar="حماية وجمالية للمباني بأنظمة تثبيت ميكانيكية متطورة." data-en="Weather-resistant mechanical-fixing systems for lasting building beauty.">حماية وجمالية للمباني بأنظمة تثبيت ميكانيكية متطورة.</p>
+            </div>
+        </a>
+
+        <!-- Tile 6: Custom Fabrication & CNC Cutting -->
+        <a href="#serviceFabrication" class="bento-tile bento-tile-wide" id="bentoTile6">
+            <div class="bento-tile-bg" style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000&auto=format&fit=crop');"></div>
+            <!-- REPLACE WITH CLIENT PHOTO: CNC machine cutting stone slab -->
+            <div class="bento-tile-overlay"></div>
+            <div class="bento-tile-content">
+                <span class="bento-tile-num">06</span>
+                <h3 class="bento-tile-title" data-ar="التصنيع المخصص وقطع CNC" data-en="Custom Fabrication & CNC Cutting">التصنيع المخصص وقطع CNC</h3>
+                <p class="bento-tile-desc" data-ar="تشكيل دقيق بالكمبيوتر لبروفايلات حواف مخصصة وتصاميم معقدة." data-en="Computer-precision shaping for custom edge profiles and intricate designs.">تشكيل دقيق بالكمبيوتر لبروفايلات حواف مخصصة وتصاميم معقدة.</p>
+            </div>
+        </a>
+
+        <!-- Tile 7: Installation & On-Site Fitting -->
+        <a href="#serviceInstallation" class="bento-tile bento-tile-wide" id="bentoTile7">
+            <div class="bento-tile-bg" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop');"></div>
+            <!-- REPLACE WITH CLIENT PHOTO: On-site stone installation team at work -->
+            <div class="bento-tile-overlay"></div>
+            <div class="bento-tile-content">
+                <span class="bento-tile-num">07</span>
+                <h3 class="bento-tile-title" data-ar="التركيب والتثبيت في الموقع" data-en="Installation & On-Site Fitting">التركيب والتثبيت في الموقع</h3>
+                <p class="bento-tile-desc" data-ar="فريق تركيب محترف يضمن إتمام المشروع بأعلى معايير الجودة." data-en="Expert fitting teams ensuring flawless project completion on every site.">فريق تركيب محترف يضمن إتمام المشروع بأعلى معايير الجودة.</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+
+
+<!-- ==========================================
+     PART 05 — OUR FABRICATION PROCESS (FIXED)
+     Layout: content-driven grid — no fixed aspect-ratio,
+     no absolute cards, nothing can be clipped.
+     The SVG path is generated by JS from the real dot positions.
+========================================== -->
+<section id="fabricationProcess" aria-label="Our Fabrication Process">
+    <div class="process-container">
+        <div class="process-header">
+            <div class="process-eyebrow" data-ar="رحلة الحجر" data-en="The Stone Journey">رحلة الحجر</div>
+            <h2 class="process-heading" data-ar="من الفكرة إلى التركيب" data-en="From Concept to Installation">من الفكرة إلى التركيب</h2>
+        </div>
+
+        <div class="process-timeline">
+            <!-- SVG is drawn by JS through the real dot centers — d is set in initProcessAnimations() -->
+            <svg class="process-svg" aria-hidden="true">
+                <path class="process-path-bg" id="processPathBg" d="" />
+                <path class="process-path" id="processPath" d="" />
+            </svg>
+
+            <!-- Stage 01 -->
+            <div class="process-stage">
+                <span class="timeline-dot" id="stageDot1"></span>
+                <article class="process-card" id="stageCard1">
+                    <div class="stage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    </div>
+                    <div class="stage-num">01</div>
+                    <h3 class="stage-title" data-ar="الاستشارة" data-en="Consultation">الاستشارة</h3>
+                    <p class="stage-desc" data-ar="نستمع لرؤيتك، نفهم المساحة، ونحدد احتياجاتك بدقة." data-en="We listen to your vision, understand the space, and define your needs with precision.">نستمع لرؤيتك، نفهم المساحة، ونحدد احتياجاتك بدقة.</p>
+                </article>
+            </div>
+
+            <!-- Stage 02 -->
+            <div class="process-stage">
+                <span class="timeline-dot" id="stageDot2"></span>
+                <article class="process-card" id="stageCard2">
+                    <div class="stage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <div class="stage-num">02</div>
+                    <h3 class="stage-title" data-ar="اختيار المواد" data-en="Material Selection">اختيار المواد</h3>
+                    <p class="stage-desc" data-ar="نختار معك اللوحات المثالية من مجموعتنا العالمية بمعايير صارمة." data-en="Together we select the perfect slabs from our global collection with strict criteria.">نختار معك اللوحات المثالية من مجموعتنا العالمية بمعايير صارمة.</p>
+                </article>
+            </div>
+
+            <!-- Stage 03 -->
+            <div class="process-stage">
+                <span class="timeline-dot" id="stageDot3"></span>
+                <article class="process-card" id="stageCard3">
+                    <div class="stage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <div class="stage-num">03</div>
+                    <h3 class="stage-title" data-ar="القياس والتخطيط" data-en="Templating & Measurement">القياس والتخطيط</h3>
+                    <p class="stage-desc" data-ar="نقوم بمسح دقيق للموقع وإعداد قوالب رقمية بأبعاد مثالية." data-en="We conduct precise site scanning and create digital templates with perfect dimensions.">نقوم بمسح دقيق للموقع وإعداد قوالب رقمية بأبعاد مثالية.</p>
+                </article>
+            </div>
+
+            <!-- Stage 04 -->
+            <div class="process-stage">
+                <span class="timeline-dot" id="stageDot4"></span>
+                <article class="process-card" id="stageCard4">
+                    <div class="stage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v6m0 6v10M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M1 12h6m6 0h10M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"></path></svg>
+                    </div>
+                    <div class="stage-num">04</div>
+                    <h3 class="stage-title" data-ar="التقطيع CNC والتصنيع" data-en="CNC Cutting & Fabrication">التقطيع CNC والتصنيع</h3>
+                    <p class="stage-desc" data-ar="نحول التصاميم إلى واقع بأحدث ماكينات التقطيع والتشكيل الرقمية." data-en="We turn designs into reality with the latest CNC cutting and profiling machines.">نحول التصاميم إلى واقع بأحدث ماكينات التقطيع والتشكيل الرقمية.</p>
+                </article>
+            </div>
+
+            <!-- Stage 05 -->
+            <div class="process-stage">
+                <span class="timeline-dot" id="stageDot5"></span>
+                <article class="process-card" id="stageCard5">
+                    <div class="stage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="stage-num">05</div>
+                    <h3 class="stage-title" data-ar="فحص الجودة" data-en="Quality Check">فحص الجودة</h3>
+                    <p class="stage-desc" data-ar="كل قطعة تمر بفحص دقيق للتأكد من مطابقتها لأعلى معايير الجودة." data-en="Every piece undergoes rigorous inspection to ensure the highest quality standards.">كل قطعة تمر بفحص دقيق للتأكد من مطابقتها لأعلى معايير الجودة.</p>
+                </article>
+            </div>
+
+            <!-- Stage 06 -->
+            <div class="process-stage">
+                <span class="timeline-dot" id="stageDot6"></span>
+                <article class="process-card" id="stageCard6">
+                    <div class="stage-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    </div>
+                    <div class="stage-num">06</div>
+                    <h3 class="stage-title" data-ar="التركيب النهائي" data-en="Installation">التركيب النهائي</h3>
+                    <p class="stage-desc" data-ar="فريقنا المحترف يركب كل قطعة بإتقان تام مع حماية الموقع والتنظيف." data-en="Our expert team installs every piece with flawless precision, site protection and cleanup.">فريقنا المحترف يركب كل قطعة بإتقان تام مع حماية الموقع والتنظيف.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ==========================================
+     PART 06 — MATERIAL SHOWROOM
+========================================== -->
+<section id="materialShowroom" aria-label="Material Showroom">
+    <div class="showroom-container">
+        <div class="showroom-header">
+            <div class="showroom-eyebrow" data-ar="معرض المواد" data-en="Material Showroom">معرض المواد</div>
+            <h2 class="showroom-heading" data-ar="اختر حجرك المثالي" data-en="Choose Your Perfect Stone">اختر حجرك المثالي</h2>
+            <p class="showroom-subtext" data-ar="اسحب للاستكشاف — اضغط على أي مادة لمعرفة المزيد" data-en="Drag to explore — tap any material to learn more">اسحب للاستكشاف — اضغط على أي مادة لمعرفة المزيد</p>
+        </div>
+
+        <div class="showroom-track-wrapper">
+            <div class="showroom-track" id="showroomTrack">
+                <!-- Card 1: Calacatta Gold Marble -->
+                <div class="material-card" id="matCard1">
+                    <div class="material-image">
+                        <img src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0?q=80&w=600&auto=format&fit=crop" alt="Calacatta Gold Marble" loading="lazy">
+                        <!-- REPLACE WITH MATERIAL PHOTO: Calacatta Gold marble slab close-up -->
+                        <div class="material-image-overlay"></div>
+                    </div>
+                    <div class="material-info">
+                        <span class="material-type" data-ar="رخام" data-en="Marble">رخام</span>
+                        <h3 class="material-name">Calacatta Gold</h3>
+                        <p class="material-note" data-ar="مثالي للمطابخ الفاخرة والحمامات الرئيسية" data-en="Ideal for luxury kitchens and master bathrooms">مثالي للمطابخ الفاخرة والحمامات الرئيسية</p>
+                        <div class="material-details" id="matDetail1">
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="التشطيبات" data-en="Finishes">التشطيبات</span>
+                                <span class="detail-value" data-ar="لامع / مطفي / صقل" data-en="Polished / Honed / Leather">لامع / مطفي / صقل</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="الفئة السعرية" data-en="Price Tier">الفئة السعرية</span>
+                                <span class="detail-value premium" data-ar="فاخر" data-en="Premium">فاخر</span>
+                            </div>
+                        </div>
+                        <button class="material-toggle" aria-expanded="false" aria-controls="matDetail1" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Nero Marquina -->
+                <div class="material-card" id="matCard2">
+                    <div class="material-image">
+                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=600&auto=format&fit=crop" alt="Nero Marquina Marble" loading="lazy">
+                        <!-- REPLACE WITH MATERIAL PHOTO: Nero Marquina black marble with white veins -->
+                        <div class="material-image-overlay"></div>
+                    </div>
+                    <div class="material-info">
+                        <span class="material-type" data-ar="رخام" data-en="Marble">رخام</span>
+                        <h3 class="material-name">Nero Marquina</h3>
+                        <p class="material-note" data-ar="جمالية درامية للواجهات والأرضيات الفاخرة" data-en="Dramatic aesthetic for feature walls and luxury flooring">جمالية درامية للواجهات والأرضيات الفاخرة</p>
+                        <div class="material-details" id="matDetail2">
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="التشطيبات" data-en="Finishes">التشطيبات</span>
+                                <span class="detail-value" data-ar="لامع / مطفي" data-en="Polished / Honed">لامع / مطفي</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="الفئة السعرية" data-en="Price Tier">الفئة السعرية</span>
+                                <span class="detail-value premium" data-ar="فاخر" data-en="Premium">فاخر</span>
+                            </div>
+                        </div>
+                        <button class="material-toggle" aria-expanded="false" aria-controls="matDetail2" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Travertine Classic -->
+                <div class="material-card" id="matCard3">
+                    <div class="material-image">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=600&auto=format&fit=crop" alt="Classic Travertine" loading="lazy">
+                        <!-- REPLACE WITH MATERIAL PHOTO: Classic beige travertine texture -->
+                        <div class="material-image-overlay"></div>
+                    </div>
+                    <div class="material-info">
+                        <span class="material-type" data-ar="ترافرتين" data-en="Travertine">ترافرتين</span>
+                        <h3 class="material-name">Travertine Classic</h3>
+                        <p class="material-note" data-ar="دفء طبيعي للواجهات الخارجية والأرضيات المفتوحة" data-en="Natural warmth for exterior facades and open-plan flooring">دفء طبيعي للواجهات الخارجية والأرضيات المفتوحة</p>
+                        <div class="material-details" id="matDetail3">
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="التشطيبات" data-en="Finishes">التشطيبات</span>
+                                <span class="detail-value" data-ar="مملس / ملء الثقوب / ناعم" data-en="Smooth / Filled / Tumbled">مملس / ملء الثقوب / ناعم</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="الفئة السعرية" data-en="Price Tier">الفئة السعرية</span>
+                                <span class="detail-value mid" data-ar="متوسط" data-en="Mid-Range">متوسط</span>
+                            </div>
+                        </div>
+                        <button class="material-toggle" aria-expanded="false" aria-controls="matDetail3" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Black Galaxy Granite -->
+                <div class="material-card" id="matCard4">
+                    <div class="material-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=600&auto=format&fit=crop" alt="Black Galaxy Granite" loading="lazy">
+                        <!-- REPLACE WITH MATERIAL PHOTO: Black Galaxy granite with gold speckles -->
+                        <div class="material-image-overlay"></div>
+                    </div>
+                    <div class="material-info">
+                        <span class="material-type" data-ar="جرانيت" data-en="Granite">جرانيت</span>
+                        <h3 class="material-name">Black Galaxy</h3>
+                        <p class="material-note" data-ar="متانة فائقة لمطابخ المطاعم والأسطح الثقيلة" data-en="Superior durability for commercial kitchens and heavy-use surfaces">متانة فائقة لمطابخ المطاعم والأسطح الثقيلة</p>
+                        <div class="material-details" id="matDetail4">
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="التشطيبات" data-en="Finishes">التشطيبات</span>
+                                <span class="detail-value" data-ar="لامع / مطفي / مشعل" data-en="Polished / Honed / Flamed">لامع / مطفي / مشعل</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="الفئة السعرية" data-en="Price Tier">الفئة السعرية</span>
+                                <span class="detail-value mid" data-ar="متوسط" data-en="Mid-Range">متوسط</span>
+                            </div>
+                        </div>
+                        <button class="material-toggle" aria-expanded="false" aria-controls="matDetail4" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                    </div>
+                </div>
+
+                <!-- Card 5: Carrara White -->
+                <div class="material-card" id="matCard5">
+                    <div class="material-image">
+                        <img src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?q=80&w=600&auto=format&fit=crop" alt="Carrara White Marble" loading="lazy">
+                        <!-- REPLACE WITH MATERIAL PHOTO: Carrara white marble with grey veins -->
+                        <div class="material-image-overlay"></div>
+                    </div>
+                    <div class="material-info">
+                        <span class="material-type" data-ar="رخام" data-en="Marble">رخام</span>
+                        <h3 class="material-name">Carrara White</h3>
+                        <p class="material-note" data-ar="أناقة خالدة للحمامات وأسطح الترحيب" data-en="Timeless elegance for bathrooms and reception surfaces">أناقة خالدة للحمامات وأسطح الترحيب</p>
+                        <div class="material-details" id="matDetail5">
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="التشطيبات" data-en="Finishes">التشطيبات</span>
+                                <span class="detail-value" data-ar="لامع / مطفي / ناعم" data-en="Polished / Honed / Brushed">لامع / مطفي / ناعم</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="الفئة السعرية" data-en="Price Tier">الفئة السعرية</span>
+                                <span class="detail-value mid" data-ar="متوسط" data-en="Mid-Range">متوسط</span>
+                            </div>
+                        </div>
+                        <button class="material-toggle" aria-expanded="false" aria-controls="matDetail5" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                    </div>
+                </div>
+
+                <!-- Card 6: Quartz Calacatta -->
+                <div class="material-card" id="matCard6">
+                    <div class="material-image">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop" alt="Calacatta Quartz" loading="lazy">
+                        <!-- REPLACE WITH MATERIAL PHOTO: White quartz with grey veining -->
+                        <div class="material-image-overlay"></div>
+                    </div>
+                    <div class="material-info">
+                        <span class="material-type" data-ar="كوارتز" data-en="Quartz">كوارتز</span>
+                        <h3 class="material-name">Calacatta Quartz</h3>
+                        <p class="material-note" data-ar="مقاومة عالية للخدوش والبقع — مثالي للمطابخ العصرية" data-en="High scratch and stain resistance — ideal for modern kitchens">مقاومة عالية للخدوش والبقع — مثالي للمطابخ العصرية</p>
+                        <div class="material-details" id="matDetail6">
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="التشطيبات" data-en="Finishes">التشطيبات</span>
+                                <span class="detail-value" data-ar="لامع / مطفي / مخملي" data-en="Polished / Honed / Suede">لامع / مطفي / مخملي</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="الفئة السعرية" data-en="Price Tier">الفئة السعرية</span>
+                                <span class="detail-value standard" data-ar="اقتصادي" data-en="Standard">اقتصادي</span>
+                            </div>
+                        </div>
+                        <button class="material-toggle" aria-expanded="false" aria-controls="matDetail6" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                    </div>
+                </div>
+
+                <!-- Card 7: Pietra Grey -->
+                <div class="material-card" id="matCard7">
+                    <div class="material-image">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600&auto=format&fit=crop" alt="Pietra Grey Marble" loading="lazy">
+                        <!-- REPLACE WITH MATERIAL PHOTO: Pietra Grey dark marble with white veins -->
+                        <div class="material-image-overlay"></div>
+                    </div>
+                    <div class="material-info">
+                        <span class="material-type" data-ar="رخام" data-en="Marble">رخام</span>
+                        <h3 class="material-name">Pietra Grey</h3>
+                        <p class="material-note" data-ar="جاذبية معاصرة للواجهات الداخلية والأثاث الحجرى" data-en="Contemporary appeal for interior feature walls and stone furniture">جاذبية معاصرة للواجهات الداخلية والأثاث الحجرى</p>
+                        <div class="material-details" id="matDetail7">
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="التشطيبات" data-en="Finishes">التشطيبات</span>
+                                <span class="detail-value" data-ar="لامع / مطفي / صنفرة" data-en="Polished / Honed / Sandblasted">لامع / مطفي / صنفرة</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="الفئة السعرية" data-en="Price Tier">الفئة السعرية</span>
+                                <span class="detail-value premium" data-ar="فاخر" data-en="Premium">فاخر</span>
+                            </div>
+                        </div>
+                        <button class="material-toggle" aria-expanded="false" aria-controls="matDetail7" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                    </div>
+                </div>
+
+                <!-- Card 8: Beige Limestone -->
+                <div class="material-card" id="matCard8">
+                    <div class="material-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop" alt="Beige Limestone" loading="lazy">
+                        <!-- REPLACE WITH MATERIAL PHOTO: Warm beige limestone texture -->
+                        <div class="material-image-overlay"></div>
+                    </div>
+                    <div class="material-info">
+                        <span class="material-type" data-ar="حجر جيري" data-en="Limestone">حجر جيري</span>
+                        <h3 class="material-name">Beige Limestone</h3>
+                        <p class="material-note" data-ar="ملمس دافئ وطبيعي للحدائق والواجهات الخارجية" data-en="Warm, natural texture for gardens and exterior cladding">ملمس دافئ وطبيعي للحدائق والواجهات الخارجية</p>
+                        <div class="material-details" id="matDetail8">
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="التشطيبات" data-en="Finishes">التشطيبات</span>
+                                <span class="detail-value" data-ar="مملس / ناعم / مقسوم" data-en="Smooth / Tumbled / Split-face">مملس / ناعم / مقسوم</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-ar="الفئة السعرية" data-en="Price Tier">الفئة السعرية</span>
+                                <span class="detail-value standard" data-ar="اقتصادي" data-en="Standard">اقتصادي</span>
+                            </div>
+                        </div>
+                        <button class="material-toggle" aria-expanded="false" aria-controls="matDetail8" data-ar="التفاصيل" data-en="Details">التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="showroom-scroll-hint" id="showroomHint">
+            <div class="showroom-hint-line"></div>
+            <span class="showroom-hint-text" data-ar="اسحب للاستكشاف" data-en="Drag to explore">اسحب للاستكشاف</span>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     PART 07 — WORKSHOP IN ACTION
+========================================== -->
+<section id="workshopAction" aria-label="Workshop in Action">
+    <div class="workshop-container">
+        <div class="workshop-header">
+            <div class="workshop-eyebrow" data-ar="ورشتنا" data-en="Our Workshop">ورشتنا</div>
+            <h2 class="workshop-heading" data-ar="الحجر يتجسد في أيدينا" data-en="Where Stone Takes Shape">الحجر يتجسد في أيدينا</h2>
+        </div>
+
+        <div class="workshop-gallery">
+            <!-- Item 1: Slab Cutting (large) -->
+            <div class="workshop-item workshop-item-large" id="wsItem1">
+                <div class="workshop-image">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=1000&auto=format&fit=crop" alt="Slab cutting with diamond wire saw" loading="lazy">
+                    <!-- REPLACE WITH CLIENT PHOTO: Diamond wire saw cutting a marble slab -->
+                </div>
+                <div class="workshop-caption">
+                    <span class="ws-tag" data-ar="تقطيع اللوحات" data-en="Slab Cutting">تقطيع اللوحات</span>
+                    <h3 class="ws-title" data-ar="قطع دقيق بأسلاك الماس" data-en="Precision Diamond Wire Cutting">قطع دقيق بأسلاك الماس</h3>
+                </div>
+            </div>
+
+            <!-- Item 2: Edge Profiling -->
+            <div class="workshop-item" id="wsItem2">
+                <div class="workshop-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" alt="Edge profiling machine shaping stone" loading="lazy">
+                    <!-- REPLACE WITH CLIENT PHOTO: CNC edge profiling on a granite countertop -->
+                </div>
+                <div class="workshop-caption">
+                    <span class="ws-tag" data-ar="تشكيل الحواف" data-en="Edge Profiling">تشكيل الحواف</span>
+                    <h3 class="ws-title" data-ar="بروفايلات حواف مخصصة" data-en="Custom Edge Profiles">بروفايلات حواف مخصصة</h3>
+                </div>
+            </div>
+
+            <!-- Item 3: Stone Polishing -->
+            <div class="workshop-item" id="wsItem3">
+                <div class="workshop-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop" alt="Stone surface polishing" loading="lazy">
+                    <!-- REPLACE WITH CLIENT PHOTO: Polishing machine buffing a marble surface to high gloss -->
+                </div>
+                <div class="workshop-caption">
+                    <span class="ws-tag" data-ar="التلميع" data-en="Polishing">التلميع</span>
+                    <h3 class="ws-title" data-ar="لميع يعكس الضوء كالمرآة" data-en="Mirror-Finish Polishing">لميع يعكس الضوء كالمرآة</h3>
+                </div>
+            </div>
+
+            <!-- Item 4: CNC Fabrication (wide) -->
+            <div class="workshop-item workshop-item-wide" id="wsItem4">
+                <div class="workshop-image">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000&auto=format&fit=crop" alt="CNC machine carving stone" loading="lazy">
+                    <!-- REPLACE WITH CLIENT PHOTO: 5-axis CNC machine carving intricate stone detail -->
+                </div>
+                <div class="workshop-caption">
+                    <span class="ws-tag" data-ar="تصنيع CNC" data-en="CNC Fabrication">تصنيع CNC</span>
+                    <h3 class="ws-title" data-ar="دقة رقمية حتى أصغر التفاصيل" data-en="Digital Precision Down to the Finest Detail">دقة رقمية حتى أصغر التفاصيل</h3>
+                </div>
+            </div>
+
+            <!-- Item 5: On-Site Installation -->
+            <div class="workshop-item workshop-item-tall" id="wsItem5">
+                <div class="workshop-image">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop" alt="On-site stone installation team" loading="lazy">
+                    <!-- REPLACE WITH CLIENT PHOTO: Installation team fitting a stone countertop on location -->
+                </div>
+                <div class="workshop-caption">
+                    <span class="ws-tag" data-ar="التركيب في الموقع" data-en="On-Site Installation">التركيب في الموقع</span>
+                    <h3 class="ws-title" data-ar="إتقان ينتهي عند باب منزلك" data-en="Flawless Fitting at Your Doorstep">إتقان ينتهي عند باب منزلك</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top-line" aria-hidden="true"></div>
+
+        <div class="footer-main">
+            <div class="footer-wordmark">
+                <span class="footer-wordmark-en">Retag Stone</span>
+                <span class="footer-wordmark-ar" data-ar="ريتاج ستون" data-en="Retag Stone">ريتاج ستون</span>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="#" class="footer-nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                <a href="#about" class="footer-nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+                <a href="#services" class="footer-nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+                <a href="#projects" class="footer-nav-link" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+                <a href="contact.html" class="footer-nav-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="https://instagram.com/retagstone" class="footer-social-link" target="_blank" rel="noopener"
+                    aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://tiktok.com/@retagstone" class="footer-social-link" target="_blank" rel="noopener"
+                    aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path>
+                    </svg>
+                </a>
+                <a href="https://wa.me/971501234567" class="footer-social-link" target="_blank" rel="noopener"
+                    aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-copyright" data-ar="© ٢٠٢٦ ريتاج ستون. جميع الحقوق محفوظة."
+                data-en="© 2026 Retag Stone. All rights reserved.">© ٢٠٢٦ ريتاج ستون. جميع الحقوق محفوظة.</span>
+            <span class="footer-tagline" data-ar="نحتُ الجمال من قلب الطبيعة"
+                data-en="We sculpt beauty from nature's heart">نحتُ الجمال من قلب الطبيعة</span>
+        </div>
+    </footer>
+
+
+    <!-- ==========================================
+         GSAP SCRIPTS
+    ========================================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const CONFIG = {
+            lang: 'ar',
+            reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+            isTouch: window.matchMedia('(hover: none) and (pointer: coarse)').matches
+        };
+
+        // ==========================================
+        // CUSTOM CURSOR
+        // ==========================================
+        if (!CONFIG.isTouch && !CONFIG.reducedMotion) {
+            const cursor = document.getElementById('cursor');
+            const cursorDot = document.getElementById('cursorDot');
+            const cursorLabel = document.getElementById('cursorLabel');
+
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            let dotX = 0, dotY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.12;
+                cursorY += (mouseY - cursorY) * 0.12;
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+
+                dotX += (mouseX - dotX) * 0.35;
+                dotY += (mouseY - dotY) * 0.35;
+                cursorDot.style.left = dotX + 'px';
+                cursorDot.style.top = dotY + 'px';
+
+                cursorLabel.style.left = cursorX + 'px';
+                cursorLabel.style.top = (cursorY + 40) + 'px';
+
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            const hoverElements = document.querySelectorAll('a, button, .services-hero-cta-primary, .services-hero-cta-secondary, .capabilities-cta');
+            hoverElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hover');
+                    if (el.classList.contains('services-hero-cta-primary')) {
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'اطلب' : 'Request';
+                        cursorLabel.classList.add('visible');
+                    }
+                    if (el.classList.contains('services-hero-cta-secondary')) {
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'استكشف' : 'Explore';
+                        cursorLabel.classList.add('visible');
+                    }
+                    if (el.classList.contains('capabilities-cta')) {
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'استكشف' : 'Explore';
+                        cursorLabel.classList.add('visible');
+                    }
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hover');
+                    cursorLabel.classList.remove('visible');
+                });
+            });
+        }
+
+        // ==========================================
+        // LOADING SEQUENCE
+        // ==========================================
+        const loadingScreen = document.getElementById('loadingScreen');
+        const loadingBar = document.getElementById('loadingBar');
+
+        function startLoading() {
+            const tl = gsap.timeline({
+                onComplete: () => {
+                    gsap.to(loadingScreen, {
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: 'power2.inOut',
+                        onComplete: () => {
+                            loadingScreen.style.display = 'none';
+                            initServicesHeroAnimations();
+                            initCapabilitiesAnimations();
+                            initServicesHeroAnimations();
+                            initStatsAnimations();
+                            initBentoAnimations();
+                            initProcessAnimations();
+                            initShowroomAnimations();
+                            initWorkshopAnimations(); 
+                        }
+                    });
+                }
+            });
+
+            tl.to(loadingBar, {
+                width: '100%',
+                duration: 1.2,
+                ease: 'power2.inOut'
+            });
+        }
+
+        // ==========================================
+        // PART 01 — SERVICES HERO ANIMATIONS
+        // ==========================================
+        function initServicesHeroAnimations() {
+            const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+            tl.fromTo('#mainNav .logo',
+                { opacity: 0, y: -20 },
+                { opacity: 1, y: 0, duration: 1.2 },
+                0.2
+            );
+
+            if (!CONFIG.reducedMotion) {
+                gsap.fromTo('#servicesHeroBg',
+                    { scale: 1.15 },
+                    { scale: 1, duration: 2.5, ease: 'power2.out' }
+                );
+
+                gsap.to('#servicesHeroBg', {
+                    yPercent: 15,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#servicesHero',
+                        start: 'top top',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                });
+            }
+
+            tl.to('#shBreadcrumb', { opacity: 1, y: 0, duration: 0.8 }, 0.4);
+            tl.to('#shEyebrow', { opacity: 1, y: 0, duration: 0.8 }, 0.6);
+
+            const headlineLines = document.querySelectorAll('#shHeadline .line-inner');
+            headlineLines.forEach((line, i) => {
+                tl.fromTo(line,
+                    { y: '110%', opacity: 0 },
+                    { y: '0%', opacity: 1, duration: 1.2, ease: 'power3.out' },
+                    0.8 + (i * 0.18)
+                );
+            });
+
+            tl.to('#shSubheadline', { opacity: 1, y: 0, duration: 0.9 }, 1.4);
+            tl.to('#shCtas', { opacity: 1, y: 0, duration: 0.8 }, 1.7);
+
+            tl.fromTo('#shCornerTL', { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 1 }, 1.2);
+            tl.fromTo('#shCornerBR', { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 1 }, 1.4);
+
+            if (!CONFIG.reducedMotion) {
+                const veinPath = document.getElementById('shVeinPath');
+                const veinPath2 = document.getElementById('shVeinPath2');
+                if (veinPath && veinPath2) {
+                    const veinLength = veinPath.getTotalLength();
+                    const veinLength2 = veinPath2.getTotalLength();
+
+                    gsap.set([veinPath, veinPath2], {
+                        strokeDasharray: (i) => i === 0 ? veinLength : veinLength2,
+                        strokeDashoffset: (i) => i === 0 ? veinLength : veinLength2
+                    });
+
+                    tl.to(veinPath, { strokeDashoffset: 0, duration: 2.5, ease: 'power2.inOut' }, 1.0);
+                    tl.to(veinPath2, { strokeDashoffset: 0, duration: 2.0, ease: 'power2.inOut' }, 1.5);
+                }
+
+                gsap.to('#shVein', {
+                    opacity: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#servicesHero',
+                        start: '20% top',
+                        end: '60% top',
+                        scrub: true
+                    }
+                });
+            }
+
+            tl.fromTo('#shScrollCue', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, 2.2);
+
+            if (!CONFIG.reducedMotion) {
+                gsap.to('#shScrollCueLine', {
+                    scaleY: 0.3,
+                    transformOrigin: 'top',
+                    duration: 1.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+            }
+
+            tl.fromTo('#whatsappBtn', { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }, 2.4);
+        }
+
+        // ==========================================
+        // PART 02 — CAPABILITIES OVERVIEW ANIMATIONS
+        // ==========================================
+        function initCapabilitiesAnimations() {
+            if (CONFIG.reducedMotion) {
+                gsap.to('.capabilities-eyebrow', { opacity: 1, duration: 0.6 });
+                gsap.to('.capabilities-heading .line-inner', { opacity: 1, y: 0, duration: 0.6, stagger: 0.1 });
+                gsap.to('.capabilities-paragraph', { opacity: 1, duration: 0.6, stagger: 0.1 });
+                gsap.to('.capabilities-cta', { opacity: 1, duration: 0.6 });
+                return;
+            }
+
+            const isMobileCap = window.innerWidth <= 768;
+
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            const initialClip = isRTL ? 'inset(0 100% 0 0)' : 'inset(0 0 0 100%)';
+            gsap.set('#capImageInner', { clipPath: initialClip });
+
+            gsap.to('#capImageInner', {
+                clipPath: 'inset(0 0% 0 0%)',
+                ease: 'power3.inOut',
+                duration: 1.4,
+                scrollTrigger: {
+                    trigger: '#capabilitiesOverview',
+                    start: 'top 75%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            if (!isMobileCap) {
+                ScrollTrigger.create({
+                    trigger: '#capabilitiesOverview',
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    pin: '.capabilities-image-side',
+                    pinSpacing: false
+                });
+            }
+
+            gsap.fromTo('#capEyebrow',
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '#capabilitiesOverview',
+                        start: 'top 60%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+
+            const capHeadlineLines = document.querySelectorAll('#capHeading .line-inner');
+            capHeadlineLines.forEach((line, i) => {
+                gsap.fromTo(line,
+                    { y: '110%', opacity: 0 },
+                    {
+                        y: '0%', opacity: 1, duration: 1.0, ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#capabilitiesOverview',
+                            start: 'top 55%',
+                            toggleActions: 'play none none none'
+                        },
+                        delay: i * 0.15
+                    }
+                );
+            });
+
+            gsap.utils.toArray('.capabilities-paragraph').forEach((p, i) => {
+                gsap.fromTo(p,
+                    { opacity: 0, y: 40 },
+                    {
+                        opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: p,
+                            start: 'top 85%',
+                            toggleActions: 'play none none none'
+                        },
+                        delay: i * 0.12
+                    }
+                );
+            });
+
+            gsap.fromTo('#capCta',
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '#capCta',
+                        start: 'top 90%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+        // ==========================================
+        // NAVIGATION BEHAVIOR
+        // ==========================================
+        const mainNav = document.getElementById('mainNav');
+        const menuTrigger = document.getElementById('menuTrigger');
+
+        const isMobile = () => window.innerWidth <= 768;
+
+        ScrollTrigger.create({
+            trigger: '#servicesHero',
+            start: '10% top',
+            onEnter: () => {
+                mainNav.classList.add('scrolled');
+                if (isMobile()) {
+                    mainNav.classList.remove('visible-nav');
+                    mainNav.classList.add('hidden-nav');
+                    menuTrigger.classList.add('visible');
+                }
+            },
+            onLeaveBack: () => {
+                mainNav.classList.remove('scrolled');
+                if (isMobile()) {
+                    mainNav.classList.add('hidden-nav');
+                    mainNav.classList.remove('visible-nav');
+                    menuTrigger.classList.add('visible');
+                }
+            }
+        });
+
+        menuTrigger.addEventListener('click', () => {
+            mainNav.classList.remove('hidden-nav');
+            mainNav.classList.add('visible-nav');
+            menuTrigger.classList.remove('visible');
+        });
+
+        // ==========================================
+        // HERO SCROLL-DRIVEN FADE-OUT
+        // ==========================================
+        if (!CONFIG.reducedMotion) {
+            gsap.to('.services-hero-content', {
+                opacity: 0,
+                y: -60,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#servicesHero',
+                    start: '30% top',
+                    end: '80% top',
+                    scrub: true
+                }
+            });
+
+            gsap.to('#shBreadcrumb', {
+                opacity: 0,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#servicesHero',
+                    start: '20% top',
+                    end: '50% top',
+                    scrub: true
+                }
+            });
+
+            gsap.to('#shScrollCue', {
+                opacity: 0,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#servicesHero',
+                    start: '5% top',
+                    end: '25% top',
+                    scrub: true
+                }
+            });
+        }
+
+        // ==========================================
+        // SCROLL PROGRESS INDICATOR
+        // ==========================================
+        if (!CONFIG.reducedMotion) {
+            gsap.to('#scrollProgressFill', {
+                height: '100%',
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: 'body',
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    scrub: true
+                }
+            });
+        }
+
+        // ==========================================
+        // LANGUAGE TOGGLE
+        // ==========================================
+        const langToggle = document.getElementById('langToggle');
+        const langText = document.getElementById('langText');
+        const html = document.documentElement;
+
+        const translations = {
+            ar: { dir: 'rtl', lang: 'ar', toggleText: 'EN' },
+            en: { dir: 'ltr', lang: 'en', toggleText: 'AR' }
+        };
+
+        function updateContent(lang) {
+            document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+                gsap.to(el, {
+                    opacity: 0,
+                    y: -10,
+                    duration: 0.2,
+                    onComplete: () => {
+                        el.textContent = el.getAttribute('data-' + lang);
+                        gsap.to(el, { opacity: 1, y: 0, duration: 0.3 });
+                        const capCta = document.getElementById('capCta');
+if (capCta) {
+    const capCtaSpan = capCta.querySelector('span');
+    gsap.to(capCtaSpan, {
+        opacity: 0, duration: 0.2,
+        onComplete: () => {
+            capCtaSpan.textContent = capCta.getAttribute('data-' + lang + '-text');
+            gsap.to(capCtaSpan, { opacity: 1, duration: 0.3 });
+        }
+    });
+}
+                    }
+                });
+            });
+
+
+
+            const ctaPrimary = document.getElementById('shCtaPrimary');
+            if (ctaPrimary) {
+                const ctaPrimarySpan = ctaPrimary.querySelector('span');
+                gsap.to(ctaPrimarySpan, {
+                    opacity: 0,
+                    duration: 0.2,
+                    onComplete: () => {
+                        ctaPrimarySpan.textContent = ctaPrimary.getAttribute('data-' + lang + '-text');
+                        gsap.to(ctaPrimarySpan, { opacity: 1, duration: 0.3 });
+                    }
+                });
+            }
+
+            const ctaSecondary = document.getElementById('shCtaSecondary');
+            if (ctaSecondary) {
+                const ctaSecondarySpan = ctaSecondary.querySelector('span');
+                gsap.to(ctaSecondarySpan, {
+                    opacity: 0,
+                    duration: 0.2,
+                    onComplete: () => {
+                        ctaSecondarySpan.textContent = ctaSecondary.getAttribute('data-' + lang + '-text');
+                        gsap.to(ctaSecondarySpan, { opacity: 1, duration: 0.3 });
+                    }
+                });
+            }
+
+            const capCta = document.getElementById('capCta');
+            if (capCta) {
+                const capCtaSpan = capCta.querySelector('span');
+                gsap.to(capCtaSpan, {
+                    opacity: 0,
+                    duration: 0.2,
+                    onComplete: () => {
+                        capCtaSpan.textContent = capCta.getAttribute('data-' + lang + '-text');
+                        gsap.to(capCtaSpan, { opacity: 1, duration: 0.3 });
+                    }
+                });
+            }
+
+            gsap.to(menuTrigger, {
+                opacity: 0,
+                duration: 0.2,
+                onComplete: () => {
+                    menuTrigger.textContent = lang === 'ar' ? 'القائمة' : 'Menu';
+                    gsap.to(menuTrigger, {
+                        opacity: menuTrigger.classList.contains('visible') ? 1 : 0,
+                        duration: 0.3
+                    });
+                }
+            });
+
+            const cursorLabel = document.getElementById('cursorLabel');
+            if (cursorLabel) cursorLabel.textContent = lang === 'ar' ? 'عرض' : 'View';
+
+            const headline = document.getElementById('shHeadline');
+            if (headline) headline.style.fontStyle = lang === 'en' ? 'italic' : 'normal';
+        }
+
+        langToggle.addEventListener('click', () => {
+            const newLang = CONFIG.lang === 'ar' ? 'en' : 'ar';
+            const t = translations[newLang];
+
+            html.setAttribute('dir', t.dir);
+            html.setAttribute('lang', t.lang);
+            langText.textContent = t.toggleText;
+            CONFIG.lang = newLang;
+
+            updateContent(newLang);
+            ScrollTrigger.refresh();
+        });
+
+        // ==========================================
+        // RESIZE HANDLER
+        // ==========================================
+        window.addEventListener('resize', () => {
+            if (!isMobile()) {
+                mainNav.classList.remove('hidden-nav');
+                mainNav.classList.add('visible-nav');
+                menuTrigger.classList.remove('visible');
+            }
+        });
+
+        // ==========================================
+        // KEYBOARD NAVIGATION
+        // ==========================================
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') document.body.classList.add('keyboard-nav');
+        });
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-nav');
+        });
+
+        // ==========================================
+        // INIT
+        // ==========================================
+        window.addEventListener('load', startLoading);
+        if (document.readyState === 'complete') startLoading();
+
+        // ==========================================
+        // PART 02 — CAPABILITIES OVERVIEW ANIMATIONS
+        // ==========================================
+        function initCapabilitiesAnimations() {
+            if (CONFIG.reducedMotion) {
+                gsap.to('.capabilities-eyebrow', { opacity: 1, duration: 0.6 });
+                gsap.to('.capabilities-heading .line-inner', { opacity: 1, y: 0, duration: 0.6, stagger: 0.1 });
+                gsap.to('.capabilities-paragraph', { opacity: 1, duration: 0.6, stagger: 0.1 });
+                gsap.to('.capabilities-cta', { opacity: 1, duration: 0.6 });
+                return;
+            }
+
+            const isMobileCap = window.innerWidth <= 768;
+
+            // Image clip-path reveal (RTL-aware)
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            const initialClip = isRTL ? 'inset(0 100% 0 0)' : 'inset(0 0 0 100%)';
+            gsap.set('#capImageInner', { clipPath: initialClip });
+
+            gsap.to('#capImageInner', {
+                clipPath: 'inset(0 0% 0 0%)',
+                ease: 'power3.inOut',
+                duration: 1.4,
+                scrollTrigger: {
+                    trigger: '#capabilitiesOverview',
+                    start: 'top 75%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            // Pin image on desktop while text scrolls
+            if (!isMobileCap) {
+                ScrollTrigger.create({
+                    trigger: '#capabilitiesOverview',
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    pin: '.capabilities-image-side',
+                    pinSpacing: false
+                });
+            }
+
+            // Eyebrow
+            gsap.fromTo('#capEyebrow',
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '#capabilitiesOverview',
+                        start: 'top 60%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+
+            // Headline split-text reveal
+            const capHeadlineLines = document.querySelectorAll('#capHeading .line-inner');
+            capHeadlineLines.forEach((line, i) => {
+                gsap.fromTo(line,
+                    { y: '110%', opacity: 0 },
+                    {
+                        y: '0%', opacity: 1, duration: 1.0, ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#capabilitiesOverview',
+                            start: 'top 55%',
+                            toggleActions: 'play none none none'
+                        },
+                        delay: i * 0.15
+                    }
+                );
+            });
+
+            // Paragraphs stagger
+            gsap.utils.toArray('.capabilities-paragraph').forEach((p, i) => {
+                gsap.fromTo(p,
+                    { opacity: 0, y: 40 },
+                    {
+                        opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: p,
+                            start: 'top 85%',
+                            toggleActions: 'play none none none'
+                        },
+                        delay: i * 0.12
+                    }
+                );
+            });
+
+            // CTA
+            gsap.fromTo('#capCta',
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '#capCta',
+                        start: 'top 90%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+        // ==========================================
+// PART 03 — SERVICES IN NUMBERS
+// ==========================================
+function initStatsAnimations() {
+    const statsSection = document.getElementById('servicesNumbers');
+    if (!statsSection) return;
+
+    // Top & bottom divider lines draw in
+    gsap.to('#statsDividerTop', {
+        width: '100%',
+        duration: 1.2,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+            trigger: '#servicesNumbers',
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    gsap.to('#statsDividerBottom', {
+        width: '100%',
+        duration: 1.2,
+        ease: 'power2.inOut',
+        delay: 0.3,
+        scrollTrigger: {
+            trigger: '#servicesNumbers',
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    // Stat items fade in with stagger
+    gsap.utils.toArray('.stat-item').forEach((item, i) => {
+        gsap.to(item, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            delay: i * 0.15,
+            scrollTrigger: {
+                trigger: '#servicesNumbers',
+                start: 'top 75%',
+                toggleActions: 'play none none none'
+            }
+        });
+    });
+
+    // Vertical divider lines grow
+    gsap.utils.toArray('.stat-divider').forEach((div, i) => {
+        gsap.to(div, {
+            height: '60%',
+            duration: 0.8,
+            ease: 'power2.out',
+            delay: 0.4 + (i * 0.1),
+            scrollTrigger: {
+                trigger: '#servicesNumbers',
+                start: 'top 75%',
+                toggleActions: 'play none none none'
+            }
+        });
+    });
+
+    // Bronze underline draw
+    gsap.utils.toArray('.stat-line').forEach((line, i) => {
+        gsap.to(line, {
+            width: 40,
+            duration: 0.6,
+            ease: 'power2.out',
+            delay: 0.6 + (i * 0.12),
+            scrollTrigger: {
+                trigger: '#servicesNumbers',
+                start: 'top 75%',
+                toggleActions: 'play none none none'
+            }
+        });
+    });
+
+    // Count-up numbers
+    if (!CONFIG.reducedMotion) {
+        document.querySelectorAll('.stat-number').forEach((numEl) => {
+            const target = parseInt(numEl.getAttribute('data-target'), 10);
+            const suffix = numEl.getAttribute('data-suffix') || '';
+            const obj = { val: 0 };
+
+            ScrollTrigger.create({
+                trigger: numEl,
+                start: 'top 90%',
+                once: true,
+                onEnter: () => {
+                    gsap.to(obj, {
+                        val: target,
+                        duration: 2.0,
+                        ease: 'power2.out',
+                        onUpdate: () => {
+                            numEl.innerText = Math.round(obj.val) + suffix;
+                        },
+                        onComplete: () => {
+                            numEl.innerText = target + suffix;
+                        }
+                    });
+                }
+            });
+        });
+    } else {
+        // Reduced motion: show final values immediately
+        document.querySelectorAll('.stat-number').forEach((numEl) => {
+            const target = numEl.getAttribute('data-target');
+            const suffix = numEl.getAttribute('data-suffix') || '';
+            numEl.innerText = target + suffix;
+        });
+    }
+}
+// ==========================================
+// PART 04 — BENTO GRID ANIMATIONS
+// ==========================================
+function initBentoAnimations() {
+    if (CONFIG.reducedMotion) {
+        gsap.set('.bento-tile', { clipPath: 'inset(0)', opacity: 1 });
+        gsap.set('.bento-eyebrow', { opacity: 1 });
+        gsap.set('.bento-heading', { opacity: 1 });
+        return;
+    }
+
+    // Eyebrow & heading
+    gsap.to('.bento-eyebrow', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '#servicesOverview',
+            start: 'top 75%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    gsap.to('.bento-heading', {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        delay: 0.15,
+        scrollTrigger: {
+            trigger: '#servicesOverview',
+            start: 'top 75%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    // Tiles clip-path reveal with stagger
+    const tiles = document.querySelectorAll('.bento-tile');
+    tiles.forEach((tile, i) => {
+        gsap.to(tile, {
+            clipPath: 'inset(0 0 0% 0)',
+            opacity: 1,
+            duration: 1.0,
+            ease: 'power3.inOut',
+            delay: i * 0.1,
+            scrollTrigger: {
+                trigger: tile,
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            }
+        });
+    });
+
+    // 3D tilt on mouse move (desktop only)
+    if (!CONFIG.isTouch && !CONFIG.reducedMotion) {
+        tiles.forEach(tile => {
+            tile.addEventListener('mousemove', (e) => {
+                const rect = tile.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -4;
+                const rotateY = ((x - centerX) / centerX) * 4;
+
+                gsap.to(tile, {
+                    rotateX: rotateX,
+                    rotateY: rotateY,
+                    duration: 0.4,
+                    ease: 'power2.out',
+                    transformPerspective: 1000
+                });
+            });
+
+            tile.addEventListener('mouseleave', () => {
+                gsap.to(tile, {
+                    rotateX: 0,
+                    rotateY: 0,
+                    duration: 0.6,
+                    ease: 'power2.out'
+                });
+            });
+        });
+    }
+}
+// ==========================================
+// PART 05 — FABRICATION PROCESS ANIMATIONS (FIXED)
+// The SVG serpentine path is computed from the REAL dot
+// positions after layout, so path / dots / cards can never
+// drift apart — at any screen size or text length.
+// Card/dot reveals are synced to the drawn path length.
+// ==========================================
+function initProcessAnimations() {
+    const section = document.getElementById('fabricationProcess');
+    if (!section) return;
+
+    const timeline = section.querySelector('.process-timeline');
+    const svg      = section.querySelector('.process-svg');
+    const path     = document.getElementById('processPath');
+    const pathBg   = document.getElementById('processPathBg');
+    const dots     = Array.from(timeline.querySelectorAll('.timeline-dot'));
+    const cards    = Array.from(timeline.querySelectorAll('.process-card'));
+    const isMobile = window.matchMedia('(max-width: 768px)');
+
+    let ctx = null; // gsap context, rebuilt on resize
+
+    /* ---------- Geometry: build serpentine path through dot centers ----------
+       p1 —— p2
+            \
+             p3 —— p4
+                    \
+                     p5 —— p6          */
+    function buildPath() {
+        const box = timeline.getBoundingClientRect();
+        const pts = dots.map(d => {
+            const r = d.getBoundingClientRect();
+            return {
+                x: +(r.left - box.left + r.width / 2).toFixed(2),
+                y: +(r.top - box.top + r.height / 2).toFixed(2)
+            };
+        });
+
+        svg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`);
+
+        // Horizontal S-curve between two dots on different rows
+        const curve = (a, b) => {
+            const midY = (a.y + b.y) / 2;
+            return ` C ${a.x} ${midY} ${b.x} ${midY} ${b.x} ${b.y}`;
+        };
+
+        const segments = [
+            `M ${pts[0].x} ${pts[0].y} L ${pts[1].x} ${pts[1].y}`,
+            curve(pts[1], pts[2]),
+            ` L ${pts[3].x} ${pts[3].y}`,
+            curve(pts[3], pts[4]),
+            ` L ${pts[5].x} ${pts[5].y}`
+        ];
+        const d = segments.join('');
+
+        path.setAttribute('d', d);
+        pathBg.setAttribute('d', d);
+
+        // Fraction of total path length at which each dot sits,
+        // so every reveal fires exactly when the line reaches its dot.
+        const total = path.getTotalLength();
+        const fractions = [0];
+        let dSoFar = segments[0];
+        for (let i = 1; i < pts.length; i++) {
+            const probe = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            probe.setAttribute('d', dSoFar);
+            fractions.push(probe.getTotalLength() / total);
+            if (segments[i]) dSoFar += segments[i];
+        }
+        return { total, fractions };
+    }
+
+    /* ---------- Static states ---------- */
+    function showEverything() {
+        gsap.set(['.process-eyebrow', '.process-heading'], { opacity: 1, y: 0 });
+        gsap.set(dots,  { opacity: 1, scale: 1 });
+        gsap.set(cards, { opacity: 1, y: 0 });
+        dots.forEach(d => d.classList.add('active'));
+        if (!isMobile.matches) {
+            buildPath();
+            gsap.set(path, { strokeDasharray: 'none', strokeDashoffset: 0 });
+        }
+    }
+
+    /* ---------- Animated build ---------- */
+    function build() {
+        if (ctx) ctx.revert();
+
+        if (CONFIG.reducedMotion || isMobile.matches) { showEverything(); return; }
+
+        ctx = gsap.context(() => {
+            const { total, fractions } = buildPath();
+
+            // Header
+            gsap.to('.process-eyebrow', {
+                opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+                scrollTrigger: { trigger: section, start: 'top 75%', toggleActions: 'play none none none' }
+            });
+            gsap.to('.process-heading', {
+                opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.15,
+                scrollTrigger: { trigger: section, start: 'top 75%', toggleActions: 'play none none none' }
+            });
+
+            // One scrubbed master timeline: line draws, dots pop and cards
+            // rise exactly when the line reaches them.
+            gsap.set(path, { strokeDasharray: total, strokeDashoffset: total });
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: timeline,
+                    start: 'top 65%',
+                    end: 'bottom 70%',
+                    scrub: 1.2
+                }
+            });
+
+            tl.to(path, { strokeDashoffset: 0, duration: total, ease: 'none' }, 0);
+
+            dots.forEach((dot, i) => {
+                const t = fractions[i] * total;
+                tl.to(dot, {
+                    opacity: 1, scale: 1, duration: 40, ease: 'back.out(1.7)',
+                    onComplete: () => dot.classList.add('active'),
+                    onReverseComplete: () => dot.classList.remove('active')
+                }, t);
+                tl.to(cards[i], {
+                    opacity: 1, y: 0, duration: 60, ease: 'power3.out'
+                }, t + 20);
+            });
+        });
+    }
+
+    build();
+
+    // Rebuild geometry + triggers on resize / orientation change (debounced)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            build();
+            ScrollTrigger.refresh();
+        }, 200);
+    });
+}
+
+// ==========================================
+// PART 06 — MATERIAL SHOWROOM ANIMATIONS
+// ==========================================
+function initShowroomAnimations() {
+    const showroom = document.getElementById('materialShowroom');
+    if (!showroom) return;
+
+    if (CONFIG.reducedMotion) {
+        gsap.set('.showroom-eyebrow', { opacity: 1 });
+        gsap.set('.showroom-heading', { opacity: 1 });
+        gsap.set('.showroom-subtext', { opacity: 1 });
+        gsap.set('.material-card', { opacity: 1, y: 0 });
+        gsap.set('.showroom-scroll-hint', { opacity: 1 });
+        return;
+    }
+
+    // Header
+    gsap.to('.showroom-eyebrow', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '#materialShowroom',
+            start: 'top 75%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    gsap.to('.showroom-heading', {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        delay: 0.1,
+        scrollTrigger: {
+            trigger: '#materialShowroom',
+            start: 'top 75%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    gsap.to('.showroom-subtext', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        delay: 0.2,
+        scrollTrigger: {
+            trigger: '#materialShowroom',
+            start: 'top 75%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    // Cards stagger in
+    gsap.utils.toArray('.material-card').forEach((card, i) => {
+        gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+            ease: 'power3.out',
+            delay: i * 0.08,
+            scrollTrigger: {
+                trigger: '#materialShowroom',
+                start: 'top 65%',
+                toggleActions: 'play none none none'
+            }
+        });
+    });
+
+    // Scroll hint
+    gsap.to('.showroom-scroll-hint', {
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.6,
+        scrollTrigger: {
+            trigger: '#materialShowroom',
+            start: 'top 65%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    // Drag-to-scroll logic
+    const track = document.getElementById('showroomTrack');
+    if (track) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        track.addEventListener('mousedown', (e) => {
+            isDown = true;
+            track.style.cursor = 'grabbing';
+            startX = e.pageX - track.offsetLeft;
+            scrollLeft = track.scrollLeft;
+        });
+
+        track.addEventListener('mouseleave', () => {
+            isDown = false;
+            track.style.cursor = 'grab';
+        });
+
+        track.addEventListener('mouseup', () => {
+            isDown = false;
+            track.style.cursor = 'grab';
+        });
+
+        track.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - track.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            track.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+    // Expand/collapse details
+    document.querySelectorAll('.material-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const targetId = btn.getAttribute('aria-controls');
+            const details = document.getElementById(targetId);
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+
+            // Close all others
+            document.querySelectorAll('.material-details').forEach(d => d.classList.remove('open'));
+            document.querySelectorAll('.material-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+            if (!isExpanded && details) {
+                details.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+}
+
+// ==========================================
+// PART 07 — WORKSHOP IN ACTION ANIMATIONS
+// ==========================================
+function initWorkshopAnimations() {
+    const workshop = document.getElementById('workshopAction');
+    if (!workshop) return;
+
+    if (CONFIG.reducedMotion) {
+        gsap.set('.workshop-eyebrow', { opacity: 1 });
+        gsap.set('.workshop-heading', { opacity: 1 });
+        gsap.set('.workshop-item', { clipPath: 'inset(0)', opacity: 1 });
+        return;
+    }
+
+    // Header
+    gsap.to('.workshop-eyebrow', {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '#workshopAction',
+            start: 'top 75%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    gsap.to('.workshop-heading', {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        delay: 0.15,
+        scrollTrigger: {
+            trigger: '#workshopAction',
+            start: 'top 75%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    // Items clip-path reveal with stagger by column
+    const items = document.querySelectorAll('.workshop-item');
+    items.forEach((item, i) => {
+        // Alternate direction for visual rhythm
+        const clipDir = i % 2 === 0 ? 'inset(0 0 100% 0)' : 'inset(0 0 0 100%)';
+
+        gsap.fromTo(item,
+            { clipPath: clipDir, opacity: 0 },
+            {
+                clipPath: 'inset(0 0 0% 0)',
+                opacity: 1,
+                duration: 1.2,
+                ease: 'power3.inOut',
+                delay: (i % 3) * 0.15,
+                scrollTrigger: {
+                    trigger: item,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            }
+        );
+    });
+
+    // Parallax on images
+    items.forEach((item) => {
+        const img = item.querySelector('img');
+        if (img) {
+            gsap.fromTo(img,
+                { yPercent: -8 },
+                {
+                    yPercent: 8,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                }
+            );
+        }
+    });
+}
+    </script>
+</body>
+
+</html>

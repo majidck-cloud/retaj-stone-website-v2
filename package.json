@@ -1,0 +1,22 @@
+{
+  "name": "retag-stone-vite",
+  "version": "1.0.0",
+  "description": "Retag Stone - Premium natural stone website with Vite + Tailwind CSS v4",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.2.1"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0"
+  }
+}

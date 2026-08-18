@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ريتاج ستون - من نحن. خمسة عشر عاماً من الخبرة في توريد وتركيب الحجر الطبيعي.">
+    <title>من نحن | ريتاج ستون — Retag Stone</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">ريتاج ستون</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill" id="loadingBar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-label" id="cursorLabel">عرض</div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true">
+        <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container visible-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="index.html" class="logo" aria-label="Retag Stone Home">
+            <div class="logo">
+                <img src="./Assets/Logo.png" alt="retaj-logo" width="120" height="auto">
+            </div>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="about.html" class="nav-link active" data-ar="من نحن" data-en="About">من نحن</a>
+            <a href="services.html" class="nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+            <a href="projects.html" class="nav-link" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+            <a href="contact.html" class="nav-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+        </div>
+
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+            <span id="langText">EN</span>
+        </button>
+    </nav>
+
+    <!-- Menu Trigger -->
+    <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">القائمة</button>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" id="whatsappBtn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ==========================================
+         ABOUT HERO — EDITORIAL SPLIT (Part 01)
+    ========================================== -->
+    <section class="about-editorial" id="aboutEditorial" aria-label="About Hero">
+
+        <!-- Breadcrumb -->
+        <nav class="about-editorial-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <span class="breadcrumb-sep" aria-hidden="true">—</span>
+            <span data-ar="من نحن" data-en="About">من نحن</span>
+        </nav>
+
+        <!-- Image Side -->
+        <div class="about-editorial-image" id="aboutEditorialImage">
+            <div class="about-editorial-image-inner">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop" alt="Raw natural stone slab texture close-up" loading="eager">
+                <div class="about-editorial-image-frame" aria-hidden="true"></div>
+                <div class="about-editorial-image-corner tl" aria-hidden="true"></div>
+                <div class="about-editorial-image-corner br" aria-hidden="true"></div>
+            </div>
+            <div class="about-editorial-image-caption" id="aboutEditorialCaption">
+                <span class="image-caption-label" data-ar="من الورشة" data-en="From the Workshop">من الورشة</span>
+                <span class="image-caption-text" data-ar="رخام كالاكاتا خام" data-en="Raw Calacatta Marble">رخام كالاكاتا خام</span>
+            </div>
+        </div>
+
+        <!-- Vertical Divider Line -->
+        <div class="about-editorial-divider" id="aboutEditorialDivider" aria-hidden="true"></div>
+
+        <!-- Text Side -->
+        <div class="about-editorial-text" id="aboutEditorialText">
+            <span class="about-editorial-eyebrow" id="aboutEditorialEyebrow" data-ar="من نحن" data-en="About Us">من نحن</span>
+
+            <h1 class="about-editorial-headline" id="aboutEditorialHeadline">
+                <span class="headline-line"><span class="headline-inner" data-ar="قصتنا" data-en="Our Story">قصتنا</span></span>
+                <span class="headline-line"><span class="headline-inner" data-ar="مبنية من حجر" data-en="Built in Stone">مبنية من حجر</span></span>
+            </h1>
+
+            <p class="about-editorial-subheadline" id="aboutEditorialSubheadline" data-ar="خمسة عشر عاماً من الشغف بالحجر الطبيعي — نحول الخامات إلى تحف معمارية تروي قصة الجمال الأصيل." data-en="Fifteen years of passion for natural stone — transforming raw materials into architectural masterpieces that tell the story of authentic beauty.">خمسة عشر عاماً من الشغف بالحجر الطبيعي — نحول الخامات إلى تحف معمارية تروي قصة الجمال الأصيل.</p>
+
+            <div class="about-editorial-meta" id="aboutEditorialMeta">
+                <div class="about-editorial-meta-item">
+                    <span class="meta-number" data-target="15">0</span>
+                    <span class="meta-label" data-ar="عاماً" data-en="Years">عاماً</span>
+                </div>
+                <div class="about-editorial-meta-item">
+                    <span class="meta-number" data-target="340">0</span>
+                    <span class="meta-label" data-ar="مشروع" data-en="Projects">مشروع</span>
+                </div>
+                <div class="about-editorial-meta-item">
+                    <span class="meta-number" data-target="12">0</span>
+                    <span class="meta-label" data-ar="مدينة" data-en="Cities">مدينة</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Cue -->
+        <div class="about-editorial-scroll" id="aboutEditorialScroll">
+            <span class="about-editorial-scroll-text" data-ar="استمر بالتمرير" data-en="Keep Scrolling">استمر بالتمرير</span>
+            <div class="about-editorial-scroll-line" id="aboutEditorialScrollLine"></div>
+        </div>
+    </section>
+        <!-- ==========================================
+         ABOUT STORY — BRAND NARRATIVE (Part 02)
+    ========================================== -->
+    <section class="about-story" id="aboutStory" aria-label="Our Story">
+        <div class="about-story-grid">
+
+            <!-- Image Column -->
+            <div class="about-story-image-col" id="aboutStoryImageCol">
+                <div class="about-story-image-wrap" id="aboutStoryImageWrap">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop" alt="Stone workshop craftsmanship" loading="lazy">
+                    <div class="about-story-image-frame" aria-hidden="true"></div>
+                </div>
+                <div class="about-story-image-caption" id="aboutStoryCaption">
+                    <div class="caption-line" aria-hidden="true"></div>
+                    <span class="caption-text" data-ar="ورشة ريتاج ستون" data-en="Retag Stone Workshop">ورشة ريتاج ستون</span>
+                </div>
+                <div class="about-story-number" aria-hidden="true">01</div>
+            </div>
+
+            <!-- Text Column -->
+            <div class="about-story-text-col" id="aboutStoryTextCol">
+                <span class="about-story-eyebrow" id="aboutStoryEyebrow" data-ar="قصتنا" data-en="Our Story">قصتنا</span>
+
+                <h2 class="about-story-headline" id="aboutStoryHeadline" data-ar="من الصخر إلى الفن" data-en="From Stone to Art">من الصخر إلى الفن</h2>
+
+                <div class="about-story-body" id="aboutStoryBody">
+                    <p data-ar="انطلقنا في ريتاج ستون عام ٢٠١٠ برؤية واضحة: أن نحول الخامات الطبيعية إلى تحف معمارية تروي قصة الجمال الأصيل. لم نكن مجرد موردين للحجر، بل كنا حرفيين يؤمنون بأن كل قطعة حجر تحمل في طياتها ذاكرة الأرض." data-en="We launched Retag Stone in 2010 with a clear vision: to transform natural raw materials into architectural masterpieces that tell the story of authentic beauty. We were not merely stone suppliers, but craftsmen who believe every piece of stone carries the memory of the earth within it.">انطلقنا في ريتاج ستون عام ٢٠١٠ برؤية واضحة: أن نحول الخامات الطبيعية إلى تحف معمارية تروي قصة الجمال الأصيل. لم نكن مجرد موردين للحجر، بل كنا حرفيين يؤمنون بأن كل قطعة حجر تحمل في طياتها ذاكرة الأرض.</p>
+
+                    <p data-ar="نختار كل قطعة بعناية فائقة من مناجمنا الممتدة عبر أربع قارات، ونخضعها لأدق معايير الجودة قبل أن تصل إلى ورشنا. هناك، يجتمع حرفيونا مع التقنية المتطورة ليصنعوا أسطحاُ تتحدى الزمن." data-en="We select each piece with utmost care from our quarries spanning four continents, and subject it to the strictest quality standards before it reaches our workshops. There, our craftsmen meet advanced technology to create surfaces that defy time.">نختار كل قطعة بعناية فائقة من مناجمنا الممتدة عبر أربع قارات، ونخضعها لأدق معايير الجودة قبل أن تصل إلى ورشنا. هناك، يجتمع حرفيونا مع التقنية المتطورة ليصنعوا أسطحاُ تتحدى الزمن.</p>
+
+                    <div class="about-story-quote">
+                        <p data-ar="الحجر الطبيعي ليس مجرد مادة بناء — بل هو إرث طبيعي يحمل في طياته ذاكرة الأرض." data-en="Natural stone is not merely a building material — it is a natural legacy carrying the memory of the earth within it.">الحجر الطبيعي ليس مجرد مادة بناء — بل هو إرث طبيعي يحمل في طياته ذاكرة الأرض.</p>
+                    </div>
+
+                    <p data-ar="نرفض الحجر الصناعي لأنه يفتقر إلى الروح. الحجر الطبيعي يتنفس، يتغير مع الضوء، ويكتسب طابعاُ فريداُ مع مرور السنين. هذا هو الفرق بين المنتج والتحفة." data-en="We reject engineered stone because it lacks soul. Natural stone breathes, changes with light, and acquires a unique character over the years. This is the difference between a product and a masterpiece.">نرفض الحجر الصناعي لأنه يفتقر إلى الروح. الحجر الطبيعي يتنفس، يتغير مع الضوء، ويكتسب طابعاُ فريداُ مع مرور السنين. هذا هو الفرق بين المنتج والتحفة.</p>
+                </div>
+
+                <span class="about-story-signature" id="aboutStorySignature" data-ar="فريق ريتاج ستون" data-en="The Retag Stone Team">فريق ريتاج ستون</span>
+            </div>
+        </div>
+    </section>
+        <!-- ==========================================
+         ABOUT STATS — MILESTONES STRIP (Part 03)
+    ========================================== -->
+    <section class="about-stats" id="aboutStats" aria-label="Milestones">
+        <div class="about-stats-grid" id="aboutStatsGrid">
+
+            <div class="about-stat" id="aboutStat1">
+                <span class="about-stat-number" data-target="15">0</span>
+                <div class="about-stat-line" aria-hidden="true"></div>
+                <span class="about-stat-label" data-ar="عاماً من الخبرة" data-en="Years of Experience">عاماً من الخبرة</span>
+            </div>
+
+            <div class="about-stat" id="aboutStat2">
+                <span class="about-stat-number" data-target="340">0</span>
+                <div class="about-stat-line" aria-hidden="true"></div>
+                <span class="about-stat-label" data-ar="مشروع منجز" data-en="Projects Completed">مشروع منجز</span>
+            </div>
+
+            <div class="about-stat" id="aboutStat3">
+                <span class="about-stat-number" data-target="50">0</span>
+                <div class="about-stat-line" aria-hidden="true"></div>
+                <span class="about-stat-label" data-ar="نوع حجر" data-en="Stone Types">نوع حجر</span>
+            </div>
+
+            <div class="about-stat" id="aboutStat4">
+                <span class="about-stat-number" data-target="12">0</span>
+                <div class="about-stat-line" aria-hidden="true"></div>
+                <span class="about-stat-label" data-ar="مدينة" data-en="Cities Served">مدينة</span>
+            </div>
+
+            <div class="about-stats-divider" aria-hidden="true"></div>
+        </div>
+    </section>
+        <!-- ==========================================
+         ABOUT BENTO — MISSION & VALUES (Part 04)
+    ========================================== -->
+    <section class="about-bento" id="aboutBento" aria-label="Mission and Values">
+
+        <div class="about-bento-header" id="aboutBentoHeader">
+            <span class="about-bento-eyebrow" id="aboutBentoEyebrow" data-ar="قيمنا" data-en="Our Values">قيمنا</span>
+            <h2 class="about-bento-headline" id="aboutBentoHeadline" data-ar="ما نؤمن به" data-en="What We Believe In">ما نؤمن به</h2>
+            <p class="about-bento-subheadline" id="aboutBentoSubheadline" data-ar="أربع قيم أساسية توجه كل قرار نتخذه وكل مشروع ننجزه" data-en="Four core values guide every decision we make and every project we deliver">أربع قيم أساسية توجه كل قرار نتخذه وكل مشروع ننجزه</p>
+        </div>
+
+        <div class="about-bento-grid" id="aboutBentoGrid">
+
+            <!-- Large Tile with Image -->
+            <article class="bento-tile bento-tile-large" id="bentoTileLarge">
+                <div class="bento-tile-image" aria-hidden="true"></div>
+                <div class="bento-tile-content">
+                    <span class="bento-tile-number">01</span>
+                    <div class="bento-tile-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="bento-tile-title" data-ar="جودة المصدر" data-en="Quality Sourcing">جودة المصدر</h3>
+                    <p class="bento-tile-desc" data-ar="نختار كل قطعة حجر بعناية فائقة من أفضل المناجم حول العالم، ونخضعها لأدق معايير الجودة قبل أن تصل إلى ورشنا." data-en="We select each stone piece with utmost care from the world's finest quarries, subjecting it to the strictest quality standards before it reaches our workshops.">نختار كل قطعة حجر بعناية فائقة من أفضل المناجم حول العالم، ونخضعها لأدق معايير الجودة قبل أن تصل إلى ورشنا.</p>
+                </div>
+            </article>
+
+            <!-- Small Tile 1 -->
+            <article class="bento-tile" id="bentoTile2">
+                <span class="bento-tile-number">02</span>
+                <div class="bento-tile-icon">
+                    <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <div>
+                    <h3 class="bento-tile-title" data-ar="دقة التصنيع" data-en="Precision Fabrication">دقة التصنيع</h3>
+                    <p class="bento-tile-desc" data-ar="يجتمع الحرفيون مع التقنية المتطورة ليصنعوا أسطحاً تتحدى الزمن بأبعاد دقيقة ونهايات مثالية." data-en="Our craftsmen meet advanced technology to create surfaces that defy time with precise dimensions and perfect finishes.">يجتمع الحرفيون مع التقنية المتطورة ليصنعوا أسطحاً تتحدى الزمن بأبعاد دقيقة ونهايات مثالية.</p>
+                </div>
+            </article>
+
+            <!-- Small Tile 2 -->
+            <article class="bento-tile" id="bentoTile3">
+                <span class="bento-tile-number">03</span>
+                <div class="bento-tile-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <div>
+                    <h3 class="bento-tile-title" data-ar="تركيب موثوق" data-en="Reliable Installation">تركيب موثوق</h3>
+                    <p class="bento-tile-desc" data-ar="فريق تركيب متخصص يضمن تنفيذ كل مشروع بأعلى معايير الدقة والاحترافية، في الموعد المحدد." data-en="A specialized installation team ensures every project is executed with the highest standards of precision and professionalism, on time.">فريق تركيب متخصص يضمن تنفيذ كل مشروع بأعلى معايير الدقة والاحترافية، في الموعد المحدد.</p>
+                </div>
+            </article>
+
+            <!-- Small Tile 3 -->
+            <article class="bento-tile" id="bentoTile4">
+                <span class="bento-tile-number">04</span>
+                <div class="bento-tile-icon">
+                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <div>
+                    <h3 class="bento-tile-title" data-ar="خدمة العميل أولاً" data-en="Client-First Service">خدمة العميل أولاً</h3>
+                    <p class="bento-tile-desc" data-ar="نرى عملاءنا شركاء نجاح، ونسعى دائماً لتجاوز توقعاتهم في كل مرحلة من مراحل المشروع." data-en="We see our clients as partners in success, always striving to exceed their expectations at every stage of the project.">نرى عملاءنا شركاء نجاح، ونسعى دائماً لتجاوز توقعاتهم في كل مرحلة من مراحل المشروع.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+        <!-- ==========================================
+         ABOUT PROCESS — CONDENSED TIMELINE (Part 05)
+    ========================================== -->
+    <section class="about-process" id="aboutProcess" aria-label="Our Process">
+
+        <div class="about-process-header" id="aboutProcessHeader">
+            <span class="about-process-eyebrow" id="aboutProcessEyebrow" data-ar="عمليتنا" data-en="Our Process">عمليتنا</span>
+            <h2 class="about-process-headline" id="aboutProcessHeadline" data-ar="من الفكرة إلى التركيب" data-en="From Concept to Installation">من الفكرة إلى التركيب</h2>
+            <p class="about-process-subheadline" id="aboutProcessSubheadline" data-ar="أربع خطوات بسيطة تحول رؤيتك إلى واقع" data-en="Four simple steps that turn your vision into reality">أربع خطوات بسيطة تحول رؤيتك إلى واقع</p>
+        </div>
+
+        <div class="about-process-timeline" id="aboutProcessTimeline">
+
+            <!-- Animated path line -->
+            <div class="about-process-path" aria-hidden="true">
+                <div class="about-process-path-fill" id="aboutProcessPathFill"></div>
+            </div>
+
+            <!-- Step 1 -->
+            <article class="process-step" id="processStep1">
+                <div class="process-step-node">
+                    <span class="step-number">01</span>
+                    <span class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+                    </span>
+                </div>
+                <h3 class="process-step-title" data-ar="استشارة" data-en="Consultation">استشارة</h3>
+                <p class="process-step-desc" data-ar="نستمع إلى رؤيتك ونفهم احتياجاتك لنقدم لك الحل الأمثل." data-en="We listen to your vision and understand your needs to offer the best solution.">نستمع إلى رؤيتك ونفهم احتياجاتك لنقدم لك الحل الأمثل.</p>
+            </article>
+
+            <!-- Step 2 -->
+            <article class="process-step" id="processStep2">
+                <div class="process-step-node">
+                    <span class="step-number">02</span>
+                    <span class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </span>
+                </div>
+                <h3 class="process-step-title" data-ar="اختيار" data-en="Selection">اختيار</h3>
+                <p class="process-step-desc" data-ar="نرشدك لاختيار الحجر المثالي من مجموعتنا الواسعة من الأنواع والألوان." data-en="We guide you to choose the perfect stone from our wide range of types and colors.">نرشدك لاختيار الحجر المثالي من مجموعتنا الواسعة من الأنواع والألوان.</p>
+            </article>
+
+            <!-- Step 3 -->
+            <article class="process-step" id="processStep3">
+                <div class="process-step-node">
+                    <span class="step-number">03</span>
+                    <span class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                    </span>
+                </div>
+                <h3 class="process-step-title" data-ar="تصنيع" data-en="Fabrication">تصنيع</h3>
+                <p class="process-step-desc" data-ar="نصنع الحجر بدقة متناهية باستخدام أحدث التقنيات والأدوات." data-en="We fabricate the stone with extreme precision using the latest technology and tools.">نصنع الحجر بدقة متناهية باستخدام أحدث التقنيات والأدوات.</p>
+            </article>
+
+            <!-- Step 4 -->
+            <article class="process-step" id="processStep4">
+                <div class="process-step-node">
+                    <span class="step-number">04</span>
+                    <span class="step-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </span>
+                </div>
+                <h3 class="process-step-title" data-ar="تركيب" data-en="Installation">تركيب</h3>
+                <p class="process-step-desc" data-ar="فريق متخصص ينفذ التركيب بأعلى معايير الجودة والاحترافية." data-en="A specialized team executes installation with the highest quality and professionalism standards.">فريق متخصص ينفذ التركيب بأعلى معايير الجودة والاحترافية.</p>
+            </article>
+
+        </div>
+
+        <div class="about-process-cta" id="aboutProcessCta">
+            <a href="index.html#contact" data-ar="ابدأ مشروعك" data-en="Start Your Project">
+                <span>ابدأ مشروعك</span>
+                <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+        <!-- ==========================================
+         ABOUT TEAM — MEET THE TEAM (Part 06)
+    ========================================== -->
+    <section class="about-team" id="aboutTeam" aria-label="Meet the Team">
+
+        <div class="about-team-header" id="aboutTeamHeader">
+            <span class="about-team-eyebrow" id="aboutTeamEyebrow" data-ar="فريقنا" data-en="Our Team">فريقنا</span>
+            <h2 class="about-team-headline" id="aboutTeamHeadline" data-ar="من وراء الكواليس" data-en="Behind the Scenes">من وراء الكواليس</h2>
+            <p class="about-team-subheadline" id="aboutTeamSubheadline" data-ar="حرفيون يحولون الحجر إلى فن" data-en="Craftsmen who turn stone into art">حرفيون يحولون الحجر إلى فن</p>
+        </div>
+
+        <div class="about-team-scroll" id="aboutTeamScroll">
+            <div class="about-team-track" id="aboutTeamTrack">
+
+                <!-- Team Member 1 -->
+                <article class="team-card" id="teamCard1">
+                    <span class="team-card-number">01</span>
+                    <div class="team-card-image">
+                        <!-- REPLACE WITH TEAM PHOTO -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="Team member portrait" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <h3 class="team-card-name" data-ar="أحمد الخالدي" data-en="Ahmad Al-Khaldi">أحمد الخالدي</h3>
+                        <span class="team-card-role" data-ar="مؤسس ومدير" data-en="Founder & Director">مؤسس ومدير</span>
+                        <p class="team-card-bio" data-ar="خمسة عشر عاماً من الخبرة في صناعة الحجر الطبيعي." data-en="Fifteen years of experience in the natural stone industry.">خمسة عشر عاماً من الخبرة في صناعة الحجر الطبيعي.</p>
+                    </div>
+                </article>
+
+                <!-- Team Member 2 -->
+                <article class="team-card" id="teamCard2">
+                    <span class="team-card-number">02</span>
+                    <div class="team-card-image">
+                        <!-- REPLACE WITH TEAM PHOTO -->
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop" alt="Team member portrait" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <h3 class="team-card-name" data-ar="خالد الراشد" data-en="Khalid Al-Rashid">خالد الراشد</h3>
+                        <span class="team-card-role" data-ar="مدير التصنيع" data-en="Fabrication Manager">مدير التصنيع</span>
+                        <p class="team-card-bio" data-ar="متخصص في تقنيات القطع والتشكيل الدقيق للحجر." data-en="Specialist in precise stone cutting and shaping techniques.">متخصص في تقنيات القطع والتشكيل الدقيق للحجر.</p>
+                    </div>
+                </article>
+
+                <!-- Team Member 3 -->
+                <article class="team-card" id="teamCard3">
+                    <span class="team-card-number">03</span>
+                    <div class="team-card-image">
+                        <!-- REPLACE WITH TEAM PHOTO -->
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" alt="Team member portrait" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <h3 class="team-card-name" data-ar="عمر السبيعي" data-en="Omar Al-Subaie">عمر السبيعي</h3>
+                        <span class="team-card-role" data-ar="مدير التركيب" data-en="Installation Manager">مدير التركيب</span>
+                        <p class="team-card-bio" data-ar="يقود فريق التركيب لضمان الجودة في كل مشروع." data-en="Leads the installation team to ensure quality on every project.">يقود فريق التركيب لضمان الجودة في كل مشروع.</p>
+                    </div>
+                </article>
+
+                <!-- Team Member 4 -->
+                <article class="team-card" id="teamCard4">
+                    <span class="team-card-number">04</span>
+                    <div class="team-card-image">
+                        <!-- REPLACE WITH TEAM PHOTO -->
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop" alt="Team member portrait" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <h3 class="team-card-name" data-ar="سامي العمري" data-en="Sami Al-Omari">سامي العمري</h3>
+                        <span class="team-card-role" data-ar="مصمم مشاريع" data-en="Project Designer">مصمم مشاريع</span>
+                        <p class="team-card-bio" data-ar="يحول رؤية العميل إلى تصاميم حجرية مذهلة." data-en="Transforms client vision into stunning stone designs.">يحول رؤية العميل إلى تصاميم حجرية مذهلة.</p>
+                    </div>
+                </article>
+
+                <!-- Team Member 5 -->
+                <article class="team-card" id="teamCard5">
+                    <span class="team-card-number">05</span>
+                    <div class="team-card-image">
+                        <!-- REPLACE WITH TEAM PHOTO -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" alt="Team member portrait" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <h3 class="team-card-name" data-ar="يوسف الحربي" data-en="Yousef Al-Harbi">يوسف الحربي</h3>
+                        <span class="team-card-role" data-ar="مهندس جودة" data-en="Quality Engineer">مهندس جودة</span>
+                        <p class="team-card-bio" data-ar="يضمن أن كل قطعة حجر تلبي أعلى معايير الجودة." data-en="Ensures every stone piece meets the highest quality standards.">يضمن أن كل قطعة حجر تلبي أعلى معايير الجودة.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <p class="about-team-hint" id="aboutTeamHint" data-ar="اسحب للتصفح" data-en="Drag to explore">اسحب للتصفح</p>
+    </section>
+        <!-- ==========================================
+         ABOUT GALLERY — WORKSHOP CRAFTSMANSHIP (Part 07)
+    ========================================== -->
+    <section class="about-gallery" id="aboutGallery" aria-label="Workshop Gallery">
+
+        <div class="about-gallery-header" id="aboutGalleryHeader">
+            <span class="about-gallery-eyebrow" id="aboutGalleryEyebrow" data-ar="الورشة" data-en="The Workshop">الورشة</span>
+            <h2 class="about-gallery-headline" id="aboutGalleryHeadline" data-ar="الحرفية في التفاصيل" data-en="Craftsmanship in Detail">الحرفية في التفاصيل</h2>
+            <p class="about-gallery-subheadline" id="aboutGallerySubheadline" data-ar="نظرات خلف الكواليس على عملية تحويل الحجر الخام إلى تحف معمارية" data-en="Behind-the-scenes glimpses of raw stone becoming architectural masterpieces">نظرات خلف الكواليس على عملية تحويل الحجر الخام إلى تحف معمارية</p>
+        </div>
+
+        <div class="about-gallery-grid" id="aboutGalleryGrid">
+
+            <div class="gallery-item" id="galleryItem1">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Slab cutting process" loading="lazy">
+                <div class="gallery-item-frame" aria-hidden="true"></div>
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-label" data-ar="القطع" data-en="Cutting">القطع</span>
+                    <span class="gallery-item-caption" data-ar="تقطيع الألواح بدقة متناهية" data-en="Precision slab cutting">تقطيع الألواح بدقة متناهية</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" id="galleryItem2">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop" alt="Stone polishing" loading="lazy">
+                <div class="gallery-item-frame" aria-hidden="true"></div>
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-label" data-ar="التلميع" data-en="Polishing">التلميع</span>
+                    <span class="gallery-item-caption" data-ar="إبراز لمعان الحجر الطبيعي" data-en="Bringing out natural stone shine">إبراز لمعان الحجر الطبيعي</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" id="galleryItem3">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800&auto=format&fit=crop" alt="Quality inspection" loading="lazy">
+                <div class="gallery-item-frame" aria-hidden="true"></div>
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-label" data-ar="الفحص" data-en="Inspection">الفحص</span>
+                    <span class="gallery-item-caption" data-ar="فحص دقيق لكل قطعة" data-en="Detailed inspection of every piece">فحص دقيق لكل قطعة</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" id="galleryItem4">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800&auto=format&fit=crop" alt="Stone fabrication" loading="lazy">
+                <div class="gallery-item-frame" aria-hidden="true"></div>
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-label" data-ar="التصنيع" data-en="Fabrication">التصنيع</span>
+                    <span class="gallery-item-caption" data-ar="تشكيل الحجر بأحدث التقنيات" data-en="Shaping stone with latest technology">تشكيل الحجر بأحدث التقنيات</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" id="galleryItem5">
+                <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?q=80&w=1200&auto=format&fit=crop" alt="On-site installation" loading="lazy">
+                <div class="gallery-item-frame" aria-hidden="true"></div>
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-label" data-ar="التركيب" data-en="Installation">التركيب</span>
+                    <span class="gallery-item-caption" data-ar="تركيب احترافي في الموقع" data-en="Professional on-site installation">تركيب احترافي في الموقع</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" id="galleryItem6">
+                <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=800&auto=format&fit=crop" alt="Finished project detail" loading="lazy">
+                <div class="gallery-item-frame" aria-hidden="true"></div>
+                <div class="gallery-item-overlay">
+                    <span class="gallery-item-label" data-ar="النتيجة" data-en="Result">النتيجة</span>
+                    <span class="gallery-item-caption" data-ar="سطح نهائي بجودة استثنائية" data-en="Exceptional quality finished surface">سطح نهائي بجودة استثنائية</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+            <!-- ==========================================
+         ABOUT CERTS — CERTIFICATIONS & PARTNERS (Part 10)
+    ========================================== -->
+    <section class="about-certs" id="aboutCerts" aria-label="Certifications and Partnerships">
+
+        <div class="about-certs-header" id="aboutCertsHeader">
+            <span class="about-certs-eyebrow" id="aboutCertsEyebrow" data-ar="الاعتمادات" data-en="Accreditations">الاعتمادات</span>
+            <h2 class="about-certs-headline" id="aboutCertsHeadline" data-ar="ثقة تُبنى على إثبات" data-en="Trust Built on Proof">ثقة تُبنى على إثبات</h2>
+            <p class="about-certs-subheadline" id="aboutCertsSubheadline" data-ar="شراكات واعتمادات تضمن لك الجودة في كل خطوة" data-en="Partnerships and certifications that ensure quality at every step">شراكات واعتمادات تضمن لك الجودة في كل خطوة</p>
+        </div>
+
+        <div class="about-certs-strip" id="aboutCertsStrip">
+
+            <div class="cert-logo" id="certLogo1">
+                <div class="cert-logo-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <span class="cert-logo-name" data-ar="ISO 9001" data-en="ISO 9001">ISO 9001</span>
+                <span class="cert-logo-desc" data-ar="جودة" data-en="Quality">جودة</span>
+            </div>
+
+            <div class="cert-logo" id="certLogo2">
+                <div class="cert-logo-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span class="cert-logo-name" data-ar="ISO 14001" data-en="ISO 14001">ISO 14001</span>
+                <span class="cert-logo-desc" data-ar="بيئة" data-en="Environment">بيئة</span>
+            </div>
+
+            <div class="cert-logo" id="certLogo3">
+                <div class="cert-logo-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <span class="cert-logo-name" data-ar="OHSAS 18001" data-en="OHSAS 18001">OHSAS 18001</span>
+                <span class="cert-logo-desc" data-ar="سلامة" data-en="Safety">سلامة</span>
+            </div>
+
+            <div class="cert-logo" id="certLogo4">
+                <div class="cert-logo-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <span class="cert-logo-name" data-ar="LEED" data-en="LEED">LEED</span>
+                <span class="cert-logo-desc" data-ar="استدامة" data-en="Sustainability">استدامة</span>
+            </div>
+
+            <div class="cert-logo" id="certLogo5">
+                <div class="cert-logo-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+                </div>
+                <span class="cert-logo-name" data-ar="Dubai Municipality" data-en="Dubai Municipality">Dubai Municipality</span>
+                <span class="cert-logo-desc" data-ar="معتمد" data-en="Approved">معتمد</span>
+            </div>
+
+        </div>
+    </section>
+    <!-- ==========================================
+         ABOUT VOICES — CLIENT TESTIMONIALS (Part 11)
+    ========================================== -->
+    <section class="about-voices" id="aboutVoices" aria-label="Client Testimonials">
+
+        <div class="about-voices-header" id="aboutVoicesHeader">
+            <span class="about-voices-eyebrow" id="aboutVoicesEyebrow" data-ar="آراء العملاء" data-en="Client Voices">آراء العملاء</span>
+            <h2 class="about-voices-headline" id="aboutVoicesHeadline" data-ar="ثقة تُروى بالحجر" data-en="Trust Carved in Stone">ثقة تُروى بالحجر</h2>
+            <p class="about-voices-subheadline" id="aboutVoicesSubheadline" data-ar="ما يقوله عملاؤنا عن تجربتهم مع ريتاج ستون" data-en="What our clients say about their experience with Retag Stone">ما يقوله عملاؤنا عن تجربتهم مع ريتاج ستون</p>
+        </div>
+
+        <div class="about-voices-grid" id="aboutVoicesGrid">
+
+            <article class="voice-card" id="voiceCard1">
+                <p class="voice-card-quote" data-ar="تجاوزوا توقعاتنا في كل مرحلة. الجودة لا مثيل لها." data-en="They exceeded our expectations at every stage. The quality is unmatched.">"تجاوزوا توقعاتنا في كل مرحلة. الجودة لا مثيل لها."</p>
+                <p class="voice-card-body" data-ar="عملوا معنا على فيلتنا في دبي من التصميم إلى التركيب. الكلمة الوحيدة التي تصف النتيجة: مذهل." data-en="They worked with us on our villa in Dubai from design to installation. The only word that describes the result: stunning.">"عملوا معنا على فيلتنا في دبي من التصميم إلى التركيب. الكلمة الوحيدة التي تصف النتيجة: مذهل."</p>
+                <div class="voice-card-divider" aria-hidden="true"></div>
+                <div class="voice-card-client">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Client portrait" class="voice-card-avatar" loading="lazy">
+                    <div class="voice-card-info">
+                        <span class="voice-card-name" data-ar="عبدالله المنصوري" data-en="Abdullah Al-Mansouri">عبدالله المنصوري</span>
+                        <span class="voice-card-project" data-ar="فيلا خاصة، دبي" data-en="Private Villa, Dubai">فيلا خاصة، دبي</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="voice-card" id="voiceCard2">
+                <p class="voice-card-quote" data-ar="احترافية ودقة في التنفيذ. الحجر يتحدث عن نفسه." data-en="Professionalism and precision in execution. The stone speaks for itself.">"احترافية ودقة في التنفيذ. الحجر يتحدث عن نفسه."</p>
+                <p class="voice-card-body" data-ar="فريق ريتاج ستون ليس مجرد مقاولين — هم شركاء فعليون في النجاح. أنصح بهم بشدة." data-en="The Retag Stone team are not just contractors — they are true partners in success. I highly recommend them.">"فريق ريتاج ستون ليس مجرد مقاولين — هم شركاء فعليون في النجاح. أنصح بهم بشدة."</p>
+                <div class="voice-card-divider" aria-hidden="true"></div>
+                <div class="voice-card-client">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" alt="Client portrait" class="voice-card-avatar" loading="lazy">
+                    <div class="voice-card-info">
+                        <span class="voice-card-name" data-ar="فهد الهاشمي" data-en="Fahad Al-Hashimi">فهد الهاشمي</span>
+                        <span class="voice-card-project" data-ar="برج تجاري، أبوظبي" data-en="Commercial Tower, Abu Dhabi">برج تجاري، أبوظبي</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="voice-card" id="voiceCard3">
+                <p class="voice-card-quote" data-ar="التزام بالمواعيد وجودة استثنائية. نتيجة تفوق الخيال." data-en="Commitment to deadlines and exceptional quality. A result beyond imagination.">"التزام بالمواعيد وجودة استثنائية. نتيجة تفوق الخيال."</p>
+                <p class="voice-card-body" data-ar="تعاملنا معهم في مشروع فندقنا في الشارقة. التفاصيل الدقيقة في التركيب أذهلتنا جميعاً." data-en="We worked with them on our hotel project in Sharjah. The precise installation details amazed us all.">"تعاملنا معهم في مشروع فندقنا في الشارقة. التفاصيل الدقيقة في التركيب أذهلتنا جميعاً."</p>
+                <div class="voice-card-divider" aria-hidden="true"></div>
+                <div class="voice-card-client">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Client portrait" class="voice-card-avatar" loading="lazy">
+                    <div class="voice-card-info">
+                        <span class="voice-card-name" data-ar="سالم القاسمي" data-en="Salem Al-Qasimi">سالم القاسمي</span>
+                        <span class="voice-card-project" data-ar="فندق فاخر، الشارقة" data-en="Luxury Hotel, Sharjah">فندق فاخر، الشارقة</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+        <!-- ==========================================
+         ABOUT FAQ — ACCORDION (Part 12)
+    ========================================== -->
+    <section class="about-faq" id="aboutFaq" aria-label="Frequently Asked Questions">
+
+        <div class="about-faq-header" id="aboutFaqHeader">
+            <span class="about-faq-eyebrow" id="aboutFaqEyebrow" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</span>
+            <h2 class="about-faq-headline" id="aboutFaqHeadline" data-ar="ما تود معرفته" data-en="What You Should Know">ما تود معرفته</h2>
+            <p class="about-faq-subheadline" id="aboutFaqSubheadline" data-ar="إجابات على أكثر الأسئلة تكراراً" data-en="Answers to the most common questions">إجابات على أكثر الأسئلة تكراراً</p>
+        </div>
+
+        <div class="about-faq-list" id="aboutFaqList">
+
+            <div class="faq-item" id="faqItem1">
+                <button class="faq-question" data-ar="كم تستغرق عملية التركيب؟" data-en="How long does installation take?">
+                    كم تستغرق عملية التركيب؟
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p data-ar="تتراوح مدة التركيب بين ٣ إلى ١٤ يوماً حسب حجم المشروع وتعقيد التصميم. نقدم جدولاً زمنياً مفصلاً قبل البدء." data-en="Installation takes between 3 to 14 days depending on project size and design complexity. We provide a detailed timeline before starting.">تتراوح مدة التركيب بين ٣ إلى ١٤ يوماً حسب حجم المشروع وتعقيد التصميم. نقدم جدولاً زمنياً مفصلاً قبل البدء.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" id="faqItem2">
+                <button class="faq-question" data-ar="هل تقدمون عينات من المواد؟" data-en="Do you offer material samples?">
+                    هل تقدمون عينات من المواد؟
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p data-ar="نعم، نوفر عينات فعلية من جميع أنواع الحجر لمساعدتك في اتخاذ القرار المناسب. يمكنك طلبها عبر موقعنا أو زيارة معرضنا." data-en="Yes, we provide physical samples of all stone types to help you make the right decision. You can request them through our website or visit our showroom.">نعم، نوفر عينات فعلية من جميع أنواع الحجر لمساعدتك في اتخاذ القرار المناسب. يمكنك طلبها عبر موقعنا أو زيارة معرضنا.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" id="faqItem3">
+                <button class="faq-question" data-ar="ما أنواع الحجر المتوفرة لديكم؟" data-en="What stone types do you carry?">
+                    ما أنواع الحجر المتوفرة لديكم؟
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p data-ar="نحمل أكثر من ٥٠ نوعاً من الحجر الطبيعي بما في ذلك الرخام والجرانيت والكوارتز والترافرتين والأونيكس، بألوان ونقوش متنوعة." data-en="We carry over 50 types of natural stone including marble, granite, quartz, travertine, and onyx, in various colors and patterns.">نحمل أكثر من ٥٠ نوعاً من الحجر الطبيعي بما في ذلك الرخام والجرانيت والكوارتز والترافرتين والأونيكس، بألوان ونقوش متنوعة.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" id="faqItem4">
+                <button class="faq-question" data-ar="هل تقدمون ضماناً على التركيب؟" data-en="Do you offer an installation warranty?">
+                    هل تقدمون ضماناً على التركيب؟
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p data-ar="نعم، نقدم ضماناً لمدة ٥ سنوات على جميع أعمال التركيب تشمل أي تشققات أو انفصالات ناتجة عن عيوب في التركيب." data-en="Yes, we offer a 5-year warranty on all installation work covering any cracks or separations resulting from installation defects.">نعم، نقدم ضماناً لمدة ٥ سنوات على جميع أعمال التركيب تشمل أي تشققات أو انفصالات ناتجة عن عيوب في التركيب.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" id="faqItem5">
+                <button class="faq-question" data-ar="هل يمكنكم التعامل مع مشاريع خارج الإمارات؟" data-en="Can you handle projects outside the UAE?">
+                    هل يمكنكم التعامل مع مشاريع خارج الإمارات؟
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p data-ar="نعم، لدينا خبرة في تنفيذ مشاريع في دول مجلس التعاون الخليجي. نتولى التنسيق اللوجستي للشحن والتركيب في الموقع." data-en="Yes, we have experience executing projects in GCC countries. We handle the logistics for shipping and on-site installation.">نعم، لدينا خبرة في تنفيذ مشاريع في دول مجلس التعاون الخليجي. نتولى التنسيق اللوجستي للشحن والتركيب في الموقع.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" id="faqItem6">
+                <button class="faq-question" data-ar="كيف يمكنني الحصول على عرض سعر؟" data-en="How can I get a quote?">
+                    كيف يمكنني الحصول على عرض سعر؟
+                    <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p data-ar="يمكنك التواصل معنا عبر نموذج الاتصال في الموقع أو عبر الواتساب. سنحتاج إلى مساحات المشروع ونوع الحجر المفضل لإعداد عرض دقيق خلال ٢٤ ساعة." data-en="You can contact us through the contact form on the website or via WhatsApp. We'll need project measurements and preferred stone type to prepare an accurate quote within 24 hours.">يمكنك التواصل معنا عبر نموذج الاتصال في الموقع أو عبر الواتساب. سنحتاج إلى مساحات المشروع ونوع الحجر المفضل لإعداد عرض دقيق خلال ٢٤ ساعة.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+        <!-- ==========================================
+         ABOUT TRUST — WHY CHOOSE US (Part 13)
+    ========================================== -->
+    <section class="about-trust" id="aboutTrust" aria-label="Why Choose Us">
+
+        <div class="about-trust-grid" id="aboutTrustGrid">
+
+            <article class="trust-pillar" id="trustPillar1">
+                <div class="trust-pillar-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3 class="trust-pillar-title" data-ar="مرخصون معتمدون" data-en="Licensed Installers">مرخصون معتمدون</h3>
+                <p class="trust-pillar-desc" data-ar="فريق تركيب مرخص ومعتمد من بلدية دبي" data-en="Licensed and certified installation team by Dubai Municipality">فريق تركيب مرخص ومعتمد من بلدية دبي</p>
+            </article>
+
+            <article class="trust-pillar" id="trustPillar2">
+                <div class="trust-pillar-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h3 class="trust-pillar-title" data-ar="ضمان الجودة" data-en="Quality Guarantee">ضمان الجودة</h3>
+                <p class="trust-pillar-desc" data-ar="ضمان ٥ سنوات على كل عملية تركيب" data-en="5-year warranty on every installation">ضمان ٥ سنوات على كل عملية تركيب</p>
+            </article>
+
+            <article class="trust-pillar" id="trustPillar3">
+                <div class="trust-pillar-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <h3 class="trust-pillar-title" data-ar="تسليم في الموعد" data-en="On-Time Delivery">تسليم في الموعد</h3>
+                <p class="trust-pillar-desc" data-ar="نلتزم بالجدول الزمني المتفق عليه دون تأخير" data-en="We adhere to the agreed timeline without delay">نلتزم بالجدول الزمني المتفق عليه دون تأخير</p>
+            </article>
+
+            <article class="trust-pillar" id="trustPillar4">
+                <div class="trust-pillar-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3 class="trust-pillar-title" data-ar="تشكيلة واسعة" data-en="Wide Selection">تشكيلة واسعة</h3>
+                <p class="trust-pillar-desc" data-ar="أكثر من ٥٠ نوعاً من الحجر الطبيعي" data-en="Over 50 types of natural stone">أكثر من ٥٠ نوعاً من الحجر الطبيعي</p>
+            </article>
+
+        </div>
+    </section>
+        <!-- ==========================================
+         ABOUT CTA — CLOSING CTA (Part 14)
+    ========================================== -->
+    <section class="about-cta" id="aboutCta" aria-label="Closing CTA">
+        <div class="about-cta-bg" id="aboutCtaBg" aria-hidden="true"></div>
+
+        <div class="about-cta-content">
+            <span class="about-cta-eyebrow" id="aboutCtaEyebrow" data-ar="لنبدأ" data-en="Let's Begin">لنبدأ</span>
+
+            <h2 class="about-cta-headline" id="aboutCtaHeadline">
+                <span class="cta-line"><span class="cta-line-inner" data-ar="لنحقق رؤيتك" data-en="Let's Bring Your">لنحقق رؤيتك</span></span>
+                <span class="cta-line"><span class="cta-line-inner" data-ar="سوياً" data-en="Vision to Life">سوياً</span></span>
+            </h2>
+
+            <p class="about-cta-subheadline" id="aboutCtaSubheadline" data-ar="تواصل معنا اليوم واحصل على استشارة مجانية لمشروعك" data-en="Contact us today and get a free consultation for your project">تواصل معنا اليوم واحصل على استشارة مجانية لمشروعك</p>
+
+            <a href="index.html#contact" class="about-cta-button" id="aboutCtaButton" data-ar="ابدأ مشروعك" data-en="Start Your Project">
+                <span>ابدأ مشروعك</span>
+                <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+        <!-- ==========================================
+         FOOTER (Shared)
+    ========================================== -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top-line" aria-hidden="true"></div>
+
+        <div class="footer-main">
+            <div class="footer-wordmark">
+                <span class="footer-wordmark-en">Retag Stone</span>
+                <span class="footer-wordmark-ar" data-ar="ريتاج ستون" data-en="Retag Stone">ريتاج ستون</span>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="index.html" class="footer-nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                <a href="about.html" class="footer-nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+                <a href="index.html#services" class="footer-nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+                <a href="index.html#projects" class="footer-nav-link" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+                <a href="index.html#contact" class="footer-nav-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="https://instagram.com/retagstone" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://tiktok.com/@retagstone" class="footer-social-link" target="_blank" rel="noopener" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path></svg>
+                </a>
+                <a href="https://wa.me/971501234567" class="footer-social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-copyright" data-ar="© ٢٠٢٦ ريتاج ستون. جميع الحقوق محفوظة." data-en="© 2026 Retag Stone. All rights reserved.">© ٢٠٢٦ ريتاج ستون. جميع الحقوق محفوظة.</span>
+            <span class="footer-tagline" data-ar="نحتُ الجمال من قلب الطبيعة" data-en="We sculpt beauty from nature's heart">نحتُ الجمال من قلب الطبيعة</span>
+        </div>
+    </footer>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script>
+        // ==========================================
+        // About Page JavaScript
+        // ==========================================
+        const CONFIG = {
+            lang: 'ar',
+            reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+            isTouch: window.matchMedia('(hover: none) and (pointer: coarse)').matches
+        };
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ==========================================
+        // CUSTOM CURSOR
+        // ==========================================
+        if (!CONFIG.isTouch && !CONFIG.reducedMotion) {
+            const cursor = document.getElementById('cursor');
+            const cursorDot = document.getElementById('cursorDot');
+            const cursorLabel = document.getElementById('cursorLabel');
+
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            let dotX = 0, dotY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.12;
+                cursorY += (mouseY - cursorY) * 0.12;
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+
+                dotX += (mouseX - dotX) * 0.35;
+                dotY += (mouseY - dotY) * 0.35;
+                cursorDot.style.left = dotX + 'px';
+                cursorDot.style.top = dotY + 'px';
+
+                cursorLabel.style.left = cursorX + 'px';
+                cursorLabel.style.top = (cursorY + 40) + 'px';
+
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            const hoverElements = document.querySelectorAll('a, button, .nav-link, .lang-toggle, .menu-trigger');
+            hoverElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hover');
+                    cursorLabel.textContent = CONFIG.lang === 'ar' ? 'عرض' : 'View';
+                    cursorLabel.classList.add('visible');
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hover');
+                    cursorLabel.classList.remove('visible');
+                });
+            });
+        }
+
+        // ==========================================
+        // LOADING SEQUENCE
+        // ==========================================
+        const loadingScreen = document.getElementById('loadingScreen');
+        const loadingBar = document.getElementById('loadingBar');
+
+        function startLoading() {
+            const tl = gsap.timeline({
+                onComplete: () => {
+                    gsap.to(loadingScreen, {
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: 'power2.inOut',
+                        onComplete: () => {
+                            loadingScreen.style.display = 'none';
+                            initAboutEditorial();
+                            initAboutStory();
+                            initAboutStats();
+                            initAboutBento();
+                            initAboutProcess();
+                            initAboutTeam();
+                            initAboutGallery();
+                            initAboutCerts();
+                            initAboutVoices();
+                            initAboutFaq();
+                            initAboutTrust();
+                        }
+                    });
+                }
+            });
+
+            tl.to(loadingBar, {
+                width: '100%',
+                duration: 1.2,
+                ease: 'power2.inOut'
+            });
+        }
+
+        // ==========================================
+        // NAVIGATION SCROLL BEHAVIOR
+        // ==========================================
+        const mainNav = document.getElementById('mainNav');
+        const menuTrigger = document.getElementById('menuTrigger');
+        let lastScrollY = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > 100) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+
+            if (currentScrollY > lastScrollY && currentScrollY > 200) {
+                mainNav.classList.remove('visible-nav');
+                mainNav.classList.add('hidden-nav');
+                if (window.innerWidth <= 768) menuTrigger.classList.add('visible');
+            } else {
+                mainNav.classList.add('visible-nav');
+                mainNav.classList.remove('hidden-nav');
+                if (window.innerWidth <= 768) menuTrigger.classList.remove('visible');
+            }
+
+            lastScrollY = currentScrollY;
+        }, { passive: true });
+
+        menuTrigger.addEventListener('click', () => {
+            mainNav.classList.remove('hidden-nav');
+            mainNav.classList.add('visible-nav');
+            menuTrigger.classList.remove('visible');
+        });
+
+        // WhatsApp float fade in
+        gsap.to('#whatsappBtn', { opacity: 1, duration: 0.8, delay: 2.5, ease: 'power2.out' });
+
+        // ==========================================
+        // ABOUT EDITORIAL — SPLIT SCREEN (Part 01)
+        // ==========================================
+        function initAboutEditorial() {
+            const aboutEditorial = document.getElementById('aboutEditorial');
+            if (!aboutEditorial) return;
+
+            const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+            // Background image parallax
+            if (!CONFIG.reducedMotion) {
+                const img = aboutEditorial.querySelector('.about-editorial-image-inner img');
+                if (img) {
+                    gsap.fromTo(img, { scale: 1.15 }, { scale: 1.05, duration: 2.5, ease: 'power2.out' });
+
+                    gsap.to(img, {
+                        yPercent: 8,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: '#aboutEditorial',
+                            start: 'top top',
+                            end: 'bottom top',
+                            scrub: true
+                        }
+                    });
+                }
+            }
+
+            // Breadcrumb
+            tl.to('.about-editorial-breadcrumb', { opacity: 1, y: 0, duration: 0.8 }, 0.4);
+
+            // Vertical divider line draws in
+            tl.fromTo('#aboutEditorialDivider',
+                { height: '0%' },
+                { height: '60%', duration: 1.4, ease: 'power2.inOut' },
+                0.5
+            );
+
+            // Image frame corners
+            tl.fromTo('.about-editorial-image-corner',
+                { opacity: 0, scale: 0.5 },
+                { opacity: 1, scale: 1, duration: 0.8, stagger: 0.15 },
+                0.8
+            );
+
+            // Image frame border
+            tl.fromTo('.about-editorial-image-frame',
+                { opacity: 0 },
+                { opacity: 1, duration: 1 },
+                0.9
+            );
+
+            // Image caption
+            tl.to('#aboutEditorialCaption', { opacity: 1, y: 0, duration: 0.8 }, 1.2);
+
+            // Eyebrow
+            tl.to('#aboutEditorialEyebrow', { opacity: 1, y: 0, duration: 0.8 }, 0.7);
+
+            // Headline split-text reveal
+            const headlineLines = document.querySelectorAll('#aboutEditorialHeadline .headline-inner');
+            headlineLines.forEach((line, i) => {
+                tl.fromTo(line,
+                    { y: '110%', opacity: 0 },
+                    { y: '0%', opacity: 1, duration: 1.2, ease: 'power3.out' },
+                    0.9 + (i * 0.18)
+                );
+            });
+
+            // Subheadline
+            tl.to('#aboutEditorialSubheadline', { opacity: 1, y: 0, duration: 0.9 }, 1.4);
+
+            // Meta stats count-up
+            const metaNumbers = document.querySelectorAll('.about-editorial-meta-item .meta-number');
+            metaNumbers.forEach((stat, i) => {
+                const target = parseInt(stat.dataset.target);
+                tl.to(stat, {
+                    innerText: target,
+                    duration: 1.5,
+                    snap: { innerText: 1 },
+                    ease: 'power2.out'
+                }, 1.8 + (i * 0.12));
+            });
+
+            // Meta container fade
+            tl.to('#aboutEditorialMeta', { opacity: 1, y: 0, duration: 0.8 }, 1.7);
+
+            // Scroll cue
+            tl.to('#aboutEditorialScroll', { opacity: 1, y: 0, duration: 0.8 }, 2.2);
+
+            // Scroll line pulse
+            if (!CONFIG.reducedMotion) {
+                gsap.to('#aboutEditorialScrollLine', {
+                    scaleY: 0.3,
+                    transformOrigin: 'top',
+                    duration: 1.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+            }
+
+            // Scroll progress indicator
+            if (!CONFIG.reducedMotion) {
+                gsap.to('#scrollProgressFill', {
+                    height: '100%',
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: 'body',
+                        start: 'top top',
+                        end: 'bottom bottom',
+                        scrub: true
+                    }
+                });
+            }
+        }
+
+        // ==========================================
+        // LANGUAGE TOGGLE
+        // ==========================================
+        const langToggle = document.getElementById('langToggle');
+        const langText = document.getElementById('langText');
+        const html = document.documentElement;
+
+        const translations = {
+            ar: { dir: 'rtl', lang: 'ar', toggleText: 'EN' },
+            en: { dir: 'ltr', lang: 'en', toggleText: 'AR' }
+        };
+
+        function updateContent(lang) {
+            document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+                gsap.to(el, { opacity: 0, y: -10, duration: 0.2,
+                    onComplete: () => {
+                        el.textContent = el.getAttribute('data-' + lang);
+                        gsap.to(el, { opacity: 1, y: 0, duration: 0.3 });
+                    }
+                });
+            });
+
+            gsap.to(menuTrigger, { opacity: 0, duration: 0.2,
+                onComplete: () => {
+                    menuTrigger.textContent = lang === 'ar' ? 'القائمة' : 'Menu';
+                    gsap.to(menuTrigger, { opacity: menuTrigger.classList.contains('visible') ? 1 : 0, duration: 0.3 });
+                }
+            });
+
+            const cursorLabel = document.getElementById('cursorLabel');
+            if (cursorLabel) cursorLabel.textContent = lang === 'ar' ? 'عرض' : 'View';
+        }
+
+        langToggle.addEventListener('click', () => {
+            const newLang = CONFIG.lang === 'ar' ? 'en' : 'ar';
+            const t = translations[newLang];
+
+            html.setAttribute('dir', t.dir);
+            html.setAttribute('lang', t.lang);
+            langText.textContent = t.toggleText;
+            CONFIG.lang = newLang;
+
+            updateContent(newLang);
+        });
+
+        // ==========================================
+        // INIT
+        // ==========================================
+        window.addEventListener('load', startLoading);
+        if (document.readyState === 'complete') startLoading();
+
+                // ==========================================
+        // ABOUT STORY — BRAND NARRATIVE (Part 02)
+        // ==========================================
+        function initAboutStory() {
+            const aboutStory = document.getElementById('aboutStory');
+            if (!aboutStory) return;
+
+            // Image clip-path reveal on scroll
+            if (!CONFIG.reducedMotion) {
+                gsap.fromTo('#aboutStoryImageWrap',
+                    { clipPath: 'inset(0 100% 0 0)' },
+                    {
+                        clipPath: 'inset(0 0% 0 0)',
+                        duration: 1.4,
+                        ease: 'power3.inOut',
+                        scrollTrigger: {
+                            trigger: '#aboutStory',
+                            start: 'top 75%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+
+                // Image parallax
+                gsap.to('#aboutStoryImageWrap img', {
+                    yPercent: -8,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#aboutStory',
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                });
+            }
+
+            // Caption line draw
+            gsap.fromTo('#aboutStoryCaption .caption-line',
+                { width: 0 },
+                {
+                    width: 32,
+                    duration: 0.8,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: '#aboutStory',
+                        start: 'top 70%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+            gsap.fromTo('#aboutStoryCaption .caption-text',
+                { opacity: 0, x: 10 },
+                {
+                    opacity: 1, x: 0,
+                    duration: 0.8,
+                    delay: 0.3,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: '#aboutStory',
+                        start: 'top 70%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+
+            // Text column stagger reveal
+            const textElements = [
+                '#aboutStoryEyebrow',
+                '#aboutStoryHeadline',
+                '#aboutStoryBody',
+                '#aboutStorySignature'
+            ];
+
+            textElements.forEach((selector, i) => {
+                const el = document.querySelector(selector);
+                if (!el) return;
+                gsap.fromTo(el,
+                    { opacity: 0, y: 40 },
+                    {
+                        opacity: 1, y: 0,
+                        duration: 0.9,
+                        delay: i * 0.15,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#aboutStory',
+                            start: 'top 70%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+        }
+
+
+                // ==========================================
+        // ABOUT STATS — MILESTONES STRIP (Part 03)
+        // ==========================================
+        function initAboutStats() {
+            const aboutStats = document.getElementById('aboutStats');
+            if (!aboutStats) return;
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#aboutStats',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            // Stats fade in with stagger
+            const stats = document.querySelectorAll('.about-stat');
+            stats.forEach((stat, i) => {
+                const numberEl = stat.querySelector('.about-stat-number');
+                const lineEl = stat.querySelector('.about-stat-line');
+                const target = parseInt(numberEl.dataset.target);
+
+                // Fade in stat container
+                tl.fromTo(stat,
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+                    0.2 + (i * 0.15)
+                );
+
+                // Count up number
+                tl.to(numberEl, {
+                    innerText: target,
+                    duration: 2,
+                    snap: { innerText: 1 },
+                    ease: 'power2.out'
+                }, 0.4 + (i * 0.15));
+
+                // Bronze underline draws in after count finishes
+                if (lineEl) {
+                    tl.fromTo(lineEl,
+                        { width: 0 },
+                        { width: 40, duration: 0.6, ease: 'power2.out' },
+                        1.8 + (i * 0.15)
+                    );
+                }
+            });
+        }
+
+
+                // ==========================================
+        // ABOUT BENTO — MISSION & VALUES (Part 04)
+        // ==========================================
+       function initAboutBento() {
+    const aboutBento = document.getElementById('aboutBento');
+    if (!aboutBento) return;
+
+    // Header reveal
+    const headerTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#aboutBentoHeader',
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    headerTl.fromTo('#aboutBentoEyebrow',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }
+    );
+    headerTl.fromTo('#aboutBentoHeadline',
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' },
+        0.12
+    );
+    headerTl.fromTo('#aboutBentoSubheadline',
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+        0.25
+    );
+
+    // Tiles stagger reveal - fixed to use a single timeline with stagger
+    const tiles = gsap.utils.toArray('.bento-tile');
+    
+    gsap.fromTo(tiles,
+        { opacity: 0, y: 50, scale: 0.97 },
+        {
+            opacity: 1, 
+            y: 0, 
+            scale: 1,
+            duration: 0.9,
+            stagger: 0.15,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '#aboutBentoGrid',
+                start: 'top 75%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+}
+
+// Call the function after DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAboutBento);
+} else {
+    initAboutBento();
+}
+
+                // ==========================================
+        // ABOUT PROCESS — CONDENSED TIMELINE (Part 05)
+        // ==========================================
+        function initAboutProcess() {
+            const aboutProcess = document.getElementById('aboutProcess');
+            if (!aboutProcess) return;
+
+            // Header reveal
+            const headerTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#aboutProcessHeader',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            headerTl.fromTo('#aboutProcessEyebrow',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }
+            );
+            headerTl.fromTo('#aboutProcessHeadline',
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' },
+                0.12
+            );
+            headerTl.fromTo('#aboutProcessSubheadline',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+                0.25
+            );
+
+            // Path line draws in
+            gsap.fromTo('#aboutProcessPathFill',
+                { width: '0%' },
+                {
+                    width: '100%',
+                    duration: 1.8,
+                    ease: 'power2.inOut',
+                    scrollTrigger: {
+                        trigger: '#aboutProcessTimeline',
+                        start: 'top 75%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+
+            // Steps stagger reveal
+            const steps = document.querySelectorAll('.process-step');
+            steps.forEach((step, i) => {
+                const node = step.querySelector('.process-step-node');
+                const content = step.querySelectorAll('.process-step-title, .process-step-desc');
+
+                // Node scale + fade
+                gsap.fromTo(node,
+                    { opacity: 0, scale: 0.5 },
+                    {
+                        opacity: 1, scale: 1,
+                        duration: 0.7,
+                        delay: 0.3 + (i * 0.25),
+                        ease: 'back.out(1.7)',
+                        scrollTrigger: {
+                            trigger: '#aboutProcessTimeline',
+                            start: 'top 75%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+
+                // Title + desc fade up
+                gsap.fromTo(content,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1, y: 0,
+                        duration: 0.7,
+                        delay: 0.5 + (i * 0.25),
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#aboutProcessTimeline',
+                            start: 'top 75%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+
+            // CTA fade in
+            gsap.fromTo('#aboutProcessCta',
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1, y: 0,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: '#aboutProcessCta',
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+                // ==========================================
+        // ABOUT TEAM — MEET THE TEAM (Part 06)
+        // ==========================================
+        function initAboutTeam() {
+            const aboutTeam = document.getElementById('aboutTeam');
+            if (!aboutTeam) return;
+
+            // Header reveal
+            const headerTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#aboutTeamHeader',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            headerTl.fromTo('#aboutTeamEyebrow',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }
+            );
+            headerTl.fromTo('#aboutTeamHeadline',
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' },
+                0.12
+            );
+            headerTl.fromTo('#aboutTeamSubheadline',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+                0.25
+            );
+
+            // Cards stagger reveal
+            const cards = document.querySelectorAll('.team-card');
+            cards.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { opacity: 0, y: 60, scale: 0.95 },
+                    {
+                        opacity: 1, y: 0, scale: 1,
+                        duration: 0.9,
+                        delay: i * 0.12,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#aboutTeamTrack',
+                            start: 'top 80%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+
+            // Drag-to-scroll behavior
+            const scrollContainer = document.getElementById('aboutTeamScroll');
+            if (scrollContainer && !CONFIG.isTouch) {
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                scrollContainer.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    scrollContainer.classList.add('active');
+                    startX = e.pageX - scrollContainer.offsetLeft;
+                    scrollLeft = scrollContainer.scrollLeft;
+                });
+
+                scrollContainer.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    scrollContainer.classList.remove('active');
+                });
+
+                scrollContainer.addEventListener('mouseup', () => {
+                    isDown = false;
+                    scrollContainer.classList.remove('active');
+                });
+
+                scrollContainer.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - scrollContainer.offsetLeft;
+                    const walk = (x - startX) * 1.5;
+                    scrollContainer.scrollLeft = scrollLeft - walk;
+                });
+            }
+
+            // Hint fade in
+            gsap.fromTo('#aboutTeamHint',
+                { opacity: 0 },
+                {
+                    opacity: 0.5,
+                    duration: 0.8,
+                    delay: 0.6,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: '#aboutTeam',
+                        start: 'top 70%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        }
+
+                // ==========================================
+        // ABOUT GALLERY — WORKSHOP CRAFTSMANSHIP (Part 07)
+        // ==========================================
+        function initAboutGallery() {
+            const aboutGallery = document.getElementById('aboutGallery');
+            if (!aboutGallery) return;
+
+            // Header reveal
+            const headerTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#aboutGalleryHeader',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            headerTl.fromTo('#aboutGalleryEyebrow',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }
+            );
+            headerTl.fromTo('#aboutGalleryHeadline',
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' },
+                0.12
+            );
+            headerTl.fromTo('#aboutGallerySubheadline',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+                0.25
+            );
+
+            // Gallery items clip-path wipe reveal, staggered by column
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach((item, i) => {
+                const img = item.querySelector('img');
+
+                // Clip-path wipe from bottom
+                gsap.fromTo(item,
+                    { clipPath: 'inset(100% 0 0 0)' },
+                    {
+                        clipPath: 'inset(0% 0 0 0)',
+                        duration: 1.2,
+                        delay: (i % 3) * 0.15,
+                        ease: 'power3.inOut',
+                        scrollTrigger: {
+                            trigger: '#aboutGalleryGrid',
+                            start: 'top 75%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+
+                // Image parallax within container
+                if (!CONFIG.reducedMotion && img) {
+                    gsap.fromTo(img,
+                        { yPercent: 10 },
+                        {
+                            yPercent: -10,
+                            ease: 'none',
+                            scrollTrigger: {
+                                trigger: item,
+                                start: 'top bottom',
+                                end: 'bottom top',
+                                scrub: true
+                            }
+                        }
+                    );
+                }
+            });
+        }
+                // ==========================================
+        // ABOUT CERTS — CERTIFICATIONS & PARTNERS (Part 10)
+        // ==========================================
+        function initAboutCerts() {
+            const aboutCerts = document.getElementById('aboutCerts');
+            if (!aboutCerts) return;
+
+            const headerTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#aboutCertsHeader',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            headerTl.fromTo('#aboutCertsEyebrow',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }
+            );
+            headerTl.fromTo('#aboutCertsHeadline',
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' },
+                0.12
+            );
+            headerTl.fromTo('#aboutCertsSubheadline',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+                0.25
+            );
+
+            const logos = document.querySelectorAll('.cert-logo');
+            logos.forEach((logo, i) => {
+                gsap.fromTo(logo,
+                    { opacity: 0, y: 30, scale: 0.95 },
+                    {
+                        opacity: 1, y: 0, scale: 1,
+                        duration: 0.7,
+                        delay: i * 0.12,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#aboutCertsStrip',
+                            start: 'top 80%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+        }
+                // ==========================================
+        // ABOUT VOICES — CLIENT TESTIMONIALS (Part 11)
+        // ==========================================
+        function initAboutVoices() {
+            const aboutVoices = document.getElementById('aboutVoices');
+            if (!aboutVoices) return;
+
+            const headerTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#aboutVoicesHeader',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            headerTl.fromTo('#aboutVoicesEyebrow',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }
+            );
+            headerTl.fromTo('#aboutVoicesHeadline',
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' },
+                0.12
+            );
+            headerTl.fromTo('#aboutVoicesSubheadline',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+                0.25
+            );
+
+            const cards = document.querySelectorAll('.voice-card');
+            cards.forEach((card, i) => {
+                gsap.fromTo(card,
+                    { opacity: 0, y: 50 },
+                    {
+                        opacity: 1, y: 0,
+                        duration: 0.9,
+                        delay: i * 0.15,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#aboutVoicesGrid',
+                            start: 'top 75%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+        }
+
+                // ==========================================
+        // ABOUT FAQ — ACCORDION (Part 12)
+        // ==========================================
+        function initAboutFaq() {
+            const aboutFaq = document.getElementById('aboutFaq');
+            if (!aboutFaq) return;
+
+            const headerTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#aboutFaqHeader',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            headerTl.fromTo('#aboutFaqEyebrow',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }
+            );
+            headerTl.fromTo('#aboutFaqHeadline',
+                { opacity: 0, y: 30 },
+                { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' },
+                0.12
+            );
+            headerTl.fromTo('#aboutFaqSubheadline',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+                0.25
+            );
+
+            const items = document.querySelectorAll('.faq-item');
+            items.forEach((item, i) => {
+                gsap.fromTo(item,
+                    { opacity: 0, y: 30 },
+                    {
+                        opacity: 1, y: 0,
+                        duration: 0.7,
+                        delay: i * 0.08,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#aboutFaqList',
+                            start: 'top 80%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+
+            const questions = document.querySelectorAll('.faq-question');
+            questions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    const isActive = item.classList.contains('active');
+
+                    items.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    item.classList.toggle('active', !isActive);
+                });
+            });
+        }
+                // ==========================================
+        // ABOUT TRUST — WHY CHOOSE US (Part 13)
+        // ==========================================
+        function initAboutTrust() {
+            const aboutTrust = document.getElementById('aboutTrust');
+            if (!aboutTrust) return;
+
+            const pillars = document.querySelectorAll('.trust-pillar');
+            pillars.forEach((pillar, i) => {
+                gsap.fromTo(pillar,
+                    { opacity: 0, y: 40 },
+                    {
+                        opacity: 1, y: 0,
+                        duration: 0.8,
+                        delay: i * 0.12,
+                        ease: 'power3.out',
+                        scrollTrigger: {
+                            trigger: '#aboutTrustGrid',
+                            start: 'top 80%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+        }
+                // ==========================================
+        // ABOUT CTA — CLOSING CTA (Part 14)
+        // ==========================================
+        function initAboutCta() {
+            const aboutCta = document.getElementById('aboutCta');
+            if (!aboutCta) return;
+
+            if (!CONFIG.reducedMotion) {
+                gsap.to('#aboutCtaBg', {
+                    yPercent: 10,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#aboutCta',
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                });
+            }
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#aboutCta',
+                    start: 'top 75%',
+                    toggleActions: 'play none none none'
+                }
+            });
+
+            tl.fromTo('#aboutCtaEyebrow',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }
+            );
+
+            const headlineLines = document.querySelectorAll('#aboutCtaHeadline .cta-line-inner');
+            headlineLines.forEach((line, i) => {
+                tl.fromTo(line,
+                    { y: '110%', opacity: 0 },
+                    { y: '0%', opacity: 1, duration: 1.1, ease: 'power3.out' },
+                    0.2 + (i * 0.15)
+                );
+            });
+
+            tl.fromTo('#aboutCtaSubheadline',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+                0.6
+            );
+
+            tl.fromTo('#aboutCtaButton',
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' },
+                0.8
+            );
+        }
+    </script>
+</body>
+</html>

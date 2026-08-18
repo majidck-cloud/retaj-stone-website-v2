@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أعمال ريتاج ستون - مشاريع الحجر الطبيعي. فلل، واجهات، مطابخ، أرضيات، ومشاريع تجارية فاخرة.">
+    <title>أعمالنا | ريتاج ستون — Retag Stone Projects</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">ريتاج ستون</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill" id="loadingBar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-label" id="cursorLabel">عرض</div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container visible-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="index.html" class="logo" aria-label="Retag Stone Home">
+            <div class="logo-mark">ر</div>
+            <span data-ar="ريتاج ستون" data-en="Retag Stone">ريتاج ستون</span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="about.html" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+            <a href="services.html" class="nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+            <a href="projects.html" class="nav-link active" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+            <a href="index.html#contact" class="nav-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+        </div>
+
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+            <span id="langText">EN</span>
+        </button>
+    </nav>
+
+    <!-- Menu Trigger -->
+    <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">القائمة</button>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" id="whatsappBtn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198-.198-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ==========================================
+         PART 01 — PROJECTS HERO / INTRO
+    ========================================== -->
+    <section id="projectsHero" aria-label="Projects Hero">
+        <!-- Full-bleed background with flagship project -->
+        <div class="projects-hero-bg" id="projectsHeroBg" role="img" aria-label="Luxury marble villa entrance — flagship project by Retag Stone"></div>
+
+        <!-- Noise overlay -->
+        <div class="projects-hero-noise"></div>
+
+        <!-- Vignette -->
+        <div class="projects-hero-vignette"></div>
+
+        <!-- Corner accents -->
+        <div class="projects-hero-corner top-left" id="projectsCornerTL"></div>
+        <div class="projects-hero-corner bottom-right" id="projectsCornerBR"></div>
+
+        <!-- Breadcrumb: Home / Projects -->
+        <nav class="projects-hero-breadcrumb" id="projectsBreadcrumb" aria-label="Breadcrumb">
+            <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-current" data-ar="أعمالنا" data-en="Projects">أعمالنا</span>
+        </nav>
+
+        <!-- Main content -->
+        <div class="projects-hero-content">
+            <!-- Eyebrow -->
+            <div class="projects-hero-eyebrow" id="projectsHeroEyebrow" data-ar="أعمالنا" data-en="Our Projects">أعمالنا</div>
+
+            <!-- Kinetic-type headline — split-text reveal -->
+            <h1 class="projects-hero-headline" id="projectsHeroHeadline">
+                <span class="line"><span class="line-inner" data-ar="أعمال تتحدث" data-en="Work That Speaks">أعمال تتحدث</span></span>
+                <span class="line"><span class="line-inner" data-ar="عن نفسها" data-en="for Itself">عن نفسها</span></span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="projects-hero-subheadline" id="projectsHeroSubheadline" data-ar="من الفلل الفاخرة إلى الواجهات المعمارية والمساحات التجارية — نحوّل الحجر الخام إلى تحف تدوم جمالاً ومتانة عبر الأجيال" data-en="From luxury villas to architectural facades and commercial spaces — we transform raw stone into masterpieces of enduring beauty and strength across generations">من الفلل الفاخرة إلى الواجهات المعمارية والمساحات التجارية — نحوّل الحجر الخام إلى تحف تدوم جمالاً ومتانة عبر الأجيال</p>
+
+            <!-- CTA Row -->
+            <div class="projects-hero-ctas" id="projectsHeroCtas">
+                <a href="#portfolioGrid" class="projects-hero-cta-primary" id="projectsHeroCtaPrimary" data-ar-text="استكشف المشاريع" data-en-text="Explore Projects">
+                    <span>استكشف المشاريع</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                </a>
+                <a href="services.html" class="projects-hero-cta-secondary" id="projectsHeroCtaSecondary" data-ar-text="خدماتنا" data-en-text="Our Services">
+                    <span>خدماتنا</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Decorative marble vein -->
+        <div class="projects-hero-vein" id="projectsHeroVein" aria-hidden="true">
+            <svg viewBox="0 0 10 400" preserveAspectRatio="none">
+                <path d="M5,0 Q2,50 8,100 T2,200 T8,300 T5,400" id="projectsVeinPath"/>
+                <path d="M5,0 Q8,40 3,90 T7,180 T3,270 T5,360" style="stroke-width: 0.8; opacity: 0.4;" id="projectsVeinPath2"/>
+            </svg>
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="projects-hero-scroll" id="projectsScrollCue">
+            <span class="projects-hero-scroll-text" data-ar="اسحب للأسفل" data-en="Scroll Down">اسحب للأسفل</span>
+            <div class="projects-hero-scroll-line" id="projectsScrollCueLine"></div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+     PART 02 — PORTFOLIO INTRODUCTION
+     Include this block inside <body> of projects.html,
+     immediately after the closing </section> of Part 01.
+========================================== -->
+
+<section id="portfolioIntro" aria-label="Portfolio Introduction">
+    <div class="portfolio-intro-wrapper">
+        <!-- Image side -->
+        <div class="portfolio-intro-image-side">
+            <div class="portfolio-intro-image-inner" id="portfolioIntroImage" role="img" aria-label="Signature villa interior by Retag Stone — marble flooring and stone-clad walls"></div>
+            <div class="portfolio-intro-image-caption" id="portfolioIntroCaption">
+                <span class="image-caption-label" data-ar="مشروع مميز" data-en="Signature Project">مشروع مميز</span>
+                <span class="image-caption-text" data-ar="فيلا خاصة — دبي" data-en="Private Villa — Dubai">فيلا خاصة — دبي</span>
+            </div>
+        </div>
+
+        <!-- Text side -->
+        <div class="portfolio-intro-text-side">
+            <div class="portfolio-intro-eyebrow" id="portfolioIntroEyebrow" data-ar="نطاق أعمالنا" data-en="Our Project Range">نطاق أعمالنا</div>
+
+            <h2 class="portfolio-intro-heading" id="portfolioIntroHeadline">
+                <span class="line"><span class="line-inner" data-ar="من الفلل" data-en="From Private">من الفلل</span></span>
+                <span class="line"><span class="line-inner" data-ar="إلى الواجهات" data-en="To Grand Facades">إلى الواجهات</span></span>
+            </h2>
+
+            <div class="portfolio-intro-body">
+                <p class="portfolio-intro-paragraph" id="portfolioIntroP1" data-ar="على مدى سنوات، نفذنا مشاريع سكنية فاخرة تتراوح بين الفلل الخاصة والشقق المميزة، حيث يتحول كل فضاء إلى تحفة فريدة من الحجر الطبيعي." data-en="Over the years, we have delivered luxury residential projects ranging from private villas to premium apartments, transforming every space into a unique natural stone masterpiece.">على مدى سنوات، نفذنا مشاريع سكنية فاخرة تتراوح بين الفلل الخاصة والشقق المميزة، حيث يتحول كل فضاء إلى تحفة فريدة من الحجر الطبيعي.</p>
+
+                <p class="portfolio-intro-paragraph" id="portfolioIntroP2" data-ar="في المجال التجاري والضيافة، نبني لوبيات فاخرة، ومطاعم، وفنادق بمواصفات عالمية — دائماً مع التركيز على المتانة والجمال البصري." data-en="In commercial and hospitality, we craft grand lobbies, restaurants, and hotels to world-class standards — always with a focus on durability and visual beauty.">في المجال التجاري والضيافة، نبني لوبيات فاخرة، ومطاعم، وفنادق بمواصفات عالمية — دائماً مع التركيز على المتانة والجمال البصري.</p>
+
+                <p class="portfolio-intro-paragraph" id="portfolioIntroP3" data-ar="ما يربط كل هذه المشاريع هو شيء واحد: الدقة في التنفيذ، صدق المواد، ولمسة نهائية تدوم عبر الأجيال." data-en="What ties every project together is one thing: precision in execution, material honesty, and a finish that lasts for generations.">ما يربط كل هذه المشاريع هو شيء واحد: الدقة في التنفيذ، صدق المواد، ولمسة نهائية تدوم عبر الأجيال.</p>
+            </div>
+
+            <a href="#portfolioGrid" class="portfolio-intro-cta" id="portfolioIntroCta" data-ar-text="تصفح المشاريع" data-en-text="Browse Projects">
+                <span>تصفح المشاريع</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     PART 04 — FILTERABLE PROJECT GRID (Bento-Style)
+     Asymmetric masonry with filter bar, 3D tilt,
+     clip-path reveals, and smooth reflow animation
+     
+     Include this block inside <body> of projects.html,
+     immediately after the closing </section> of Part 03.
+     
+     Required dependencies (already loaded in projects.html):
+       - GSAP 3.12+ with ScrollTrigger plugin
+       - Google Fonts: Cairo, Playfair Display
+       - Part 04 CSS file
+       - Part 04 JS file (call initProjectGrid() after DOM ready)
+========================================== -->
+
+<section id="portfolioGrid" aria-label="Project Portfolio Grid">
+    <!-- Section header -->
+    <div class="portfolio-grid-header">
+        <div class="portfolio-grid-eyebrow" data-ar="معرض الأعمال" data-en="Portfolio Gallery">معرض الأعمال</div>
+        <h2 class="portfolio-grid-title" data-ar="مشاريعنا المختارة" data-en="Selected Projects">مشاريعنا المختارة</h2>
+        <p class="portfolio-grid-subtitle" data-ar="تصفح مجموعة من أعمالنا عبر الفئات — من الفلل السكنية إلى الواجهات التجارية والمساحات الداخلية الفاخرة" data-en="Browse a selection of our work across categories — from residential villas to commercial facades and luxury interiors">تصفح مجموعة من أعمالنا عبر الفئات — من الفلل السكنية إلى الواجهات التجارية والمساحات الداخلية الفاخرة</p>
+    </div>
+
+    <!-- Sticky filter bar -->
+    <div class="portfolio-filter-bar" id="portfolioFilterBar" role="tablist" aria-label="Project categories">
+        <button class="portfolio-filter-btn active" data-filter="all" role="tab" aria-selected="true" data-ar="الكل" data-en="All">الكل</button>
+        <button class="portfolio-filter-btn" data-filter="residential" role="tab" aria-selected="false" data-ar="سكني" data-en="Residential">سكني</button>
+        <button class="portfolio-filter-btn" data-filter="commercial" role="tab" aria-selected="false" data-ar="تجاري" data-en="Commercial">تجاري</button>
+        <button class="portfolio-filter-btn" data-filter="facades" role="tab" aria-selected="false" data-ar="واجهات" data-en="Facades">واجهات</button>
+        <button class="portfolio-filter-btn" data-filter="kitchens" role="tab" aria-selected="false" data-ar="مطابخ وحمامات" data-en="Kitchens & Baths">مطابخ وحمامات</button>
+        <button class="portfolio-filter-btn" data-filter="flooring" role="tab" aria-selected="false" data-ar="أرضيات" data-en="Flooring">أرضيات</button>
+    </div>
+
+    <!-- Bento grid -->
+    <div class="portfolio-grid-container" id="portfolioGridContainer">
+
+        <!-- Item 1: Residential — Wide -->
+        <div class="portfolio-grid-item size-wide" data-category="residential" aria-label="Private Villa Dubai Hills">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Private Villa — Dubai Hills — Crema Marfil marble flooring and stone walls" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="فيلا خاصة — دبي هيلز" data-en="Private Villa — Dubai Hills">فيلا خاصة — دبي هيلز</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="دبي" data-en="Dubai">دبي</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="سكني" data-en="Residential">سكني</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="كريما مارفيل" data-en="Crema Marfil">كريما مارفيل</div>
+            </div>
+        </div>
+
+        <!-- Item 2: Facades — Tall -->
+        <div class="portfolio-grid-item size-tall" data-category="facades" aria-label="Al Wasl Tower Facade">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Al Wasl Tower — Dubai — Travertine facade cladding" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="برج الوصل — دبي" data-en="Al Wasl Tower — Dubai">برج الوصل — دبي</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="دبي" data-en="Dubai">دبي</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="واجهات" data-en="Facades">واجهات</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="ترافرتين" data-en="Travertine">ترافرتين</div>
+            </div>
+        </div>
+
+        <!-- Item 3: Kitchens — Medium -->
+        <div class="portfolio-grid-item size-medium" data-category="kitchens" aria-label="Penthouse Kitchen Abu Dhabi">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2070&auto=format&fit=crop" alt="Penthouse Kitchen — Abu Dhabi — Calacatta Gold countertops" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="مطبخ بنتهاوس — أبوظبي" data-en="Penthouse Kitchen — Abu Dhabi">مطبخ بنتهاوس — أبوظبي</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="أبوظبي" data-en="Abu Dhabi">أبوظبي</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="مطابخ" data-en="Kitchens">مطابخ</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="كالاكاتا جولد" data-en="Calacatta Gold">كالاكاتا جولد</div>
+            </div>
+        </div>
+
+        <!-- Item 4: Flooring — Small -->
+        <div class="portfolio-grid-item size-small" data-category="flooring" aria-label="Hotel Lobby Flooring RAK">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070&auto=format&fit=crop" alt="Hotel Lobby — Ras Al Khaimah — Botticino marble flooring" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="لوبي فندق — رأس الخيمة" data-en="Hotel Lobby — RAK">لوبي فندق — رأس الخيمة</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="رأس الخيمة" data-en="RAK">رأس الخيمة</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="أرضيات" data-en="Flooring">أرضيات</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="بوتيتشينو" data-en="Botticino">بوتيتشينو</div>
+            </div>
+        </div>
+
+        <!-- Item 5: Commercial — Large -->
+        <div class="portfolio-grid-item size-large" data-category="commercial" aria-label="Retail Showroom Sharjah">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" alt="Retail Showroom — Sharjah — Nero Marquina feature wall" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="معرض تجاري — الشارقة" data-en="Retail Showroom — Sharjah">معرض تجاري — الشارقة</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="الشارقة" data-en="Sharjah">الشارقة</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="تجاري" data-en="Commercial">تجاري</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="نيرو ماركينا" data-en="Nero Marquina">نيرو ماركينا</div>
+            </div>
+        </div>
+
+        <!-- Item 6: Residential — Medium -->
+        <div class="portfolio-grid-item size-medium" data-category="residential" aria-label="Beach Villa Fujairah">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2070&auto=format&fit=crop" alt="Beach Villa — Fujairah — Beige limestone exterior" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="فيلا شاطئية — الفجيرة" data-en="Beach Villa — Fujairah">فيلا شاطئية — الفجيرة</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="الفجيرة" data-en="Fujairah">الفجيرة</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="سكني" data-en="Residential">سكني</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="حجر جيري بيج" data-en="Beige Limestone">حجر جيري بيج</div>
+            </div>
+        </div>
+
+        <!-- Item 7: Facades — Small -->
+        <div class="portfolio-grid-item size-small" data-category="facades" aria-label="Office Building Facade Ajman">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2070&auto=format&fit=crop" alt="Office Building — Ajman — Granite facade panels" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="مبنى مكاتب — عجمان" data-en="Office Building — Ajman">مبنى مكاتب — عجمان</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="عجمان" data-en="Ajman">عجمان</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="واجهات" data-en="Facades">واجهات</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="جرانيت" data-en="Granite">جرانيت</div>
+            </div>
+        </div>
+
+        <!-- Item 8: Kitchens — Wide -->
+        <div class="portfolio-grid-item size-wide" data-category="kitchens" aria-label="Luxury Bathroom Dubai Marina">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1584622050111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" alt="Luxury Bathroom — Dubai Marina — Statuario marble walls and floors" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="حمام فاخر — دبي مارينا" data-en="Luxury Bathroom — Dubai Marina">حمام فاخر — دبي مارينا</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="دبي" data-en="Dubai">دبي</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="حمامات" data-en="Bathrooms">حمامات</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="ستاتواريو" data-en="Statuario">ستاتواريو</div>
+            </div>
+        </div>
+
+        <!-- Item 9: Flooring — Tall -->
+        <div class="portfolio-grid-item size-tall" data-category="flooring" aria-label="Mosque Prayer Hall UAQ">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2070&auto=format&fit=crop" alt="Mosque Prayer Hall — Umm Al Quwain — White Thassos marble flooring" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="مصلى مسجد — أم القيوين" data-en="Mosque Prayer Hall — UAQ">مصلى مسجد — أم القيوين</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="أم القيوين" data-en="UAQ">أم القيوين</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="أرضيات" data-en="Flooring">أرضيات</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="ثاسوس أبيض" data-en="White Thassos">ثاسوس أبيض</div>
+            </div>
+        </div>
+
+        <!-- Item 10: Commercial — Medium -->
+        <div class="portfolio-grid-item size-medium" data-category="commercial" aria-label="Restaurant Interior DIFC">
+            <div class="portfolio-grid-image-wrap">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop" alt="Restaurant — DIFC Dubai — Emperador dark marble bar and walls" loading="lazy">
+                <!-- REPLACE WITH CLIENT PHOTO -->
+            </div>
+            <div class="portfolio-grid-reveal-mask"></div>
+            <div class="portfolio-grid-overlay"></div>
+            <div class="portfolio-grid-shine"></div>
+            <div class="portfolio-grid-info">
+                <div class="portfolio-grid-info-name" data-ar="مطعم فاخر — مركز دبي المالي" data-en="Fine Dining — DIFC Dubai">مطعم فاخر — مركز دبي المالي</div>
+                <div class="portfolio-grid-info-meta">
+                    <span data-ar="دبي" data-en="Dubai">دبي</span>
+                    <span class="meta-sep"></span>
+                    <span data-ar="تجاري" data-en="Commercial">تجاري</span>
+                </div>
+                <div class="portfolio-grid-info-material" data-ar="إمبيرادور دارك" data-en="Emperador Dark">إمبيرادور دارك</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ==========================================
+     PART 05 — FEATURED PROJECT SHOWCASE
+     Pinned crossfade showcase: 4 flagship projects
+========================================== -->
+
+<section id="featuredShowcase" aria-label="Featured Projects Showcase">
+    <div class="featured-showcase-inner">
+
+        <!-- Project 1: Royal Villa — Emirates Hills -->
+        <div class="featured-project active-project" data-index="0" data-ar-eyebrow="مشروع مميز" data-en-eyebrow="Featured Project">
+            <div class="featured-project-bg" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2070&auto=format&fit=crop');" role="img" aria-label="Royal Villa Emirates Hills — Calacatta Gold marble interior"></div>
+            <!-- REPLACE WITH CLIENT PHOTO -->
+            <div class="featured-project-noise"></div>
+            <div class="featured-project-content">
+                <div class="featured-project-eyebrow" data-ar="مشروع مميز" data-en="Featured Project">مشروع مميز</div>
+                <h2 class="featured-project-title" data-ar="فيلا رويال — هضبة الإمارات" data-en="Royal Villa — Emirates Hills">فيلا رويال — هضبة الإمارات</h2>
+                <div class="featured-project-meta">
+                    <span data-ar="دبي" data-en="Dubai">دبي</span>
+                    <span class="meta-dot"></span>
+                    <span data-ar="كالاكاتا جولد" data-en="Calacatta Gold">كالاكاتا جولد</span>
+                    <span class="meta-dot"></span>
+                    <span class="meta-scope" data-ar="توريد + تركيب" data-en="Supply + Install">توريد + تركيب</span>
+                </div>
+                <p class="featured-project-desc" data-ar="المعماري طلب بيئة داخلية تُجسّد الفخامة الهادئة. نفذنا أرضيات وأسطح من كالاكاتا جولد بمفاصل دقيقة، لتحوّل الفيلا إلى تحفة حجرية تتنفس الأناقة." data-en="The architect requested an interior that embodies quiet luxury. We executed Calacatta Gold flooring and surfaces with precision joints, transforming the villa into a stone masterpiece that breathes elegance.">المعماري طلب بيئة داخلية تُجسّد الفخامة الهادئة. نفذنا أرضيات وأسطح من كالاكاتا جولد بمفاصل دقيقة، لتحوّل الفيلا إلى تحفة حجرية تتنفس الأناقة.</p>
+            </div>
+        </div>
+
+        <!-- Project 2: Al Wasl Tower — Business Bay -->
+        <div class="featured-project" data-index="1" data-ar-eyebrow="مشروع مميز" data-en-eyebrow="Featured Project">
+            <div class="featured-project-bg" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');" role="img" aria-label="Al Wasl Tower Business Bay — Travertine facade"></div>
+            <!-- REPLACE WITH CLIENT PHOTO -->
+            <div class="featured-project-noise"></div>
+            <div class="featured-project-content">
+                <div class="featured-project-eyebrow" data-ar="مشروع مميز" data-en="Featured Project">مشروع مميز</div>
+                <h2 class="featured-project-title" data-ar="برج الوصل — الخليج التجاري" data-en="Al Wasl Tower — Business Bay">برج الوصل — الخليج التجاري</h2>
+                <div class="featured-project-meta">
+                    <span data-ar="دبي" data-en="Dubai">دبي</span>
+                    <span class="meta-dot"></span>
+                    <span data-ar="ترافرتين" data-en="Travertine">ترافرتين</span>
+                    <span class="meta-dot"></span>
+                    <span class="meta-scope" data-ar="توريد + تركيب" data-en="Supply + Install">توريد + تركيب</span>
+                </div>
+                <p class="featured-project-desc" data-ar="واجهة بارتفاع 45 طابقاً تتطلب مقاومة مناخية استثنائية. قدّمنا ترافرتين روماني بمعالجة حرارية خاصة، ليمنح البرج هوية حجرية خالدة تتألق تحت شمس دبي." data-en="A 45-storey facade demanding exceptional climate resistance. We supplied Roman Travertine with special thermal treatment, giving the tower an eternal stone identity that shines under Dubai's sun.">واجهة بارتفاع 45 طابقاً تتطلب مقاومة مناخية استثنائية. قدّمنا ترافرتين روماني بمعالجة حرارية خاصة، ليمنح البرج هوية حجرية خالدة تتألق تحت شمس دبي.</p>
+            </div>
+        </div>
+
+        <!-- Project 3: The Ritz-Carlton Spa — Abu Dhabi -->
+        <div class="featured-project" data-index="2" data-ar-eyebrow="مشروع مميز" data-en-eyebrow="Featured Project">
+            <div class="featured-project-bg" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2025&auto=format&fit=crop');" role="img" aria-label="Ritz-Carlton Spa Abu Dhabi — Statuario and Thassos marble"></div>
+            <!-- REPLACE WITH CLIENT PHOTO -->
+            <div class="featured-project-noise"></div>
+            <div class="featured-project-content">
+                <div class="featured-project-eyebrow" data-ar="مشروع مميز" data-en="Featured Project">مشروع مميز</div>
+                <h2 class="featured-project-title" data-ar="ذا ريتز كارلتون سبا — أبوظبي" data-en="The Ritz-Carlton Spa — Abu Dhabi">ذا ريتز كارلتون سبا — أبوظبي</h2>
+                <div class="featured-project-meta">
+                    <span data-ar="أبوظبي" data-en="Abu Dhabi">أبوظبي</span>
+                    <span class="meta-dot"></span>
+                    <span data-ar="ستاتواريو + ثاسوس" data-en="Statuario + Thassos">ستاتواريو + ثاسوس</span>
+                    <span class="meta-dot"></span>
+                    <span class="meta-scope" data-ar="توريد فقط" data-en="Supply Only">توريد فقط</span>
+                </div>
+                <p class="featured-project-desc" data-ar="المشروع يتطلب رخاماً نقياً يتحمل الرطوبة العالية دون فقدان بريقه. وفرنا ألواح ستاتواريو وثاسوس بدرجات بياض متناغمة، ليحوّل المنتجع الصحي إلى ملاذ من النور والهدوء." data-en="The project demanded pure marble that withstands high humidity without losing its lustre. We supplied Statuario and Thassos slabs in harmonious white tones, transforming the spa into a sanctuary of light and calm.">المشروع يتطلب رخاماً نقياً يتحمل الرطوبة العالية دون فقدان بريقه. وفرنا ألواح ستاتواريو وثاسوس بدرجات بياض متناغمة، ليحوّل المنتجع الصحي إلى ملاذ من النور والهدوء.</p>
+            </div>
+        </div>
+
+        <!-- Project 4: Beach Residence — Saadiyat Island -->
+        <div class="featured-project" data-index="3" data-ar-eyebrow="مشروع مميز" data-en-eyebrow="Featured Project">
+            <div class="featured-project-bg" style="background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop');" role="img" aria-label="Beach Residence Saadiyat Island — Beige limestone exterior"></div>
+            <!-- REPLACE WITH CLIENT PHOTO -->
+            <div class="featured-project-noise"></div>
+            <div class="featured-project-content">
+                <div class="featured-project-eyebrow" data-ar="مشروع مميز" data-en="Featured Project">مشروع مميز</div>
+                <h2 class="featured-project-title" data-ar="ريزيدنس شاطئي — جزيرة السعديات" data-en="Beach Residence — Saadiyat Island">ريزيدنس شاطئي — جزيرة السعديات</h2>
+                <div class="featured-project-meta">
+                    <span data-ar="أبوظبي" data-en="Abu Dhabi">أبوظبي</span>
+                    <span class="meta-dot"></span>
+                    <span data-ar="حجر جيري بيج" data-en="Beige Limestone">حجر جيري بيج</span>
+                    <span class="meta-dot"></span>
+                    <span class="meta-scope" data-ar="توريد + تركيب" data-en="Supply + Install">توريد + تركيب</span>
+                </div>
+                <p class="featured-project-desc" data-ar="فيلا مطلة على البحر تحتاج واجهة تتحمل الملح والرطوبة. نفذنا واجهة خارجية وحوائط داخلية من الحجر الجيري البيج بمعالجة مقاومة للأملاح، ليصبح المنزل امتداداً طبيعياً للشاطئ." data-en="A sea-facing villa needed a facade that withstands salt and humidity. We executed exterior cladding and interior walls in Beige Limestone with salt-resistant treatment, making the home a natural extension of the beach.">فيلا مطلة على البحر تحتاج واجهة تتحمل الملح والرطوبة. نفذنا واجهة خارجية وحوائط داخلية من الحجر الجيري البيج بمعالجة مقاومة للأملاح، ليصبح المنزل امتداداً طبيعياً للشاطئ.</p>
+            </div>
+        </div>
+
+        <!-- Progress indicator -->
+        <div class="featured-showcase-progress" id="featuredShowcaseProgress">
+            <span class="featured-progress-text" id="featuredProgressText">01 / 04</span>
+            <div class="featured-progress-bar">
+                <div class="featured-progress-fill" id="featuredProgressFill"></div>
+            </div>
+            <div class="featured-progress-dots" id="featuredProgressDots">
+                <div class="featured-progress-dot active"></div>
+                <div class="featured-progress-dot"></div>
+                <div class="featured-progress-dot"></div>
+                <div class="featured-progress-dot"></div>
+            </div>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="featured-scroll-hint" id="featuredScrollHint">
+            <span class="featured-scroll-hint-text" data-ar="استمر في التمرير" data-en="Keep Scrolling">استمر في التمرير</span>
+            <div class="featured-scroll-hint-line"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Paste after Part 05 closing </section> -->
+<section id="beforeAfterSpotlight" aria-label="Before and After Transformations">
+    <div class="beforeafter-header">
+        <div class="beforeafter-eyebrow" data-ar="قبل وبعد" data-en="Before & After">قبل وبعد</div>
+        <h2 class="beforeafter-title" data-ar="تحولات تتحدث" data-en="Transformations That Speak">تحولات تتحدث</h2>
+        <p class="beforeafter-subtitle" data-ar="اسحب للاستكشاف — شاهد كيف تحولنا المساحات الخام إلى تحف حجرية فاخرة" data-en="Drag to explore — see how we transformed raw spaces into luxury stone masterpieces">اسحب للاستكشاف — شاهد كيف تحولنا المساحات الخام إلى تحف حجرية فاخرة</p>
+    </div>
+
+    <!-- Slider 1: Villa Lobby — Dubai Hills -->
+    <div class="beforeafter-slider-wrapper" id="beforeAfterWrapper1">
+        <div class="beforeafter-slider-label" data-ar="فيلا خاصة — دبي هيلز" data-en="Private Villa — Dubai Hills">فيلا خاصة — دبي هيلز</div>
+        <div class="beforeafter-slider" id="beforeAfterSlider1" data-slider="1">
+            <img class="beforeafter-image beforeafter-image-before" src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=2070&auto=format&fit=crop" alt="Before — Unfinished villa lobby with raw concrete" loading="lazy">
+            <img class="beforeafter-image beforeafter-image-after" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="After — Finished villa lobby with Crema Marfil marble" loading="lazy">
+            <span class="beforeafter-image-label beforeafter-label-before" data-ar="قبل" data-en="Before">قبل</span>
+            <span class="beforeafter-image-label beforeafter-label-after" data-ar="بعد" data-en="After">بعد</span>
+            <div class="beforeafter-handle" id="beforeAfterHandle1">
+                <div class="beforeafter-grip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+            </div>
+        </div>
+        <div class="beforeafter-info">
+            <div class="beforeafter-info-main">
+                <div class="beforeafter-info-name" data-ar="لوبي الفيلا" data-en="Villa Lobby">لوبي الفيلا</div>
+                <div class="beforeafter-info-location" data-ar="دبي هيلز — دبي" data-en="Dubai Hills — Dubai">دبي هيلز — دبي</div>
+                <p class="beforeafter-info-desc" data-ar="تحوّل لوبي مُهمل بأرضية خرسانية إلى فضاء فاخر بأرضيات كريما مارفيل وأسطح جدارية متناغمة." data-en="A neglected lobby with a concrete floor was transformed into a luxurious space with Crema Marfil flooring and harmonious wall surfaces.">تحوّل لوبي مُهمل بأرضية خرسانية إلى فضاء فاخر بأرضيات كريما مارفيل وأسطح جدارية متناغمة.</p>
+            </div>
+            <div class="beforeafter-info-stats">
+                <div class="beforeafter-stat"><div class="beforeafter-stat-value">120</div><div class="beforeafter-stat-label" data-ar="م²" data-en="m²">م²</div></div>
+                <div class="beforeafter-stat"><div class="beforeafter-stat-value">14</div><div class="beforeafter-stat-label" data-ar="يوم" data-en="Days">يوم</div></div>
+                <div class="beforeafter-stat"><div class="beforeafter-stat-value">3</div><div class="beforeafter-stat-label" data-ar="فنيين" data-en="Craftsmen">فنيين</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="beforeafter-divider" id="beforeAfterDivider1"></div>
+
+    <!-- Slider 2: Penthouse Kitchen — Downtown Dubai -->
+    <div class="beforeafter-slider-wrapper" id="beforeAfterWrapper2">
+        <div class="beforeafter-slider-label" data-ar="بنتهاوس — وسط دبي" data-en="Penthouse — Downtown Dubai">بنتهاوس — وسط دبي</div>
+        <div class="beforeafter-slider" id="beforeAfterSlider2" data-slider="2">
+            <img class="beforeafter-image beforeafter-image-before" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=2070&auto=format&fit=crop" alt="Before — Empty kitchen space with bare walls" loading="lazy">
+            <img class="beforeafter-image beforeafter-image-after" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2070&auto=format&fit=crop" alt="After — Luxury kitchen with Calacatta Gold countertops and backsplash" loading="lazy">
+            <span class="beforeafter-image-label beforeafter-label-before" data-ar="قبل" data-en="Before">قبل</span>
+            <span class="beforeafter-image-label beforeafter-label-after" data-ar="بعد" data-en="After">بعد</span>
+            <div class="beforeafter-handle" id="beforeAfterHandle2">
+                <div class="beforeafter-grip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+            </div>
+        </div>
+        <div class="beforeafter-info">
+            <div class="beforeafter-info-main">
+                <div class="beforeafter-info-name" data-ar="مطبخ البنتهاوس" data-en="Penthouse Kitchen">مطبخ البنتهاوس</div>
+                <div class="beforeafter-info-location" data-ar="وسط دبي — دبي" data-en="Downtown Dubai — Dubai">وسط دبي — دبي</div>
+                <p class="beforeafter-info-desc" data-ar="مطبخ فارغ تحول إلى تحفة مع أسطح كالاكاتا جولد وبلاط خلفي متناسق، مع مفاصل دقيقة تبرز جمال الحجر الطبيعي." data-en="An empty kitchen transformed into a masterpiece with Calacatta Gold countertops and a matching backsplash, with precision joints highlighting the beauty of natural stone.">مطبخ فارغ تحول إلى تحفة مع أسطح كالاكاتا جولد وبلاط خلفي متناسق، مع مفاصل دقيقة تبرز جمال الحجر الطبيعي.</p>
+            </div>
+            <div class="beforeafter-info-stats">
+                <div class="beforeafter-stat"><div class="beforeafter-stat-value">45</div><div class="beforeafter-stat-label" data-ar="م²" data-en="m²">م²</div></div>
+                <div class="beforeafter-stat"><div class="beforeafter-stat-value">8</div><div class="beforeafter-stat-label" data-ar="يوم" data-en="Days">يوم</div></div>
+                <div class="beforeafter-stat"><div class="beforeafter-stat-value">2</div><div class="beforeafter-stat-label" data-ar="فنيين" data-en="Craftsmen">فنيين</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="beforeafter-divider" id="beforeAfterDivider2"></div>
+
+    <!-- Slider 3: Hotel Entrance — Ras Al Khaimah -->
+    <div class="beforeafter-slider-wrapper" id="beforeAfterWrapper3">
+        <div class="beforeafter-slider-label" data-ar="مدخل فندق — رأس الخيمة" data-en="Hotel Entrance — Ras Al Khaimah">مدخل فندق — رأس الخيمة</div>
+        <div class="beforeafter-slider" id="beforeAfterSlider3" data-slider="3">
+            <img class="beforeafter-image beforeafter-image-before" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop" alt="Before — Plain hotel entrance with basic flooring" loading="lazy">
+            <img class="beforeafter-image beforeafter-image-after" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070&auto=format&fit=crop" alt="After — Grand hotel entrance with Botticino marble flooring and columns" loading="lazy">
+            <span class="beforeafter-image-label beforeafter-label-before" data-ar="قبل" data-en="Before">قبل</span>
+            <span class="beforeafter-image-label beforeafter-label-after" data-ar="بعد" data-en="After">بعد</span>
+            <div class="beforeafter-handle" id="beforeAfterHandle3">
+                <div class="beforeafter-grip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+            </div>
+        </div>
+        <div class="beforeafter-info">
+            <div class="beforeafter-info-main">
+                <div class="beforeafter-info-name" data-ar="مدخل الفندق" data-en="Hotel Entrance">مدخل الفندق</div>
+                <div class="beforeafter-info-location" data-ar="رأس الخيمة — الإمارات" data-en="Ras Al Khaimah — UAE">رأس الخيمة — الإمارات</div>
+                <p class="beforeafter-info-desc" data-ar="مدخل بسيط تحول إلى بوابة فاخرة بأرضيات بوتيتشينو وأعمدة حجرية مطعمة، يمنح الضيوف انطباعاً أولياً لا يُنسى." data-en="A simple entrance transformed into a grand gateway with Botticino flooring and inlaid stone columns, giving guests an unforgettable first impression.">مدخل بسيط تحول إلى بوابة فاخرة بأرضيات بوتيتشينو وأعمدة حجرية مطعمة، يمنح الضيوف انطباعاً أولياً لا يُنسى.</p>
+            </div>
+            <div class="beforeafter-info-stats">
+                <div class="beforeafter-stat"><div class="beforeafter-stat-value">280</div><div class="beforeafter-stat-label" data-ar="م²" data-en="m²">م²</div></div>
+                <div class="beforeafter-stat"><div class="beforeafter-stat-value">21</div><div class="beforeafter-stat-label" data-ar="يوم" data-en="Days">يوم</div></div>
+                <div class="beforeafter-stat"><div class="beforeafter-stat-value">6</div><div class="beforeafter-stat-label" data-ar="فنيين" data-en="Craftsmen">فنيين</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- ==========================================
+         FOOTER (Part 10 — NEW)
+    ========================================== -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top-line" aria-hidden="true"></div>
+
+        <div class="footer-main">
+            <div class="footer-wordmark">
+                <span class="footer-wordmark-en">Retag Stone</span>
+                <span class="footer-wordmark-ar" data-ar="ريتاج ستون" data-en="Retag Stone">ريتاج ستون</span>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="#" class="footer-nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                <a href="#about" class="footer-nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+                <a href="#services" class="footer-nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+                <a href="#projects" class="footer-nav-link" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+                <a href="contact.html" class="footer-nav-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="https://instagram.com/retagstone" class="footer-social-link" target="_blank" rel="noopener"
+                    aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://tiktok.com/@retagstone" class="footer-social-link" target="_blank" rel="noopener"
+                    aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path>
+                    </svg>
+                </a>
+                <a href="https://wa.me/971501234567" class="footer-social-link" target="_blank" rel="noopener"
+                    aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-copyright" data-ar="© ٢٠٢٦ ريتاج ستون. جميع الحقوق محفوظة."
+                data-en="© 2026 Retag Stone. All rights reserved.">© ٢٠٢٦ ريتاج ستون. جميع الحقوق محفوظة.</span>
+            <span class="footer-tagline" data-ar="نحتُ الجمال من قلب الطبيعة"
+                data-en="We sculpt beauty from nature's heart">نحتُ الجمال من قلب الطبيعة</span>
+        </div>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // ==========================================
+        // CONFIGURATION
+        // ==========================================
+        const CONFIG = {
+            lang: 'ar',
+            reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+            isTouch: window.matchMedia('(hover: none) and (pointer: coarse)').matches
+        };
+
+        // ==========================================
+        // CUSTOM CURSOR
+        // ==========================================
+        if (!CONFIG.isTouch && !CONFIG.reducedMotion) {
+            const cursor = document.getElementById('cursor');
+            const cursorDot = document.getElementById('cursorDot');
+            const cursorLabel = document.getElementById('cursorLabel');
+
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+            let dotX = 0, dotY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.12;
+                cursorY += (mouseY - cursorY) * 0.12;
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+
+                dotX += (mouseX - dotX) * 0.35;
+                dotY += (mouseY - dotY) * 0.35;
+                cursorDot.style.left = dotX + 'px';
+                cursorDot.style.top = dotY + 'px';
+
+                cursorLabel.style.left = cursorX + 'px';
+                cursorLabel.style.top = (cursorY + 40) + 'px';
+
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            const hoverElements = document.querySelectorAll('a, button, .projects-hero-cta-primary, .projects-hero-cta-secondary');
+            hoverElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.classList.add('hover');
+                    if (el.classList.contains('projects-hero-cta-primary')) {
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'استكشف' : 'Explore';
+                        cursorLabel.classList.add('visible');
+                    }
+                    if (el.classList.contains('projects-hero-cta-secondary')) {
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'تفاصيل' : 'Details';
+                        cursorLabel.classList.add('visible');
+                    }
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.classList.remove('hover');
+                    cursorLabel.classList.remove('visible');
+                });
+            });
+        }
+
+        // ==========================================
+        // LOADING SEQUENCE
+        // ==========================================
+        const loadingScreen = document.getElementById('loadingScreen');
+        const loadingBar = document.getElementById('loadingBar');
+
+        function startLoading() {
+            const tl = gsap.timeline({
+                onComplete: () => {
+                    gsap.to(loadingScreen, {
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: 'power2.inOut',
+                        onComplete: () => {
+                            loadingScreen.style.display = 'none';
+                            initProjectsHeroAnimations();
+                            initPortfolioIntro();
+                            initProjectGrid();
+                            initFeaturedShowcase();
+                            initBeforeAfterSpotlight();
+                            
+                        }
+                    });
+                }
+            });
+
+            tl.to(loadingBar, {
+                width: '100%',
+                duration: 1.2,
+                ease: 'power2.inOut'
+            });
+        }
+
+        // ==========================================
+        // PROJECTS HERO ANIMATIONS (Part 01)
+        // ==========================================
+        function initProjectsHeroAnimations() {
+            const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+            // 1. Nav logo fade in
+            tl.fromTo('#mainNav .logo',
+                { opacity: 0, y: -20 },
+                { opacity: 1, y: 0, duration: 1.2 },
+                0.2
+            );
+
+            // 2. Nav links stagger
+            tl.fromTo('#mainNav .nav-link',
+                { opacity: 0, y: -10 },
+                { opacity: 1, y: 0, duration: 0.8, stagger: 0.06 },
+                0.4
+            );
+
+            // 3. Background slow-pan (scale down from 1.15 to 1)
+            if (!CONFIG.reducedMotion) {
+                gsap.fromTo('#projectsHeroBg',
+                    { scale: 1.15 },
+                    { scale: 1, duration: 2.5, ease: 'power2.out' }
+                );
+
+                // Parallax on scroll
+                gsap.to('#projectsHeroBg', {
+                    yPercent: 15,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#projectsHero',
+                        start: 'top top',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                });
+            }
+
+            // 4. Breadcrumb fade in
+            tl.to('#projectsBreadcrumb', { opacity: 1, y: 0, duration: 0.8 }, 0.5);
+
+            // 5. Eyebrow fade in
+            tl.to('#projectsHeroEyebrow', { opacity: 1, y: 0, duration: 0.8 }, 0.6);
+
+            // 6. Kinetic-type split-text headline reveal
+            // Each line slides up from 110% with stagger
+            const headlineLines = document.querySelectorAll('#projectsHeroHeadline .line-inner');
+            headlineLines.forEach((line, i) => {
+                tl.fromTo(line,
+                    { y: '110%', opacity: 0 },
+                    { y: '0%', opacity: 1, duration: 1.2, ease: 'power3.out' },
+                    0.8 + (i * 0.18)
+                );
+            });
+
+            // 7. Subheadline fade in
+            tl.to('#projectsHeroSubheadline', { opacity: 1, y: 0, duration: 0.9 }, 1.4);
+
+            // 8. CTAs fade in
+            tl.to('#projectsHeroCtas', { opacity: 1, y: 0, duration: 0.8 }, 1.7);
+
+            // 9. Corner accents
+            tl.fromTo('#projectsCornerTL', { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 1 }, 1.2);
+            tl.fromTo('#projectsCornerBR', { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 1 }, 1.4);
+
+            // 10. Marble vein SVG draw-in
+            if (!CONFIG.reducedMotion) {
+                const veinPath = document.getElementById('projectsVeinPath');
+                const veinPath2 = document.getElementById('projectsVeinPath2');
+                const veinLength = veinPath.getTotalLength();
+                const veinLength2 = veinPath2.getTotalLength();
+
+                gsap.set([veinPath, veinPath2], {
+                    strokeDasharray: (i) => i === 0 ? veinLength : veinLength2,
+                    strokeDashoffset: (i) => i === 0 ? veinLength : veinLength2
+                });
+
+                tl.to(veinPath, { strokeDashoffset: 0, duration: 2.5, ease: 'power2.inOut' }, 1.0);
+                tl.to(veinPath2, { strokeDashoffset: 0, duration: 2.0, ease: 'power2.inOut' }, 1.5);
+
+                // Fade out vein on scroll
+                gsap.to('#projectsHeroVein', {
+                    opacity: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#projectsHero',
+                        start: '20% top',
+                        end: '60% top',
+                        scrub: true
+                    }
+                });
+            }
+
+            // 11. Scroll cue
+            tl.to('#projectsScrollCue', { opacity: 1, y: 0, duration: 0.8 }, 2.2);
+
+            // Scroll cue line pulse animation
+            if (!CONFIG.reducedMotion) {
+                gsap.to('#projectsScrollCueLine', {
+                    scaleY: 0.3,
+                    transformOrigin: 'top',
+                    duration: 1.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: 'sine.inOut'
+                });
+            }
+
+            // 12. WhatsApp button
+            tl.fromTo('#whatsappBtn', { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }, 2.4);
+
+            // 13. Content fade-out on scroll (hero scroll-driven exit)
+            if (!CONFIG.reducedMotion) {
+                gsap.to('.projects-hero-content', {
+                    opacity: 0, y: -60, ease: 'none',
+                    scrollTrigger: { trigger: '#projectsHero', start: '30% top', end: '80% top', scrub: true }
+                });
+                gsap.to('#projectsBreadcrumb', {
+                    opacity: 0, ease: 'none',
+                    scrollTrigger: { trigger: '#projectsHero', start: '20% top', end: '50% top', scrub: true }
+                });
+                gsap.to('#projectsScrollCue', {
+                    opacity: 0, ease: 'none',
+                    scrollTrigger: { trigger: '#projectsHero', start: '5% top', end: '25% top', scrub: true }
+                });
+            }
+
+            // 14. Scroll progress indicator
+            if (!CONFIG.reducedMotion) {
+                gsap.to('#scrollProgressFill', {
+                    height: '100%',
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: 'body',
+                        start: 'top top',
+                        end: 'bottom bottom',
+                        scrub: true
+                    }
+                });
+            }
+        }
+
+        // ==========================================
+        // NAVIGATION BEHAVIOR
+        // ==========================================
+        const mainNav = document.getElementById('mainNav');
+        const menuTrigger = document.getElementById('menuTrigger');
+
+        const isMobile = () => window.innerWidth <= 768;
+
+        ScrollTrigger.create({
+            trigger: '#projectsHero',
+            start: '10% top',
+            onEnter: () => {
+                mainNav.classList.add('scrolled');
+                if (isMobile()) {
+                    mainNav.classList.remove('visible-nav');
+                    mainNav.classList.add('hidden-nav');
+                    menuTrigger.classList.add('visible');
+                }
+            },
+            onLeaveBack: () => {
+                mainNav.classList.remove('scrolled');
+                if (isMobile()) {
+                    mainNav.classList.add('hidden-nav');
+                    mainNav.classList.remove('visible-nav');
+                    menuTrigger.classList.add('visible');
+                }
+            }
+        });
+
+        menuTrigger.addEventListener('click', () => {
+            mainNav.classList.remove('hidden-nav');
+            mainNav.classList.add('visible-nav');
+            menuTrigger.classList.remove('visible');
+        });
+
+        // ==========================================
+        // LANGUAGE TOGGLE
+        // ==========================================
+        const langToggle = document.getElementById('langToggle');
+        const langText = document.getElementById('langText');
+        const html = document.documentElement;
+
+        const translations = {
+            ar: { dir: 'rtl', lang: 'ar', toggleText: 'EN' },
+            en: { dir: 'ltr', lang: 'en', toggleText: 'AR' }
+        };
+
+        function updateContent(lang) {
+            // Update all elements with data-ar and data-en
+            document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+                gsap.to(el, { opacity: 0, y: -10, duration: 0.2,
+                    onComplete: () => {
+                        el.textContent = el.getAttribute(`data-${lang}`);
+                        gsap.to(el, { opacity: 1, y: 0, duration: 0.3 });
+                    }
+                });
+            });
+
+            // Update CTA primary
+            const ctaPrimary = document.getElementById('projectsHeroCtaPrimary');
+            if (ctaPrimary) {
+                const ctaPrimarySpan = ctaPrimary.querySelector('span');
+                gsap.to(ctaPrimarySpan, { opacity: 0, duration: 0.2,
+                    onComplete: () => {
+                        ctaPrimarySpan.textContent = ctaPrimary.getAttribute(`data-${lang}-text`);
+                        gsap.to(ctaPrimarySpan, { opacity: 1, duration: 0.3 });
+                    }
+                });
+            }
+
+            // Update CTA secondary
+            const ctaSecondary = document.getElementById('projectsHeroCtaSecondary');
+            if (ctaSecondary) {
+                const ctaSecondarySpan = ctaSecondary.querySelector('span');
+                gsap.to(ctaSecondarySpan, { opacity: 0, duration: 0.2,
+                    onComplete: () => {
+                        ctaSecondarySpan.textContent = ctaSecondary.getAttribute(`data-${lang}-text`);
+                        gsap.to(ctaSecondarySpan, { opacity: 1, duration: 0.3 });
+                    }
+                });
+            }
+
+            // Update menu trigger
+            gsap.to(menuTrigger, { opacity: 0, duration: 0.2,
+                onComplete: () => {
+                    menuTrigger.textContent = lang === 'ar' ? 'القائمة' : 'Menu';
+                    gsap.to(menuTrigger, { opacity: menuTrigger.classList.contains('visible') ? 1 : 0, duration: 0.3 });
+                }
+            });
+
+            // Update cursor label
+            const cursorLabel = document.getElementById('cursorLabel');
+            if (cursorLabel) cursorLabel.textContent = lang === 'ar' ? 'عرض' : 'View';
+
+            // Update headline font-style for English
+            const headline = document.getElementById('projectsHeroHeadline');
+            if (headline) headline.style.fontStyle = lang === 'en' ? 'italic' : 'normal';
+        }
+
+        langToggle.addEventListener('click', () => {
+            const newLang = CONFIG.lang === 'ar' ? 'en' : 'ar';
+            const t = translations[newLang];
+
+            html.setAttribute('dir', t.dir);
+            html.setAttribute('lang', t.lang);
+            langText.textContent = t.toggleText;
+            CONFIG.lang = newLang;
+
+            updateContent(newLang);
+        });
+
+        // ==========================================
+        // RESIZE HANDLER
+        // ==========================================
+        window.addEventListener('resize', () => {
+            if (!isMobile()) {
+                mainNav.classList.remove('hidden-nav');
+                mainNav.classList.add('visible-nav');
+                menuTrigger.classList.remove('visible');
+            }
+        });
+
+        // ==========================================
+        // KEYBOARD NAVIGATION
+        // ==========================================
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') document.body.classList.add('keyboard-nav');
+        });
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-nav');
+        });
+
+        // ==========================================
+        // INIT
+        // ==========================================
+        window.addEventListener('load', startLoading);
+        if (document.readyState === 'complete') startLoading();
+
+// ============================================
+// PART 02 — PORTFOLIO INTRODUCTION
+// =========================================== 
+
+
+        (function () {
+    'use strict';
+
+    const PART02_CONFIG = {
+        reducedMotion: (typeof CONFIG !== 'undefined' && CONFIG.reducedMotion) ||
+                       window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    };
+
+    window.initPortfolioIntro = function () {
+        const section = document.getElementById('portfolioIntro');
+        if (!section) {
+            console.warn('[Part 02] #portfolioIntro not found.');
+            return;
+        }
+        if (PART02_CONFIG.reducedMotion) {
+            initReducedMotion();
+            return;
+        }
+        initFullMotion();
+    };
+
+    function initFullMotion() {
+        const imageInner = document.getElementById('portfolioIntroImage');
+        const isLTR = document.documentElement.getAttribute('dir') === 'ltr';
+
+        // 1. Image clip-path reveal
+        if (imageInner) {
+            const fromClip = isLTR ? 'inset(0 0 0 100%)' : 'inset(0 100% 0 0)';
+            gsap.fromTo(imageInner,
+                { clipPath: fromClip },
+                {
+                    clipPath: 'inset(0 0% 0 0)',
+                    duration: 1.4,
+                    ease: 'power3.inOut',
+                    scrollTrigger: {
+                        trigger: '#portfolioIntro',
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse'
+                    }
+                }
+            );
+
+            // 2. Image parallax scale
+            gsap.fromTo(imageInner,
+                { scale: 1.1 },
+                {
+                    scale: 1.0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: '#portfolioIntro',
+                        start: 'top bottom',
+                        end: 'bottom top',
+                        scrub: true
+                    }
+                }
+            );
+        }
+
+        // 3. Image caption
+        gsap.fromTo('#portfolioIntroCaption',
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1, y: 0,
+                duration: 0.8,
+                ease: 'power2.out',
+                scrollTrigger: { trigger: '#portfolioIntro', start: 'top 60%', toggleActions: 'play none none reverse' },
+                delay: 0.6
+            }
+        );
+
+        // 4. Eyebrow
+        gsap.fromTo('#portfolioIntroEyebrow',
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1, y: 0,
+                duration: 0.7,
+                ease: 'power2.out',
+                scrollTrigger: { trigger: '#portfolioIntro', start: 'top 75%', toggleActions: 'play none none reverse' }
+            }
+        );
+
+        // 5. Headline split-text
+        document.querySelectorAll('#portfolioIntroHeadline .line-inner').forEach((line, i) => {
+            gsap.fromTo(line,
+                { y: '110%', opacity: 0 },
+                {
+                    y: '0%', opacity: 1,
+                    duration: 1.0,
+                    ease: 'power3.out',
+                    scrollTrigger: { trigger: '#portfolioIntroHeadline', start: 'top 80%', toggleActions: 'play none none reverse' },
+                    delay: i * 0.12
+                }
+            );
+        });
+
+        // 6. Paragraphs staggered
+        document.querySelectorAll('.portfolio-intro-paragraph').forEach((p, i) => {
+            gsap.fromTo(p,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0,
+                    duration: 0.8,
+                    ease: 'power2.out',
+                    scrollTrigger: { trigger: '#portfolioIntro', start: 'top 70%', toggleActions: 'play none none reverse' },
+                    delay: 0.3 + (i * 0.15)
+                }
+            );
+        });
+
+        // 7. CTA
+        gsap.fromTo('#portfolioIntroCta',
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1, y: 0,
+                duration: 0.7,
+                ease: 'power2.out',
+                scrollTrigger: { trigger: '#portfolioIntro', start: 'top 60%', toggleActions: 'play none none reverse' },
+                delay: 0.8
+            }
+        );
+    }
+
+    function initReducedMotion() {
+        const els = document.querySelectorAll(
+            '#portfolioIntro .portfolio-intro-eyebrow, ' +
+            '#portfolioIntro .portfolio-intro-heading .line-inner, ' +
+            '#portfolioIntro .portfolio-intro-paragraph, ' +
+            '#portfolioIntro .portfolio-intro-cta, ' +
+            '#portfolioIntro .portfolio-intro-image-caption'
+        );
+        els.forEach((el, i) => {
+            gsap.fromTo(el, { opacity: 0, y: 20 },
+                {
+                    opacity: 1, y: 0,
+                    duration: 0.6,
+                    delay: i * 0.1,
+                    scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none reverse' }
+                }
+            );
+        });
+    }
+
+    // Language toggle support
+    window.updatePortfolioIntroLanguage = function (lang) {
+        const eyebrow = document.getElementById('portfolioIntroEyebrow');
+        if (eyebrow) {
+            const t = eyebrow.getAttribute(`data-${lang}`);
+            if (t) eyebrow.textContent = t;
+        }
+
+        document.querySelectorAll('#portfolioIntroHeadline .line-inner').forEach(line => {
+            const t = line.getAttribute(`data-${lang}`);
+            if (t) line.textContent = t;
+        });
+
+        document.querySelectorAll('.portfolio-intro-paragraph').forEach(p => {
+            const t = p.getAttribute(`data-${lang}`);
+            if (t) p.textContent = t;
+        });
+
+        const cta = document.getElementById('portfolioIntroCta');
+        if (cta) {
+            const t = cta.getAttribute(`data-${lang}-text`);
+            const span = cta.querySelector('span');
+            if (t && span) span.textContent = t;
+        }
+
+        const capLabel = document.querySelector('#portfolioIntroCaption .image-caption-label');
+        const capText = document.querySelector('#portfolioIntroCaption .image-caption-text');
+        if (capLabel) { const t = capLabel.getAttribute(`data-${lang}`); if (t) capLabel.textContent = t; }
+        if (capText) { const t = capText.getAttribute(`data-${lang}`); if (t) capText.textContent = t; }
+
+        const headline = document.getElementById('portfolioIntroHeadline');
+        if (headline) headline.style.fontStyle = (lang === 'en') ? 'italic' : 'normal';
+    };
+})();
+
+
+/* ============================================
+   PART 04 — FILTERABLE PROJECT GRID (Bento-Style)
+=========================================== */
+
+(function () {
+    'use strict';
+
+    const PART04_CONFIG = {
+        reducedMotion: (typeof CONFIG !== 'undefined' && CONFIG.reducedMotion) ||
+                       window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+        isTouch: (typeof CONFIG !== 'undefined' && CONFIG.isTouch) ||
+                 window.matchMedia('(hover: none) and (pointer: coarse)').matches
+    };
+
+    window.initProjectGrid = function () {
+        const gridContainer = document.getElementById('portfolioGridContainer');
+        const filterBar = document.getElementById('portfolioFilterBar');
+        if (!gridContainer || !filterBar) return;
+
+        const items = Array.from(gridContainer.querySelectorAll('.portfolio-grid-item'));
+        const filterBtns = filterBar.querySelectorAll('.portfolio-filter-btn');
+        let currentFilter = 'all';
+        let isAnimating = false;
+
+        // 1. Scroll-triggered clip-path reveal for each item
+        items.forEach((item, i) => {
+            const mask = item.querySelector('.portfolio-grid-reveal-mask');
+            if (!mask) return;
+
+            if (PART04_CONFIG.reducedMotion) {
+                gsap.set(mask, { opacity: 0 });
+                return;
+            }
+
+            gsap.fromTo(mask,
+                { clipPath: 'inset(0 0 0 0)' },
+                {
+                    clipPath: 'inset(0 0 100% 0)',
+                    duration: 1.2,
+                    ease: 'power3.inOut',
+                    scrollTrigger: {
+                        trigger: item,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    },
+                    delay: (i % 3) * 0.1
+                }
+            );
+        });
+
+        // 2. 3D tilt on mouse move (desktop only)
+        if (!PART04_CONFIG.isTouch && !PART04_CONFIG.reducedMotion) {
+            items.forEach(item => {
+                const shine = item.querySelector('.portfolio-grid-shine');
+
+                item.addEventListener('mousemove', (e) => {
+                    const rect = item.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -6;
+                    const rotateY = ((x - centerX) / centerX) * 6;
+
+                    gsap.to(item, {
+                        rotateX: rotateX,
+                        rotateY: rotateY,
+                        duration: 0.4,
+                        ease: 'power2.out',
+                        transformPerspective: 1000
+                    });
+
+                    if (shine) {
+                        gsap.to(shine, {
+                            opacity: 1,
+                            background: `linear-gradient(${135 + rotateY * 5}deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.04) 40%, rgba(255,255,255,0) 100%)`,
+                            duration: 0.3
+                        });
+                    }
+                });
+
+                item.addEventListener('mouseleave', () => {
+                    gsap.to(item, {
+                        rotateX: 0,
+                        rotateY: 0,
+                        duration: 0.6,
+                        ease: 'power2.out'
+                    });
+                    if (shine) {
+                        gsap.to(shine, { opacity: 0, duration: 0.4 });
+                    }
+                });
+            });
+        }
+
+        // 3. Filter functionality with smooth reflow
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (isAnimating) return;
+                const filter = btn.getAttribute('data-filter');
+                if (filter === currentFilter) return;
+
+                isAnimating = true;
+                currentFilter = filter;
+
+                // Update active button state
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+
+                if (PART04_CONFIG.reducedMotion) {
+                    // Instant filter for reduced motion
+                    items.forEach(item => {
+                        const cat = item.getAttribute('data-category');
+                        if (filter === 'all' || cat === filter) {
+                            item.classList.remove('hidden-item');
+                            gsap.set(item, { opacity: 1, scale: 1 });
+                        } else {
+                            item.classList.add('hidden-item');
+                            gsap.set(item, { opacity: 0, scale: 0.95 });
+                        }
+                    });
+                    isAnimating = false;
+                    return;
+                }
+
+                // Phase 1: Fade out non-matching items
+                const toHide = items.filter(item => {
+                    const cat = item.getAttribute('data-category');
+                    return filter !== 'all' && cat !== filter;
+                });
+                const toShow = items.filter(item => {
+                    const cat = item.getAttribute('data-category');
+                    return filter === 'all' || cat === filter;
+                });
+
+                const hideTl = gsap.timeline({
+                    onComplete: () => {
+                        // Phase 2: Toggle visibility, reposition grid
+                        toHide.forEach(item => item.classList.add('hidden-item'));
+                        toShow.forEach(item => item.classList.remove('hidden-item'));
+
+                        // Phase 3: Fade in matching items with stagger
+                        gsap.fromTo(toShow,
+                            { opacity: 0, scale: 0.92 },
+                            {
+                                opacity: 1,
+                                scale: 1,
+                                duration: 0.6,
+                                stagger: 0.06,
+                                ease: 'power2.out',
+                                onComplete: () => { isAnimating = false; }
+                            }
+                        );
+                    }
+                });
+
+                hideTl.to(toHide, {
+                    opacity: 0,
+                    scale: 0.92,
+                    duration: 0.4,
+                    stagger: 0.03,
+                    ease: 'power2.in'
+                });
+            });
+
+            // Keyboard navigation for filter buttons
+            btn.addEventListener('keydown', (e) => {
+                const buttons = Array.from(filterBtns);
+                const idx = buttons.indexOf(btn);
+                let nextIdx;
+
+                if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                    nextIdx = (idx + 1) % buttons.length;
+                    e.preventDefault();
+                } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                    nextIdx = (idx - 1 + buttons.length) % buttons.length;
+                    e.preventDefault();
+                }
+
+                if (nextIdx !== undefined) {
+                    buttons[nextIdx].focus();
+                    buttons[nextIdx].click();
+                }
+            });
+        });
+    };
+
+    // Language toggle support
+    window.updateProjectGridLanguage = function (lang) {
+        // Header
+        const gridEyebrow = document.querySelector('.portfolio-grid-eyebrow');
+        const gridTitle = document.querySelector('.portfolio-grid-title');
+        const gridSubtitle = document.querySelector('.portfolio-grid-subtitle');
+        if (gridEyebrow) {
+            const t = gridEyebrow.getAttribute(`data-${lang}`);
+            if (t) gridEyebrow.textContent = t;
+        }
+        if (gridTitle) {
+            const t = gridTitle.getAttribute(`data-${lang}`);
+            if (t) gridTitle.textContent = t;
+        }
+        if (gridSubtitle) {
+            const t = gridSubtitle.getAttribute(`data-${lang}`);
+            if (t) gridSubtitle.textContent = t;
+        }
+
+        // Filter buttons
+        document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
+            const t = btn.getAttribute(`data-${lang}`);
+            if (t) btn.textContent = t;
+        });
+
+        // Grid items
+        document.querySelectorAll('.portfolio-grid-info-name').forEach(el => {
+            const t = el.getAttribute(`data-${lang}`);
+            if (t) el.textContent = t;
+        });
+        document.querySelectorAll('.portfolio-grid-info-meta span[data-ar][data-en]').forEach(el => {
+            const t = el.getAttribute(`data-${lang}`);
+            if (t) el.textContent = t;
+        });
+        document.querySelectorAll('.portfolio-grid-info-material').forEach(el => {
+            const t = el.getAttribute(`data-${lang}`);
+            if (t) el.textContent = t;
+        });
+    };
+})();
+
+
+/* ============================================
+   PART 05 — FEATURED PROJECT SHOWCASE
+   JavaScript
+   Dependencies: GSAP 3.12+ + ScrollTrigger
+   Call after DOM ready:
+     initFeaturedShowcase();
+=========================================== */
+
+function initFeaturedShowcase() {
+    const showcase = document.getElementById('featuredShowcase');
+    if (!showcase) return;
+
+    const projects = gsap.utils.toArray('.featured-project');
+    const numProjects = projects.length;
+    if (numProjects === 0) return;
+
+    const progressText = document.getElementById('featuredProgressText');
+    const progressFill = document.getElementById('featuredProgressFill');
+    const progressDots = document.querySelectorAll('.featured-progress-dot');
+    const scrollHint = document.getElementById('featuredScrollHint');
+
+    // Reduced motion: stack projects vertically, no pin
+    if (CONFIG.reducedMotion) {
+        showcase.querySelector('.featured-showcase-inner').style.height = 'auto';
+        projects.forEach((project) => {
+            project.style.position = 'relative';
+            project.style.height = '100vh';
+            project.style.opacity = '1';
+            project.style.visibility = 'visible';
+            gsap.fromTo(project.querySelector('.featured-project-content').children,
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1, y: 0, duration: 0.6, stagger: 0.1,
+                    scrollTrigger: { trigger: project, start: 'top 80%', toggleActions: 'play none none reverse' }
+                }
+            );
+        });
+        if (scrollHint) scrollHint.style.display = 'none';
+        if (progressText) progressText.style.opacity = '0';
+        return;
+    }
+
+    // Set initial states
+    gsap.set(projects[0], { opacity: 1, visibility: 'visible', scale: 1 });
+    gsap.set(projects[0].querySelectorAll('.featured-project-eyebrow, .featured-project-title, .featured-project-meta, .featured-project-desc'),
+        { opacity: 1, y: 0 }
+    );
+    gsap.set(projects.slice(1), { opacity: 0, visibility: 'visible', scale: 1.06 });
+
+    // Create master timeline with pin
+    const masterTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#featuredShowcase',
+            start: 'top top',
+            end: `+=${numProjects * 100}%`,
+            pin: '.featured-showcase-inner',
+            scrub: 0.8,
+            snap: {
+                snapTo: 1 / (numProjects - 1),
+                duration: { min: 0.25, max: 0.5 },
+                ease: 'power2.inOut',
+                delay: 0
+            },
+            onUpdate: (self) => {
+                const progress = self.progress;
+                const currentIndex = Math.min(Math.floor(progress * numProjects), numProjects - 1);
+                
+                if (progressText) {
+                    const displayIndex = String(currentIndex + 1).padStart(2, '0');
+                    const totalIndex = String(numProjects).padStart(2, '0');
+                    progressText.textContent = `${displayIndex} / ${totalIndex}`;
+                }
+                
+                if (progressFill) {
+                    progressFill.style.width = `${(progress * 100)}%`;
+                }
+                
+                progressDots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+            }
+        }
+    });
+
+    // Build crossfade sequence
+    for (let i = 1; i < numProjects; i++) {
+        const prevProject = projects[i - 1];
+        const currProject = projects[i];
+        const prevContent = prevProject.querySelector('.featured-project-content');
+        const currContent = currProject.querySelector('.featured-project-content');
+        const position = i - 1;
+
+        // Previous project fades out + scale up
+        masterTl.to(prevProject, {
+            opacity: 0,
+            scale: 1.06,
+            duration: 1,
+            ease: 'power2.inOut'
+        }, position);
+
+        // Previous content slides out
+        if (prevContent) {
+            masterTl.to(prevContent.children, {
+                y: -40,
+                opacity: 0,
+                duration: 0.6,
+                stagger: 0.05,
+                ease: 'power2.in'
+            }, position);
+        }
+
+        // Current project fades in + scale down to 1
+        masterTl.fromTo(currProject, {
+            opacity: 0,
+            scale: 1.06
+        }, {
+            opacity: 1,
+            scale: 1,
+            duration: 1,
+            ease: 'power2.inOut'
+        }, position);
+
+        // Current content slides in with stagger
+        if (currContent) {
+            const contentChildren = currContent.querySelectorAll('.featured-project-eyebrow, .featured-project-title, .featured-project-meta, .featured-project-desc');
+            gsap.set(contentChildren, { opacity: 0, y: 50 });
+            masterTl.to(contentChildren, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.08,
+                ease: 'power2.out'
+            }, position + 0.25);
+        }
+    }
+
+    // Fade out scroll hint after first scroll
+    if (scrollHint) {
+        gsap.to(scrollHint, {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '#featuredShowcase',
+                start: 'top top',
+                end: '+=20%',
+                scrub: true
+            }
+        });
+    }
+
+    // Fade in progress indicator
+    gsap.fromTo('#featuredShowcaseProgress', { opacity: 0 }, {
+        opacity: 1,
+        duration: 0.8,
+        delay: 0.3,
+        scrollTrigger: {
+            trigger: '#featuredShowcase',
+            start: 'top top',
+            toggleActions: 'play none none none'
+        }
+    });
+}
+
+
+// Paste before // NAVIGATION BEHAVIOR
+(function () {
+    'use strict';
+
+    const PART06_CONFIG = {
+        reducedMotion: (typeof CONFIG !== 'undefined' && CONFIG.reducedMotion) ||
+                       window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    };
+
+    window.initBeforeAfterSpotlight = function () {
+        const section = document.getElementById('beforeAfterSpotlight');
+        if (!section) return;
+
+        const sliders = section.querySelectorAll('.beforeafter-slider');
+
+        // Scroll-triggered fade-in
+        section.querySelectorAll('.beforeafter-slider-wrapper').forEach((wrapper, i) => {
+            if (PART06_CONFIG.reducedMotion) {
+                gsap.set(wrapper, { opacity: 1 });
+                return;
+            }
+            gsap.fromTo(wrapper,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1, y: 0, duration: 1, ease: 'power2.out',
+                    scrollTrigger: { trigger: wrapper, start: 'top 85%', toggleActions: 'play none none reverse' },
+                    delay: i * 0.15
+                }
+            );
+        });
+
+        // Initialize each slider
+        sliders.forEach((slider) => {
+            const handle = slider.querySelector('.beforeafter-handle');
+            const afterImg = slider.querySelector('.beforeafter-image-after');
+            if (!handle || !afterImg) return;
+
+            let isDragging = false;
+            let currentPercent = 50;
+
+            updateSliderPosition(slider, handle, afterImg, 50);
+
+            const startDrag = (e) => {
+                isDragging = true;
+                handle.classList.add('is-dragging');
+                slider.style.cursor = 'grabbing';
+                e.preventDefault();
+            };
+
+            const endDrag = () => {
+                if (!isDragging) return;
+                isDragging = false;
+                handle.classList.remove('is-dragging');
+                slider.style.cursor = 'ew-resize';
+                if (currentPercent < 8) animateToPosition(slider, handle, afterImg, 0, 0.4);
+                else if (currentPercent > 92) animateToPosition(slider, handle, afterImg, 100, 0.4);
+            };
+
+            const onMove = (e) => {
+                if (!isDragging) return;
+                const rect = slider.getBoundingClientRect();
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const x = clientX - rect.left;
+                const percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+                currentPercent = percent;
+                updateSliderPosition(slider, handle, afterImg, percent);
+            };
+
+            handle.addEventListener('mousedown', startDrag);
+            handle.addEventListener('touchstart', startDrag, { passive: false });
+
+            slider.addEventListener('mousedown', (e) => {
+                if (e.target.closest('.beforeafter-handle')) return;
+                startDrag(e);
+                onMove(e);
+            });
+            slider.addEventListener('touchstart', (e) => {
+                if (e.target.closest('.beforeafter-handle')) return;
+                startDrag(e);
+                onMove(e);
+            }, { passive: false });
+
+            window.addEventListener('mousemove', onMove);
+            window.addEventListener('mouseup', endDrag);
+            window.addEventListener('touchmove', onMove, { passive: false });
+            window.addEventListener('touchend', endDrag);
+
+            // Keyboard
+            slider.setAttribute('tabindex', '0');
+            slider.setAttribute('role', 'slider');
+            slider.setAttribute('aria-label', 'Before and after comparison');
+            slider.setAttribute('aria-valuemin', '0');
+            slider.setAttribute('aria-valuemax', '100');
+            slider.setAttribute('aria-valuenow', '50');
+
+            slider.addEventListener('keydown', (e) => {
+                let newPercent = currentPercent;
+                if (e.key === 'ArrowLeft') { newPercent = Math.max(0, currentPercent - 5); e.preventDefault(); }
+                else if (e.key === 'ArrowRight') { newPercent = Math.min(100, currentPercent + 5); e.preventDefault(); }
+                else if (e.key === 'Home') { newPercent = 0; e.preventDefault(); }
+                else if (e.key === 'End') { newPercent = 100; e.preventDefault(); }
+
+                if (newPercent !== currentPercent) {
+                    currentPercent = newPercent;
+                    animateToPosition(slider, handle, afterImg, newPercent, 0.3);
+                    slider.setAttribute('aria-valuenow', String(Math.round(newPercent)));
+                }
+            });
+        });
+    };
+
+    function updateSliderPosition(slider, handle, afterImg, percent) {
+        const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        const effectivePercent = isRTL ? 100 - percent : percent;
+
+        if (isRTL) {
+            afterImg.style.clipPath = `inset(0 ${percent}% 0 0)`;
+        } else {
+            afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;
+        }
+
+        handle.style.left = `${effectivePercent}%`;
+    }
+
+    function animateToPosition(slider, handle, afterImg, targetPercent, duration) {
+        const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        const obj = { percent: parseFloat(handle.style.left) || 50 };
+
+        gsap.to(obj, {
+            percent: targetPercent,
+            duration: duration,
+            ease: 'power2.out',
+            onUpdate: () => {
+                const effectivePercent = isRTL ? 100 - obj.percent : obj.percent;
+                if (isRTL) {
+                    afterImg.style.clipPath = `inset(0 ${obj.percent}% 0 0)`;
+                } else {
+                    afterImg.style.clipPath = `inset(0 0 0 ${obj.percent}%)`;
+                }
+                handle.style.left = `${effectivePercent}%`;
+            },
+            onComplete: () => {
+                slider.setAttribute('aria-valuenow', String(Math.round(targetPercent)));
+            }
+        });
+    }
+
+    // Language toggle
+    window.updateBeforeAfterLanguage = function (lang) {
+        const baEyebrow = document.querySelector('.beforeafter-eyebrow');
+        const baTitle = document.querySelector('.beforeafter-title');
+        const baSubtitle = document.querySelector('.beforeafter-subtitle');
+        if (baEyebrow) { const t = baEyebrow.getAttribute(`data-${lang}`); if (t) baEyebrow.textContent = t; }
+        if (baTitle) { const t = baTitle.getAttribute(`data-${lang}`); if (t) baTitle.textContent = t; }
+        if (baSubtitle) { const t = baSubtitle.getAttribute(`data-${lang}`); if (t) baSubtitle.textContent = t; }
+
+        document.querySelectorAll('.beforeafter-slider-label').forEach(el => {
+            const t = el.getAttribute(`data-${lang}`); if (t) el.textContent = t;
+        });
+        document.querySelectorAll('.beforeafter-image-label').forEach(el => {
+            const t = el.getAttribute(`data-${lang}`); if (t) el.textContent = t;
+        });
+        document.querySelectorAll('.beforeafter-info-name').forEach(el => {
+            const t = el.getAttribute(`data-${lang}`); if (t) el.textContent = t;
+        });
+        document.querySelectorAll('.beforeafter-info-location').forEach(el => {
+            const t = el.getAttribute(`data-${lang}`); if (t) el.textContent = t;
+        });
+        document.querySelectorAll('.beforeafter-info-desc').forEach(el => {
+            const t = el.getAttribute(`data-${lang}`); if (t) el.textContent = t;
+        });
+        document.querySelectorAll('.beforeafter-stat-label').forEach(el => {
+            const t = el.getAttribute(`data-${lang}`); if (t) el.textContent = t;
+        });
+    };
+})();
+
+       
+    </script>
+
+</body>
+</html>

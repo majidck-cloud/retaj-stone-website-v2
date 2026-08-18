@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تواصل مع ريتاج ستون — توريد وتركيب الحجر الطبيعي. اطلب استشارة مجانية أو تواصل مع فريقنا.">
+    <title>تواصل معنا | ريتاج ستون — Retag Stone Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/style.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.min.js",
+            "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.min.js"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">ريتاج ستون</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill" id="loadingBar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-label" id="cursorLabel">عرض</div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true">
+        <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container visible-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="index.html" class="logo" aria-label="Retag Stone Home">
+            <div class="logo-mark">ر</div>
+            <span data-ar="ريتاج ستون" data-en="Retag Stone">ريتاج ستون</span>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="index.html#about" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+            <a href="index.html#services" class="nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+            <a href="index.html#projects" class="nav-link" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+            <a href="contact.html" class="nav-link active" data-ar="تواصل" data-en="Contact">تواصل</a>
+        </div>
+
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+            <span id="langText">EN</span>
+        </button>
+    </nav>
+
+    <!-- Menu Trigger -->
+    <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">القائمة</button>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" id="whatsappBtn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ==========================================
+         PART 01 — CONTACT HERO / INTRO
+    ========================================== -->
+    <section id="contactHero" aria-label="Contact Hero">
+        <div class="contact-hero-bg" id="contactHeroBg" role="img" aria-label="Polished dark marble texture background"></div>
+        <div class="contact-hero-noise"></div>
+        <div class="contact-hero-vignette"></div>
+
+        <div class="corner-accent top-right" id="cornerTR"></div>
+        <div class="corner-accent bottom-left" id="cornerBL"></div>
+
+        <div class="marble-vein" id="marbleVein" aria-hidden="true">
+            <svg viewBox="0 0 10 400" preserveAspectRatio="none">
+                <path d="M5,0 Q2,50 8,100 T2,200 T8,300 T5,400" id="veinPath"/>
+                <path d="M5,0 Q8,40 3,90 T7,180 T3,270 T5,360" style="stroke-width: 0.8; opacity: 0.4;" id="veinPath2"/>
+            </svg>
+        </div>
+
+        <nav class="contact-hero-breadcrumb" id="contactBreadcrumb" aria-label="Breadcrumb">
+            <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-current" data-ar="تواصل" data-en="Contact">تواصل</span>
+        </nav>
+
+        <div class="contact-hero-content">
+            <div class="contact-hero-eyebrow" id="contactHeroEyebrow" data-ar="تواصل معنا" data-en="Get in Touch">تواصل معنا</div>
+
+            <h1 class="contact-hero-headline" id="contactHeroHeadline">
+                <span class="line"><span class="line-inner" data-ar="لنبدأ" data-en="Let's Start">لنبدأ</span></span>
+                <span class="line"><span class="line-inner" data-ar="مشروعك" data-en="Your Project">مشروعك</span></span>
+            </h1>
+
+            <p class="contact-hero-subheadline" id="contactHeroSubheadline" data-ar="نحن هنا لنحول رؤيتك إلى واقع ملموس. املأ النموذج أو تواصل معنا مباشرة — فريقنا جاهز لمساعدتك في كل خطوة." data-en="We're here to turn your vision into tangible reality. Fill out the form or reach out directly — our team is ready to assist you every step of the way.">نحن هنا لنحول رؤيتك إلى واقع ملموس. املأ النموذج أو تواصل معنا مباشرة — فريقنا جاهز لمساعدتك في كل خطوة.</p>
+
+            <a href="#contactForm" class="contact-hero-cta" id="contactHeroCta" data-ar-text="ابدأ الآن" data-en-text="Get Started">
+                <span>ابدأ الآن</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+
+        <div class="contact-hero-quick-info" id="contactHeroQuickInfo">
+            <div class="quick-info-item">
+                <div class="quick-info-icon">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+                </div>
+                <div class="quick-info-text">
+                    <span class="quick-info-label" data-ar="اتصل" data-en="Call">اتصل</span>
+                    <a href="tel:+971501234567" class="quick-info-value">+971 50 123 4567</a>
+                </div>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="quick-info-text">
+                    <span class="quick-info-label" data-ar="راسلنا" data-en="Email">راسلنا</span>
+                    <a href="mailto:info@retagstone.com" class="quick-info-value">info@retagstone.com</a>
+                </div>
+            </div>
+            <div class="quick-info-item">
+                <div class="quick-info-icon">
+                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="quick-info-text">
+                    <span class="quick-info-label" data-ar="الموقع" data-en="Location">الموقع</span>
+                    <span class="quick-info-value" data-ar="دبي، الإمارات" data-en="Dubai, UAE">دبي، الإمارات</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-hero-scroll" id="contactHeroScroll">
+            <span class="contact-hero-scroll-text" data-ar="اسحب للأسفل" data-en="Scroll Down">اسحب للأسفل</span>
+            <div class="contact-hero-scroll-line" id="contactHeroScrollLine"></div>
+        </div>
+    </section>
+
+        <!-- ==========================================
+         PART 02 — MAIN CONTACT SECTION (Split Layout)
+         Form left (LTR) / right (RTL) | Details + Map right (LTR) / left (RTL)
+    ========================================== -->
+    <section id="contactForm" class="contact-section" aria-label="Contact Form">
+        <div class="contact-section-inner">
+
+            <!-- Section eyebrow -->
+            <div class="contact-section-eyebrow" data-ar="نموذج التواصل" data-en="Contact Form">نموذج التواصل</div>
+
+            <div class="contact-split">
+
+                <!-- FORM SIDE -->
+                <div class="contact-form-side">
+                    <form id="mainContactForm" class="contact-form" novalidate>
+
+                        <!-- Name -->
+                        <div class="form-group">
+                            <input type="text" id="formName" class="form-field" placeholder=" " required
+                                   data-ar-placeholder="الاسم الكامل" data-en-placeholder="Full Name">
+                            <label for="formName" class="form-label" data-ar="الاسم الكامل *" data-en="Full Name *">الاسم الكامل *</label>
+                            <span class="form-error" id="errorName" data-ar="الرجاء إدخال الاسم" data-en="Please enter your name">الرجاء إدخال الاسم</span>
+                            <div class="form-focus-line"></div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <input type="tel" id="formPhone" class="form-field" placeholder=" " required
+                                   data-ar-placeholder="رقم الهاتف" data-en-placeholder="Phone Number">
+                            <label for="formPhone" class="form-label" data-ar="رقم الهاتف *" data-en="Phone Number *">رقم الهاتف *</label>
+                            <span class="form-error" id="errorPhone" data-ar="الرجاء إدخال رقم صحيح" data-en="Please enter a valid number">الرجاء إدخال رقم صحيح</span>
+                            <div class="form-focus-line"></div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <input type="email" id="formEmail" class="form-field" placeholder=" " required
+                                   data-ar-placeholder="البريد الإلكتروني" data-en-placeholder="Email Address">
+                            <label for="formEmail" class="form-label" data-ar="البريد الإلكتروني *" data-en="Email Address *">البريد الإلكتروني *</label>
+                            <span class="form-error" id="errorEmail" data-ar="الرجاء إدخال بريد صحيح" data-en="Please enter a valid email">الرجاء إدخال بريد صحيح</span>
+                            <div class="form-focus-line"></div>
+                        </div>
+
+                        <!-- Project Type -->
+                        <div class="form-group">
+                            <select id="formProject" class="form-field form-select" required>
+                                <option value="" disabled selected></option>
+                                <option value="countertops" data-ar="كونترتوب" data-en="Countertops">كونترتوب</option>
+                                <option value="flooring" data-ar="أرضيات" data-en="Flooring">أرضيات</option>
+                                <option value="cladding" data-ar="كساء جدران" data-en="Cladding">كساء جدران</option>
+                                <option value="facade" data-ar="واجهات" data-en="Facade">واجهات</option>
+                                <option value="custom" data-ar="تصميم مخصص" data-en="Custom">تصميم مخصص</option>
+                                <option value="other" data-ar="أخرى" data-en="Other">أخرى</option>
+                            </select>
+                            <label for="formProject" class="form-label" data-ar="نوع المشروع *" data-en="Project Type *">نوع المشروع *</label>
+                            <span class="form-error" id="errorProject" data-ar="الرجاء اختيار نوع المشروع" data-en="Please select a project type">الرجاء اختيار نوع المشروع</span>
+                            <div class="form-focus-line"></div>
+                            <svg class="form-select-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                <path d="M1 1.5L6 6.5L11 1.5" stroke="#B8935A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <textarea id="formMessage" class="form-field form-textarea" rows="4" placeholder=" " required
+                                      data-ar-placeholder="اكتب رسالتك هنا..." data-en-placeholder="Write your message here..."></textarea>
+                            <label for="formMessage" class="form-label" data-ar="الرسالة *" data-en="Message *">الرسالة *</label>
+                            <span class="form-error" id="errorMessage" data-ar="الرجاء كتابة رسالة" data-en="Please write a message">الرجاء كتابة رسالة</span>
+                            <div class="form-focus-line"></div>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="form-submit" id="formSubmit" data-ar="إرسال الاستفسار" data-en="Send Inquiry">
+    <span class="submit-text">إرسال الاستفسار</span>
+    <svg class="submit-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+    <span class="submit-loader">...</span>
+    <span class="submit-success">...</span>
+</button>
+
+                        <!-- Success message -->
+                        <div class="form-success-message" id="formSuccessMessage">
+                            <div class="success-icon-wrap">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B8935A" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path class="success-checkmark" d="M8 12l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h4 data-ar="تم الإرسال بنجاح!" data-en="Sent Successfully!">تم الإرسال بنجاح!</h4>
+                            <p data-ar="سنقوم بالتواصل معك في أقرب وقت." data-en="We'll get back to you shortly.">سنقوم بالتواصل معك في أقرب وقت.</p>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- DETAILS + MAP SIDE -->
+                <div class="contact-details-side">
+
+                    <!-- Contact Details Panel -->
+                    <div class="contact-details-panel">
+                        <h3 class="details-title" data-ar="معلومات التواصل" data-en="Contact Information">معلومات التواصل</h3>
+
+                        <div class="contact-detail-row" data-detail="phone">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label" data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</span>
+                                <a href="tel:+971501234567" class="detail-value">+971 50 123 4567</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-row" data-detail="whatsapp">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label" data-ar="واتساب" data-en="WhatsApp">واتساب</span>
+                                <a href="https://wa.me/971501234567" target="_blank" rel="noopener" class="detail-value">+971 50 123 4567</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-row" data-detail="email">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</span>
+                                <button class="detail-value detail-copy" id="copyEmailBtn" data-copy="info@retagstone.com">
+                                    info@retagstone.com
+                                    <span class="copy-tooltip" id="copyTooltip" data-ar="تم النسخ!" data-en="Copied!">تم النسخ!</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-row" data-detail="address">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label" data-ar="العنوان" data-en="Address">العنوان</span>
+                                <span class="detail-value" data-ar="دبي، الإمارات العربية المتحدة" data-en="Dubai, United Arab Emirates">دبي، الإمارات العربية المتحدة</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-row" data-detail="hours">
+                            <div class="detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label" data-ar="ساعات العمل" data-en="Business Hours">ساعات العمل</span>
+                                <span class="detail-value" data-ar="السبت – الخميس: 8:00 – 18:00" data-en="Sat – Thu: 8:00 AM – 6:00 PM">السبت – الخميس: 8:00 – 18:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="contact-map-wrap">
+                        <!-- REPLACE WITH REAL ADDRESS/MAP EMBED -->
+                        <div class="contact-map-placeholder" id="contactMap">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.456!2d55.2708!3d25.2048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDEyJzE3LjMiTiA1NcKwMTYnMTQuOSJF!5e0!3m2!1sen!2sae!4v1"
+                                width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                title="Retag Stone Location">
+                            </iframe>
+                            <div class="map-pin" id="mapPin">
+                                <div class="map-pin-dot"></div>
+                                <div class="map-pin-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="quickContact" class="placeholder-section" aria-label="Quick Contact Options">
+        <h3 data-ar="خيارات التواصل السريع" data-en="Quick Contact Options">خيارات التواصل السريع</h3>
+        <p>Part 03 — Bento-Style Contact Method Cards</p>
+    </section>
+
+    <section id="processTimeline" class="placeholder-section" aria-label="What Happens Next">
+        <h3 data-ar="ماذا يحدث بعد ذلك؟" data-en="What Happens Next?">ماذا يحدث بعد ذلك؟</h3>
+        <p>Part 04 — Condensed Process Timeline</p>
+    </section>
+
+    <section id="showroom" class="placeholder-section" aria-label="Showroom Location">
+        <h3 data-ar="زور معرضنا" data-en="Visit Our Showroom">زور معرضنا</h3>
+        <p>Part 05 — Showroom / Location Highlight</p>
+    </section>
+
+    <section id="faq" class="placeholder-section" aria-label="Frequently Asked Questions">
+        <h3 data-ar="الأسئلة الشائعة" data-en="Frequently Asked Questions">الأسئلة الشائعة</h3>
+        <p>Part 06 — FAQ Accordion</p>
+    </section>
+
+    <section id="socialProof" class="placeholder-section" aria-label="Social Media">
+        <h3 data-ar="تابعنا" data-en="Follow Us">تابعنا</h3>
+        <p>Part 07 — Social Proof Strip</p>
+    </section>
+
+    <section id="closingCta" class="placeholder-section" aria-label="Closing Call to Action">
+        <h3 data-ar="يسعدنا التواصل معك" data-en="We'd Love to Hear From You">يسعدنا التواصل معك</h3>
+        <p>Part 08 — Closing CTA</p>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top-line" aria-hidden="true"></div>
+
+        <div class="footer-main">
+            <div class="footer-wordmark">
+                <span class="footer-wordmark-en">Retag Stone</span>
+                <span class="footer-wordmark-ar" data-ar="ريتاج ستون" data-en="Retag Stone">ريتاج ستون</span>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="index.html" class="footer-nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                <a href="index.html#about" class="footer-nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+                <a href="index.html#services" class="footer-nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+                <a href="index.html#projects" class="footer-nav-link" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+                <a href="contact.html" class="footer-nav-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="https://instagram.com/retagstone" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://tiktok.com/@retagstone" class="footer-social-link" target="_blank" rel="noopener" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path></svg>
+                </a>
+                <a href="https://wa.me/971501234567" class="footer-social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-copyright" data-ar="© 2024 ريتاج ستون. جميع الحقوق محفوظة." data-en="© 2024 Retag Stone. All rights reserved.">© 2024 ريتاج ستون. جميع الحقوق محفوظة.</span>
+            <span class="footer-tagline" data-ar="نحتُ الجمال من قلب الطبيعة" data-en="Sculpting beauty from nature's heart">نحتُ الجمال من قلب الطبيعة</span>
+        </div>
+    </footer>
+
+    <script type="module">
+       /* ============================================
+   RETAG STONE — CONTACT PAGE (Part 01)
+   External JavaScript for contact.html
+   ============================================ */
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+// ==========================================
+// CONFIGURATION
+// ==========================================
+const CONFIG = {
+    lang: 'ar',
+    reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    isTouch: window.matchMedia('(hover: none) and (pointer: coarse)').matches
+};
+
+// ==========================================
+// CUSTOM CURSOR
+// ==========================================
+if (!CONFIG.isTouch && !CONFIG.reducedMotion) {
+    const cursor = document.getElementById('cursor');
+    const cursorDot = document.getElementById('cursorDot');
+    const cursorLabel = document.getElementById('cursorLabel');
+
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let dotX = 0, dotY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+        cursorX += (mouseX - cursorX) * 0.12;
+        cursorY += (mouseY - cursorY) * 0.12;
+        cursor.style.left = cursorX + 'px';
+        cursor.style.top = cursorY + 'px';
+
+        dotX += (mouseX - dotX) * 0.35;
+        dotY += (mouseY - dotY) * 0.35;
+        cursorDot.style.left = dotX + 'px';
+        cursorDot.style.top = dotY + 'px';
+
+        cursorLabel.style.left = cursorX + 'px';
+        cursorLabel.style.top = (cursorY + 40) + 'px';
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    const hoverElements = document.querySelectorAll('a, button, .contact-hero-cta, .footer-social-link, .footer-nav-link');
+    hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+            if (el.classList.contains('contact-hero-cta')) {
+                cursorLabel.textContent = CONFIG.lang === 'ar' ? 'ابدأ' : 'Start';
+                cursorLabel.classList.add('visible');
+            }
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+            cursorLabel.classList.remove('visible');
+        });
+    });
+}
+
+// ==========================================
+// LOADING SEQUENCE
+// ==========================================
+const loadingScreen = document.getElementById('loadingScreen');
+const loadingBar = document.getElementById('loadingBar');
+
+function startLoading() {
+    const tl = gsap.timeline({
+        onComplete: () => {
+            gsap.to(loadingScreen, {
+                opacity: 0,
+                duration: 0.8,
+                ease: 'power2.inOut',
+                onComplete: () => {
+                    loadingScreen.style.display = 'none';
+                    initContactHeroAnimations();
+                    initPart02Animations();
+                }
+            });
+        }
+    });
+
+    tl.to(loadingBar, {
+        width: '100%',
+        duration: 1.2,
+        ease: 'power2.inOut'
+    });
+}
+
+// ==========================================
+// PART 01 — CONTACT HERO ANIMATIONS
+// ==========================================
+function initContactHeroAnimations() {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    // Logo reveal
+    tl.fromTo('#mainNav .logo',
+        { opacity: 0, y: -20 },
+        { opacity: 1, y: 0, duration: 1.2 },
+        0.2
+    );
+
+    // Nav links stagger
+    const navLinks = document.querySelectorAll('#mainNav .nav-link');
+    navLinks.forEach((link, i) => {
+        tl.fromTo(link,
+            { opacity: 0, y: -15 },
+            { opacity: 1, y: 0, duration: 0.7 },
+            0.3 + (i * 0.06)
+        );
+    });
+
+    // Background scale-in (subtle, calmer than homepage)
+    if (!CONFIG.reducedMotion) {
+        gsap.fromTo('#contactHeroBg',
+            { scale: 1.08 },
+            { scale: 1.02, duration: 2.5, ease: 'power2.out' }
+        );
+
+        // Parallax on scroll
+        gsap.to('#contactHeroBg', {
+            yPercent: 10,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#contactHero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            }
+        });
+    }
+
+    // Breadcrumb
+    tl.to('#contactBreadcrumb', { opacity: 1, y: 0, duration: 0.7 }, 0.5);
+
+    // Eyebrow with decorative lines
+    tl.to('#contactHeroEyebrow', { opacity: 1, y: 0, duration: 0.8 }, 0.7);
+
+    // Kinetic-type split-text headline reveal
+    const headlineLines = document.querySelectorAll('#contactHeroHeadline .line-inner');
+    headlineLines.forEach((line, i) => {
+        tl.fromTo(line,
+            { y: '110%', opacity: 0 },
+            { y: '0%', opacity: 1, duration: 1.2, ease: 'power3.out' },
+            0.9 + (i * 0.18)
+        );
+    });
+
+    // Subheadline
+    tl.to('#contactHeroSubheadline', { opacity: 1, y: 0, duration: 0.9 }, 1.5);
+
+    // CTA
+    tl.to('#contactHeroCta', { opacity: 1, y: 0, duration: 0.8 }, 1.8);
+
+    // Corner accents
+    tl.fromTo('#cornerTR', { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 1 }, 1.3);
+    tl.fromTo('#cornerBL', { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 1 }, 1.5);
+
+    // Marble vein draw-in
+    if (!CONFIG.reducedMotion) {
+        const veinPath = document.getElementById('veinPath');
+        const veinPath2 = document.getElementById('veinPath2');
+        if (veinPath && veinPath2) {
+            const veinLength = veinPath.getTotalLength();
+            const veinLength2 = veinPath2.getTotalLength();
+
+            gsap.set([veinPath, veinPath2], {
+                strokeDasharray: (i) => i === 0 ? veinLength : veinLength2,
+                strokeDashoffset: (i) => i === 0 ? veinLength : veinLength2
+            });
+
+            tl.to('#marbleVein', { opacity: 0.6, duration: 0.5 }, 1.0);
+            tl.to(veinPath, { strokeDashoffset: 0, duration: 2.5, ease: 'power2.inOut' }, 1.2);
+            tl.to(veinPath2, { strokeDashoffset: 0, duration: 2.0, ease: 'power2.inOut' }, 1.7);
+
+            // Fade vein on scroll
+            gsap.to('#marbleVein', {
+                opacity: 0,
+                ease: 'none',
+                scrollTrigger: {
+                    trigger: '#contactHero',
+                    start: '20% top',
+                    end: '60% top',
+                    scrub: true
+                }
+            });
+        }
+    } else {
+        tl.to('#marbleVein', { opacity: 0.6, duration: 0.5 }, 1.0);
+    }
+
+    // Quick info strip — entrance only, no fade-out
+    tl.to('#contactHeroQuickInfo', { opacity: 1, y: 0, duration: 0.8 }, 2.0);
+
+    // Quick info items stagger
+    const quickInfoItems = document.querySelectorAll('.quick-info-item');
+    quickInfoItems.forEach((item, i) => {
+        tl.fromTo(item,
+            { opacity: 0, y: 15 },
+            { opacity: 1, y: 0, duration: 0.6 },
+            2.1 + (i * 0.1)
+        );
+    });
+
+    // Scroll cue
+    tl.fromTo('#contactHeroScroll', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8 }, 2.4);
+
+    if (!CONFIG.reducedMotion) {
+        gsap.to('#contactHeroScrollLine', {
+            scaleY: 0.3,
+            transformOrigin: 'top',
+            duration: 1.5,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut'
+        });
+    }
+
+    // WhatsApp button
+    tl.fromTo('#whatsappBtn', { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.7)' }, 2.6);
+}
+
+// ==========================================
+// HERO SCROLL-DRIVEN FADE-OUT
+// ==========================================
+if (!CONFIG.reducedMotion) {
+    gsap.to('.contact-hero-content', {
+        opacity: 0,
+        y: -50,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '#contactHero',
+            start: '30% top',
+            end: '80% top',
+            scrub: true
+        }
+    });
+
+    gsap.to('#contactHeroScroll', {
+        opacity: 0,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: '#contactHero',
+            start: '5% top',
+            end: '25% top',
+            scrub: true
+        }
+    });
+}
+
+// ==========================================
+// NAVIGATION BEHAVIOR
+// ==========================================
+const mainNav = document.getElementById('mainNav');
+const menuTrigger = document.getElementById('menuTrigger');
+
+const isMobile = () => window.innerWidth <= 768;
+
+ScrollTrigger.create({
+    trigger: '#contactHero',
+    start: '10% top',
+    onEnter: () => {
+        mainNav.classList.add('scrolled');
+        if (isMobile()) {
+            mainNav.classList.remove('visible-nav');
+            mainNav.classList.add('hidden-nav');
+            menuTrigger.classList.add('visible');
+        }
+    },
+    onLeaveBack: () => {
+        mainNav.classList.remove('scrolled');
+        if (isMobile()) {
+            mainNav.classList.add('hidden-nav');
+            mainNav.classList.remove('visible-nav');
+            menuTrigger.classList.add('visible');
+        }
+    }
+});
+
+menuTrigger.addEventListener('click', () => {
+    mainNav.classList.remove('hidden-nav');
+    mainNav.classList.add('visible-nav');
+    menuTrigger.classList.remove('visible');
+});
+
+// ==========================================
+// SCROLL PROGRESS INDICATOR
+// ==========================================
+const scrollProgressFill = document.getElementById('scrollProgressFill');
+if (scrollProgressFill && !CONFIG.reducedMotion) {
+    gsap.to(scrollProgressFill, {
+        height: '100%',
+        ease: 'none',
+        scrollTrigger: {
+            trigger: document.body,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: true
+        }
+    });
+} else if (scrollProgressFill) {
+    scrollProgressFill.style.height = '0%';
+}
+
+// ==========================================
+// LANGUAGE TOGGLE
+// ==========================================
+const langToggle = document.getElementById('langToggle');
+const langText = document.getElementById('langText');
+const html = document.documentElement;
+
+const translations = {
+    ar: { dir: 'rtl', lang: 'ar', toggleText: 'EN' },
+    en: { dir: 'ltr', lang: 'en', toggleText: 'AR' }
+};
+
+function updateContent(lang) {
+    document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+        gsap.to(el, {
+            opacity: 0,
+            y: -10,
+            duration: 0.2,
+            onComplete: () => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+                gsap.to(el, { opacity: 1, y: 0, duration: 0.3 });
+            }
+        });
+    });
+
+    const cta = document.getElementById('contactHeroCta');
+    if (cta) {
+        const ctaSpan = cta.querySelector('span');
+        if (ctaSpan) {
+            gsap.to(ctaSpan, {
+                opacity: 0,
+                duration: 0.2,
+                onComplete: () => {
+                    ctaSpan.textContent = cta.getAttribute(`data-${lang}-text`);
+                    gsap.to(ctaSpan, { opacity: 1, duration: 0.3 });
+                }
+            });
+        }
+    }
+
+    gsap.to(menuTrigger, {
+        opacity: 0,
+        duration: 0.2,
+        onComplete: () => {
+            menuTrigger.textContent = lang === 'ar' ? 'القائمة' : 'Menu';
+            gsap.to(menuTrigger, {
+                opacity: menuTrigger.classList.contains('visible') ? 1 : 0,
+                duration: 0.3
+            });
+        }
+    });
+
+    const cursorLabel = document.getElementById('cursorLabel');
+    if (cursorLabel) cursorLabel.textContent = lang === 'ar' ? 'عرض' : 'View';
+}
+
+langToggle.addEventListener('click', () => {
+    const newLang = CONFIG.lang === 'ar' ? 'en' : 'ar';
+    const t = translations[newLang];
+
+    html.setAttribute('dir', t.dir);
+    html.setAttribute('lang', t.lang);
+    langText.textContent = t.toggleText;
+    CONFIG.lang = newLang;
+
+    updateContent(newLang);
+});
+
+// ==========================================
+// KEYBOARD NAVIGATION DETECTION
+// ==========================================
+let isKeyboardNav = false;
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+        isKeyboardNav = true;
+        document.body.classList.add('keyboard-nav');
+    }
+});
+document.addEventListener('mousedown', () => {
+    isKeyboardNav = false;
+    document.body.classList.remove('keyboard-nav');
+});
+
+// ==========================================
+// START
+// ==========================================
+window.addEventListener('load', startLoading);
+
+// ==========================================
+// PART 02 — MAIN CONTACT SECTION
+// ==========================================
+
+// Form validation
+const contactForm = document.getElementById('mainContactForm');
+const formSubmitBtn = document.getElementById('formSubmit');
+
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+function validatePhone(phone) {
+    return /^[\+\d\s\-\(\)]{7,}$/.test(phone.trim());
+}
+
+function showFieldError(fieldId, show) {
+    const group = document.getElementById(fieldId).closest('.form-group');
+    if (show) group.classList.add('has-error');
+    else group.classList.remove('has-error');
+}
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let isValid = true;
+
+        const name = document.getElementById('formName');
+        const phone = document.getElementById('formPhone');
+        const email = document.getElementById('formEmail');
+        const project = document.getElementById('formProject');
+        const message = document.getElementById('formMessage');
+
+        if (!name.value.trim()) { showFieldError('formName', true); isValid = false; }
+        else showFieldError('formName', false);
+
+        if (!phone.value.trim() || !validatePhone(phone.value)) { showFieldError('formPhone', true); isValid = false; }
+        else showFieldError('formPhone', false);
+
+        if (!email.value.trim() || !validateEmail(email.value)) { showFieldError('formEmail', true); isValid = false; }
+        else showFieldError('formEmail', false);
+
+        if (!project.value) { showFieldError('formProject', true); isValid = false; }
+        else showFieldError('formProject', false);
+
+        if (!message.value.trim()) { showFieldError('formMessage', true); isValid = false; }
+        else showFieldError('formMessage', false);
+
+        if (!isValid) return;
+
+        // Loading state
+        formSubmitBtn.classList.add('is-loading');
+
+        // Simulate submit
+        setTimeout(() => {
+            formSubmitBtn.classList.remove('is-loading');
+            formSubmitBtn.classList.add('is-success');
+
+            const successMsg = document.getElementById('formSuccessMessage');
+            if (successMsg) successMsg.classList.add('visible');
+
+            // Reset after delay
+            setTimeout(() => {
+                formSubmitBtn.classList.remove('is-success');
+                if (successMsg) successMsg.classList.remove('visible');
+                contactForm.reset();
+            }, 3500);
+        }, 1500);
+    });
+
+    // Real-time error clearing
+    ['formName', 'formPhone', 'formEmail', 'formProject', 'formMessage'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('input', () => {
+                el.closest('.form-group').classList.remove('has-error');
+            });
+            el.addEventListener('focus', () => {
+                el.closest('.form-group').classList.remove('has-error');
+            });
+        }
+    });
+}
+
+// Magnetic button effect
+function initMagneticButton(btn) {
+    if (CONFIG.isTouch || CONFIG.reducedMotion) return;
+    btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0, 0)';
+    });
+}
+if (formSubmitBtn) initMagneticButton(formSubmitBtn);
+
+// Click-to-copy email
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+const copyTooltip = document.getElementById('copyTooltip');
+if (copyEmailBtn && copyTooltip) {
+    copyEmailBtn.addEventListener('click', async () => {
+        const text = copyEmailBtn.dataset.copy;
+        try {
+            await navigator.clipboard.writeText(text);
+            copyTooltip.classList.add('visible');
+            setTimeout(() => copyTooltip.classList.remove('visible'), 2000);
+        } catch (err) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            copyTooltip.classList.add('visible');
+            setTimeout(() => copyTooltip.classList.remove('visible'), 2000);
+        }
+    });
+}
+
+// Part 02 scroll-triggered animations
+function initPart02Animations() {
+    if (CONFIG.reducedMotion) {
+        gsap.set('.contact-section-eyebrow, .contact-detail-row', { opacity: 1, y: 0, x: 0 });
+        return;
+    }
+
+    // Eyebrow
+    gsap.fromTo('.contact-section-eyebrow',
+        { opacity: 0, y: 20 },
+        {
+            opacity: 1, y: 0, duration: 0.8,
+            scrollTrigger: {
+                trigger: '.contact-section',
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+
+    // Form fields stagger
+    gsap.fromTo('.form-group',
+        { opacity: 0, y: 30 },
+        {
+            opacity: 1, y: 0, duration: 0.7, stagger: 0.1,
+            scrollTrigger: {
+                trigger: '.contact-form',
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+
+    // Submit button
+    gsap.fromTo('.form-submit',
+        { opacity: 0, y: 20 },
+        {
+            opacity: 1, y: 0, duration: 0.7, delay: 0.5,
+            scrollTrigger: {
+                trigger: '.contact-form',
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+
+    // Contact detail rows stagger from side
+    const detailRows = document.querySelectorAll('.contact-detail-row');
+    detailRows.forEach((row, i) => {
+        gsap.fromTo(row,
+            { opacity: 0, x: CONFIG.lang === 'ar' ? 30 : -30 },
+            {
+                opacity: 1, x: 0, duration: 0.7, delay: i * 0.1,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '.contact-details-panel',
+                    start: 'top 80%',
+                    toggleActions: 'play none none none'
+                }
+            }
+        );
+    });
+
+    // Map fade in
+    gsap.fromTo('.contact-map-wrap',
+        { opacity: 0, scale: 0.96 },
+        {
+            opacity: 1, scale: 1, duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.contact-map-wrap',
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+}
+    </script>
+</body>
+</html>

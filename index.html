@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ريتاج ستون - توريد وتركيب الحجر الطبيعي. رخام، جرانيت، كوارتز، ترافرتين، واجهات، أرضيات، مطابخ.">
+    <title>ريتاج ستون | Retag Stone — Natural Stone Craftsmanship</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- <base target="_blank"> -->
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">ريتاج ستون</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill" id="loadingBar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-label" id="cursorLabel">عرض</div>
+
+    <!-- Navigation -->
+    <nav class="nav-container visible-nav" id="mainNav" aria-label="Main Navigation">
+        <a href="#" class="logo" aria-label="Retag Stone Home">
+            <div class="logo">
+                <img src="./Assets/Logo.png" alt="retaj-logo" width="120" height="auto">
+            </div>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+            <a href="about.html" class="nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+            <a href="services.html" class="nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+            <a href="projects.html" class="nav-link" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+            <a href="contact.html" class="nav-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+        </div>
+
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+            <span id="langText">EN</span>
+        </button>
+    </nav>
+
+    <!-- Menu Trigger -->
+    <button class="menu-trigger" id="menuTrigger" aria-label="Open menu">القائمة</button>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" id="whatsappBtn" target="_blank" rel="noopener"
+        aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <!-- ===== HERO (Part 01 — UNCHANGED) ===== -->
+    <section class="relative w-full overflow-hidden" id="hero" aria-label="Hero">
+        <div class="hero-bg" id="heroBg">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+                <source src="./Assets/Render 01.mp4">
+            </video>
+        </div>
+        <div class="noise-overlay"></div>
+        <div class="corner-accent top-right" id="cornerTR"></div>
+        <div class="corner-accent bottom-left" id="cornerBL"></div>
+        <div class="marble-vein" id="marbleVein" aria-hidden="true">
+            <svg viewBox="0 0 10 400" preserveAspectRatio="none">
+                <path d="M5,0 Q2,50 8,100 T2,200 T8,300 T5,400" id="veinPath" />
+                <path d="M5,0 Q8,40 3,90 T7,180 T3,270 T5,360" style="stroke-width: 0.8; opacity: 0.4;"
+                    id="veinPath2" />
+            </svg>
+        </div>
+        <div class="hero-content">
+            <div class="hero-eyebrow" id="heroEyebrow" data-ar="توريد وتركيب الحجر الطبيعي"
+                data-en="Natural Stone Supply & Installation">توريد وتركيب الحجر الطبيعي</div>
+            <h1 class="hero-headline" id="heroHeadline">
+                <span class="line"><span class="line-inner" data-ar="نحتُ الجمال" data-en="We Sculpt">نحتُ
+                        الجمال</span></span>
+                <span class="line"><span class="line-inner" data-ar="من قلب الطبيعة" data-en="From Nature's Heart">من
+                        قلب الطبيعة</span></span>
+            </h1>
+            <p class="hero-subheadline" id="heroSubheadline"
+                data-ar="رخام، جرانيت، كوارتز، وترافرتين — نحوّل الحجر الخام إلى تحف معمارية تدوم عبر الأجيال"
+                data-en="Marble, granite, quartz, and travertine — transforming raw stone into architectural masterpieces that endure generations">
+                رخام، جرانيت، كوارتز، وترافرتين — نحوّل الحجر الخام إلى تحف معمارية تدوم عبر الأجيال</p>
+            <a href="#projects" class="hero-cta" id="heroCta" data-ar-text="استكشف أعمالنا"
+                data-en-text="Explore Our Work">
+                <span>استكشف أعمالنا</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+        </div>
+        <div class="hero-stats" id="heroStats">
+            <div class="stat-item">
+                <div class="stat-number" data-target="15">0</div>
+                <div class="stat-label" data-ar="عاماً من الخبرة" data-en="Years Experience">عاماً من الخبرة</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="340">0</div>
+                <div class="stat-label" data-ar="مشروع منجز" data-en="Projects Done">مشروع منجز</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="12">0</div>
+                <div class="stat-label" data-ar="مدينة" data-en="Cities">مدينة</div>
+            </div>
+        </div>
+        <div class="scroll-cue" id="scrollCue">
+            <span class="scroll-cue-text" data-ar="اسحب للأسفل" data-en="Scroll Down">اسحب للأسفل</span>
+            <div class="scroll-cue-line" id="scrollCueLine"></div>
+        </div>
+    </section>
+
+    <!-- ===== MATERIAL STRIP (Part 02 — UNCHANGED) ===== -->
+    <section id="materialStrip" aria-label="Material Strip">
+        <div class="strip-header-fixed" id="stripHeader">
+            <span class="strip-eyebrow" data-ar="موادنا" data-en="Our Materials">موادنا</span>
+            <h2 class="strip-headline" data-ar="اكتشف جمال الحجر" data-en="Discover the Beauty of Stone">اكتشف جمال
+                الحجر</h2>
+            <div class="strip-counter">
+                <span class="current" id="stripCounterCurrent">01</span><span>/</span><span
+                    id="stripCounterTotal">06</span>
+            </div>
+        </div>
+        <div class="strip-wrapper" id="stripWrapper">
+            <div class="strip-track" id="stripTrack">
+                <article class="material-panel" data-material="marble">
+                    <div class="panel-image-wrapper">
+                        <img class="panel-image"
+                            src="https://images.unsplash.com/photo-1566996533071-2c578080c06e?q=80&w=1600&auto=format&fit=crop"
+                            alt="White marble slab with flowing grey veining" loading="lazy">
+                        <div class="panel-overlay"></div>
+                    </div>
+                    <span class="panel-index">01</span>
+                    <div class="panel-content">
+                        <div class="panel-title-block">
+                            <h2 class="panel-title" data-ar="رخام" data-en="Marble">رخام</h2>
+                        </div>
+                        <span class="panel-subtitle" data-ar="Marble" data-en="رخام">Marble</span>
+                        <p class="panel-desc"
+                            data-ar="فخامة الخالدة، تتدفق عروقه كأنه نهر من الضوء يضفي على كل مساحة روحاً من الأناقة والتألق"
+                            data-en="Eternal luxury, its veins flow like a river of light, lending every space an aura of elegance and brilliance">
+                            فخامة الخالدة، تتدفق عروقه كأنه نهر من الضوء يضفي على كل مساحة روحاً من الأناقة والتألق</p>
+                        <div class="panel-line"></div>
+                    </div>
+                </article>
+                <article class="material-panel" data-material="granite">
+                    <div class="panel-image-wrapper">
+                        <img class="panel-image"
+                            src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=1600&auto=format&fit=crop"
+                            alt="Dark granite surface with crystalline speckles" loading="lazy">
+                        <div class="panel-overlay"></div>
+                    </div>
+                    <span class="panel-index">02</span>
+                    <div class="panel-content">
+                        <div class="panel-title-block">
+                            <h2 class="panel-title" data-ar="جرانيت" data-en="Granite">جرانيت</h2>
+                        </div>
+                        <span class="panel-subtitle" data-ar="Granite" data-en="جرانيت">Granite</span>
+                        <p class="panel-desc"
+                            data-ar="متانة لا تُقهر، وجمال يتحدى الزمن — يحمل في بنيته قوة الجبال وثباتها"
+                            data-en="Unyielding durability, beauty that defies time — carrying in its structure the strength and steadfastness of mountains">
+                            متانة لا تُقهر، وجمال يتحدى الزمن — يحمل في بنيته قوة الجبال وثباتها</p>
+                        <div class="panel-line"></div>
+                    </div>
+                </article>
+                <article class="material-panel" data-material="quartz">
+                    <div class="panel-image-wrapper">
+                        <img class="panel-image"
+                            src="https://images.unsplash.com/photo-1615971677499-54678aaa563b?q=80&w=1600&auto=format&fit=crop"
+                            alt="Engineered quartz surface with refined crystalline texture" loading="lazy">
+                        <div class="panel-overlay"></div>
+                    </div>
+                    <span class="panel-index">03</span>
+                    <div class="panel-content">
+                        <div class="panel-title-block">
+                            <h2 class="panel-title" data-ar="كوارتز" data-en="Quartz">كوارتز</h2>
+                        </div>
+                        <span class="panel-subtitle" data-ar="Quartz" data-en="كوارتز">Quartz</span>
+                        <p class="panel-desc"
+                            data-ar="تقنية متطورة تلتقي بالطبيعة بأبهى صورها — سطح خالٍ من المسامات، يجمع بين الجمال والعملية"
+                            data-en="Advanced technology meets nature at its finest — a non-porous surface that blends beauty with practicality">
+                            تقنية متطورة تلتقي بالطبيعة بأبهى صورها — سطح خالٍ من المسامات، يجمع بين الجمال والعملية</p>
+                        <div class="panel-line"></div>
+                    </div>
+                </article>
+                <article class="material-panel" data-material="travertine">
+                    <div class="panel-image-wrapper">
+                        <img class="panel-image"
+                            src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1600&auto=format&fit=crop"
+                            alt="Warm travertine stone with porous organic texture" loading="lazy">
+                        <div class="panel-overlay"></div>
+                    </div>
+                    <span class="panel-index">04</span>
+                    <div class="panel-content">
+                        <div class="panel-title-block">
+                            <h2 class="panel-title" data-ar="ترافرتين" data-en="Travertine">ترافرتين</h2>
+                        </div>
+                        <span class="panel-subtitle" data-ar="Travertine" data-en="ترافرتين">Travertine</span>
+                        <p class="panel-desc"
+                            data-ar="دفء الأرض في كل حبة، يحمل في طياته قصة ملايين السنين من التكوين الطبيعي"
+                            data-en="The warmth of earth in every grain, carrying within its folds a story millions of years in the making">
+                            دفء الأرض في كل حبة، يحمل في طياته قصة ملايين السنين من التكوين الطبيعي</p>
+                        <div class="panel-line"></div>
+                    </div>
+                </article>
+                <article class="material-panel" data-material="limestone">
+                    <div class="panel-image-wrapper">
+                        <img class="panel-image"
+                            src="https://images.unsplash.com/photo-1585128792020-803d29415281?q=80&w=1600&auto=format&fit=crop"
+                            alt="Warm limestone with sandy organic tones" loading="lazy">
+                        <div class="panel-overlay"></div>
+                    </div>
+                    <span class="panel-index">05</span>
+                    <div class="panel-content">
+                        <div class="panel-title-block">
+                            <h2 class="panel-title" data-ar="حجر جيري" data-en="Limestone">حجر جيري</h2>
+                        </div>
+                        <span class="panel-subtitle" data-ar="Limestone" data-en="حجر جيري">Limestone</span>
+                        <p class="panel-desc"
+                            data-ar="بساطة متأصلة، تناسب كل زمان ومكان — لمسة من الأصالة تمنح المساحات هوية خالدة"
+                            data-en="Inherent simplicity, timeless and placeless — a touch of authenticity that grants spaces an enduring identity">
+                            بساطة متأصلة، تناسب كل زمان ومكان — لمسة من الأصالة تمنح المساحات هوية خالدة</p>
+                        <div class="panel-line"></div>
+                    </div>
+                </article>
+                <article class="material-panel" data-material="onyx">
+                    <div class="panel-image-wrapper">
+                        <img class="panel-image"
+                            src="https://images.unsplash.com/photo-1558618047-f4b511c9d881?q=80&w=1600&auto=format&fit=crop"
+                            alt="Translucent onyx stone with dramatic veining" loading="lazy">
+                        <div class="panel-overlay"></div>
+                    </div>
+                    <span class="panel-index">06</span>
+                    <div class="panel-content">
+                        <div class="panel-title-block">
+                            <h2 class="panel-title" data-ar="عقيق" data-en="Onyx">عقيق</h2>
+                        </div>
+                        <span class="panel-subtitle" data-ar="Onyx" data-en="عقيق">Onyx</span>
+                        <p class="panel-desc"
+                            data-ar="شفافية ساحرة، يتألق كالجوهر النفيس — حجر نادر يحول الضوء إلى فن معماري"
+                            data-en="Captivating translucence, gleaming like a precious jewel — a rare stone that transforms light into architectural art">
+                            شفافية ساحرة، يتألق كالجوهر النفيس — حجر نادر يحول الضوء إلى فن معماري</p>
+                        <div class="panel-line"></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="strip-progress">
+            <div class="strip-progress-bar" id="stripProgressBar"></div>
+        </div>
+        <div class="strip-hint" id="stripHint" data-ar="اسحب للتنقل" data-en="Swipe to explore">اسحب للتنقل</div>
+    </section>
+
+    <!-- ===== SPLIT-SCREEN ABOUT (Part 03 — UNCHANGED) ===== -->
+    <section id="about" aria-label="About Retag Stone">
+        <div class="about-transition-line" id="aboutTransitionLine" aria-hidden="true"></div>
+        <div class="split-story-container" id="splitStoryContainer">
+            <div class="split-image-side" id="splitImageSide">
+                <div class="pinned-image-wrap" id="pinnedImageWrap">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop"
+                        alt="Luxury marble staircase and interior in a modern villa" loading="lazy"
+                        id="aboutPinnedImage">
+                    <div class="pinned-image-overlay"></div>
+                    <div class="image-frame-border" aria-hidden="true"></div>
+                    <div class="image-frame-corner tl" aria-hidden="true"></div>
+                    <div class="image-frame-corner br" aria-hidden="true"></div>
+                    <div class="image-caption" id="imageCaption">
+                        <span class="image-caption-label" data-ar="مشروع مميز" data-en="Featured Project">مشروع
+                            مميز</span>
+                        <span class="image-caption-text" data-ar="فيلا السلام — دبي"
+                            data-en="Villa Al Salam — Dubai">فيلا السلام — دبي</span>
+                        <span class="image-caption-sub" data-ar="رخام كالاكاتا وجرانيت أسود"
+                            data-en="Calacatta marble & black granite">رخام كالاكاتا وجرانيت أسود</span>
+                    </div>
+                </div>
+            </div>
+            <div class="split-text-side" id="splitTextSide">
+                <div class="text-side-accent" aria-hidden="true"></div>
+                <div class="story-content">
+                    <span class="story-eyebrow" id="storyEyebrow" data-ar="من نحن" data-en="About Us">من نحن</span>
+                    <h2 class="story-headline" id="storyHeadline">
+                        <span class="headline-line"><span class="headline-inner" data-ar="حكاية تبدأ"
+                                data-en="A Story Carved">حكاية تبدأ</span></span>
+                        <span class="headline-line"><span class="headline-inner" data-ar="من الصخر"
+                                data-en="From Stone">من الصخر</span></span>
+                    </h2>
+                    <div class="story-body" id="storyBody">
+                        <p data-ar="منذ خمسة عشر عاماً، انطلقنا في ريتاج ستون برؤية واضحة: أن نحول الخامات الطبيعية إلى تحف معمارية تروي قصة الجمال الأصيل. نؤمن بأن الحجر ليس مجرد مادة بناء، بل هو إرث طبيعي يحمل في طياته ذاكرة الأرض."
+                            data-en="Fifteen years ago, Retag Stone set out with a clear vision: to transform natural raw materials into architectural masterpieces that tell the story of authentic beauty. We believe stone is not merely a building material, but a natural legacy carrying the memory of the earth.">
+                            منذ خمسة عشر عاماً، انطلقنا في ريتاج ستون برؤية واضحة: أن نحول الخامات الطبيعية إلى تحف
+                            معمارية تروي قصة الجمال الأصيل. نؤمن بأن الحجر ليس مجرد مادة بناء، بل هو إرث طبيعي يحمل في
+                            طياته ذاكرة الأرض.</p>
+                        <p data-ar="نختار كل قطعة بعناية فائقة، من مناجمنا الممتدة عبر أربع قارات، ونخضعها لأدق معايير الجودة قبل أن تصل إلى ورشنا. هناك، يجتمع حرفيونا مع التقنية المتطورة ليصنعوا أسطحاً تتحدى الزمن وتبقى شاهدة على الفن الحقيقي."
+                            data-en="We select each piece with utmost care, from our quarries spanning four continents, and subject it to the strictest quality standards before it reaches our workshops. There, our craftsmen meet advanced technology to create surfaces that defy time and stand as witnesses to true art.">
+                            نختار كل قطعة بعناية فائقة، من مناجمنا الممتدة عبر أربع قارات، ونخضعها لأدق معايير الجودة
+                            قبل أن تصل إلى ورشنا. هناك، يجتمع حرفيونا مع التقنية المتطورة ليصنعوا أسطحاً تتحدى الزمن
+                            وتبقى شاهدة على الفن الحقيقي.</p>
+                        <div class="story-quote" id="storyQuote">
+                            <span class="story-quote-mark">"</span>
+                            <p class="story-quote-text"
+                                data-ar="الحجر يتكلم بلغة الصمت، ونحن المترجمون الوحيدون الذين يفهمون لغته."
+                                data-en="Stone speaks in the language of silence, and we are the only translators who understand its tongue.">
+                                الحجر يتكلم بلغة الصمت، ونحن المترجمون الوحيدون الذين يفهمون لغته.</p>
+                        </div>
+                        <p data-ar="من الفلل الفاخرة إلى المشاريع التجارية الضخمة، نحمل في كل مشروع اسم ريتاج كشعار للتميز. ليس هدفنا إرضاء العميل فحسب، بل أن نفوق توقعاته بأعمال تدوم جمالاً ومتانة لأجيال قادمة."
+                            data-en="From luxury villas to massive commercial projects, we carry the Retag name in every endeavor as a mark of excellence. Our goal is not merely to satisfy the client, but to exceed expectations with works of enduring beauty and durability for generations to come.">
+                            من الفلل الفاخرة إلى المشاريع التجارية الضخمة، نحمل في كل مشروع اسم ريتاج كشعار للتميز. ليس
+                            هدفنا إرضاء العميل فحسب، بل أن نفوق توقعاته بأعمال تدوم جمالاً ومتانة لأجيال قادمة.</p>
+                    </div>
+                    <div class="story-stats" id="storyStats">
+                        <div class="story-stat" data-stat="years">
+                            <div class="story-stat-number" data-target="15" data-suffix="+">0</div><span
+                                class="story-stat-label" data-ar="عاماً من الخبرة" data-en="Years Experience">عاماً من
+                                الخبرة</span>
+                        </div>
+                        <div class="story-stat" data-stat="projects">
+                            <div class="story-stat-number" data-target="340" data-suffix="+">0</div><span
+                                class="story-stat-label" data-ar="مشروع منجز" data-en="Projects Completed">مشروع
+                                منجز</span>
+                        </div>
+                        <div class="story-stat" data-stat="cities">
+                            <div class="story-stat-number" data-target="12">0</div><span class="story-stat-label"
+                                data-ar="مدينة" data-en="Cities Served">مدينة</span>
+                        </div>
+                        <div class="story-stat" data-stat="stones">
+                            <div class="story-stat-number" data-target="50" data-suffix="+">0</div><span
+                                class="story-stat-label" data-ar="نوع حجر" data-en="Stone Types">نوع حجر</span>
+                        </div>
+                    </div>
+                    <a href="#services" class="story-cta" id="storyCta" data-ar-text="اكتشف خدماتنا"
+                        data-en-text="Discover Our Services">
+                        <span>اكتشف خدماتنا</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BENTO GRID SERVICES (Part 04 — UNCHANGED) ===== -->
+    <section id="services" aria-label="Our Services">
+        <div class="services-transition-line" aria-hidden="true"></div>
+        <div class="services-header">
+            <span class="services-eyebrow" id="servicesEyebrow" data-ar="خدماتنا" data-en="Our Services">خدماتنا</span>
+            <h2 class="services-headline" id="servicesHeadline">
+                <span class="headline-line"><span class="headline-inner" data-ar="حلول متكاملة"
+                        data-en="Comprehensive">حلول متكاملة</span></span>
+                <span class="headline-line"><span class="headline-inner" data-ar="للمساحات الفاخرة"
+                        data-en="Luxury Solutions">للمساحات الفاخرة</span></span>
+            </h2>
+            <p class="services-subheadline" id="servicesSubheadline"
+                data-ar="من التوريد إلى التركيب، نقدم تجربة متكاملة تضمن لك الجودة في كل مرحلة"
+                data-en="From supply to installation, we deliver a comprehensive experience ensuring quality at every stage">
+                من التوريد إلى التركيب، نقدم تجربة متكاملة تضمن لك الجودة في كل مرحلة</p>
+        </div>
+        <div class="bento-grid" id="bentoGrid">
+            <article class="bento-tile tile-large has-image" data-service="marble-granite">
+                <div class="tile-image-wrap" id="tileImg01">
+                    <img class="tile-image"
+                        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"
+                        alt="Luxury kitchen with marble countertops and granite island" loading="lazy">
+                    <div class="tile-image-overlay"></div>
+                </div>
+                <div class="tile-glow"></div>
+                <div class="tile-content">
+                    <span class="tile-number">01</span>
+                    <h3 class="tile-title" data-ar="توريد الرخام والجرانيت" data-en="Marble & Granite Supply">توريد
+                        الرخام والجرانيت</h3>
+                    <p class="tile-desc" data-ar="أجود أنواع الرخام والجرانيت الطبيعي من مناجم عالمية مختارة بعناية"
+                        data-en="Finest natural marble and granite from carefully selected global quarries">أجود أنواع
+                        الرخام والجرانيت الطبيعي من مناجم عالمية مختارة بعناية</p>
+                </div>
+                <div class="tile-link-arrow"><svg viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg></div>
+            </article>
+            <article class="bento-tile tile-small" data-service="quartz">
+                <div class="tile-glow"></div>
+                <div class="tile-content tile-content-top">
+                    <div class="tile-icon"><svg viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                            <path d="M3 9h18M9 21V9"></path>
+                        </svg></div>
+                    <span class="tile-number">02</span>
+                    <h3 class="tile-title" data-ar="كوارتز وحجر مهندس" data-en="Quartz & Engineered Stone">كوارتز وحجر
+                        مهندس</h3>
+                    <p class="tile-desc" data-ar="أسطح مقاومة للخدوش والبقع بجمال الحجر الطبيعي"
+                        data-en="Scratch and stain-resistant surfaces with the beauty of natural stone">أسطح مقاومة
+                        للخدوش والبقع بجمال الحجر الطبيعي</p>
+                </div>
+                <div class="tile-link-arrow"><svg viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg></div>
+            </article>
+            <article class="bento-tile tile-small" data-service="countertops">
+                <div class="tile-glow"></div>
+                <div class="tile-content tile-content-top">
+                    <div class="tile-icon"><svg viewBox="0 0 24 24">
+                            <path d="M2 20h20M5 20v-8a2 2 0 012-2h10a2 2 0 012 2v8"></path>
+                            <path d="M9 10V7a3 3 0 016 0v3"></path>
+                        </svg></div>
+                    <span class="tile-number">03</span>
+                    <h3 class="tile-title" data-ar="مطابخ وكونترتوب" data-en="Countertops">مطابخ وكونترتوب</h3>
+                    <p class="tile-desc" data-ar="تصاميم مخصصة للمطابخ والحمامات بأعلى معايير الدقة"
+                        data-en="Custom designs for kitchens and bathrooms with the highest precision standards">تصاميم
+                        مخصصة للمطابخ والحمامات بأعلى معايير الدقة</p>
+                </div>
+                <div class="tile-link-arrow"><svg viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg></div>
+            </article>
+            <article class="bento-tile tile-large has-image" data-service="flooring">
+                <div class="tile-image-wrap" id="tileImg02">
+                    <img class="tile-image"
+                        src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1600&auto=format&fit=crop"
+                        alt="Elegant marble flooring in a grand hallway" loading="lazy">
+                    <div class="tile-image-overlay"></div>
+                </div>
+                <div class="tile-glow"></div>
+                <div class="tile-content">
+                    <span class="tile-number">04</span>
+                    <h3 class="tile-title" data-ar="أرضيات حجرية" data-en="Stone Flooring">أرضيات حجرية</h3>
+                    <p class="tile-desc" data-ar="أرضيات تتحمل المشي وتبقى جميلة لعقود، بتشطيبات متنوعة"
+                        data-en="Floors that withstand foot traffic and remain beautiful for decades, with varied finishes">
+                        أرضيات تتحمل المشي وتبقى جميلة لعقود، بتشطيبات متنوعة</p>
+                </div>
+                <div class="tile-link-arrow"><svg viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg></div>
+            </article>
+            <article class="bento-tile tile-large has-image" data-service="facade">
+                <div class="tile-image-wrap" id="tileImg03">
+                    <img class="tile-image"
+                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"
+                        alt="Modern building facade with stone cladding" loading="lazy">
+                    <div class="tile-image-overlay"></div>
+                </div>
+                <div class="tile-glow"></div>
+                <div class="tile-content">
+                    <span class="tile-number">05</span>
+                    <h3 class="tile-title" data-ar="واجهات وتكسية" data-en="Facade & Cladding">واجهات وتكسية</h3>
+                    <p class="tile-desc" data-ar="حماية وجمال للمباني من الخارج، بتقنيات تركيب متطورة"
+                        data-en="Protection and beauty for buildings from the outside, with advanced installation techniques">
+                        حماية وجمال للمباني من الخارج، بتقنيات تركيب متطورة</p>
+                </div>
+                <div class="tile-link-arrow"><svg viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg></div>
+            </article>
+            <article class="bento-tile tile-small" data-service="fabrication">
+                <div class="tile-glow"></div>
+                <div class="tile-content tile-content-top">
+                    <div class="tile-icon"><svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M12 1v6m0 6v10M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M1 12h6m6 0h10M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24">
+                            </path>
+                        </svg></div>
+                    <span class="tile-number">06</span>
+                    <h3 class="tile-title" data-ar="تصنيع مخصص" data-en="Custom Fabrication">تصنيع مخصص</h3>
+                    <p class="tile-desc" data-ar="تصاميم فريدة حسب رؤيتك، بدقة CNC ويد حرفية"
+                        data-en="Unique designs according to your vision, with CNC precision and artisan handcraft">
+                        تصاميم فريدة حسب رؤيتك، بدقة CNC ويد حرفية</p>
+                </div>
+                <div class="tile-link-arrow"><svg viewBox="0 0 24 24">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg></div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO SHOWCASE (Part 05 — UNCHANGED) ===== -->
+    <section id="projects" aria-label="Project Portfolio">
+        <div class="portfolio-transition-line" aria-hidden="true"></div>
+        <div class="portfolio-header">
+            <span class="portfolio-eyebrow" id="portfolioEyebrow" data-ar="أعمالنا" data-en="Our Work">أعمالنا</span>
+            <h2 class="portfolio-headline" id="portfolioHeadline">
+                <span class="headline-line"><span class="headline-inner" data-ar="تحف تروي"
+                        data-en="Masterpieces That">تحف تروي</span></span>
+                <span class="headline-line"><span class="headline-inner" data-ar="قصة التميز" data-en="Tell Stories">قصة
+                        التميز</span></span>
+            </h2>
+            <p class="portfolio-subheadline" id="portfolioSubheadline"
+                data-ar="لمسات من الحجر في أرقى المساحات — من الفلل الخاصة إلى المشاريع التجارية"
+                data-en="Touches of stone in the finest spaces — from private villas to commercial projects">لمسات من
+                الحجر في أرقى المساحات — من الفلل الخاصة إلى المشاريع التجارية</p>
+        </div>
+        <div class="portfolio-slideshow" id="portfolioSlideshow">
+            <article class="project-slide active" data-project="01">
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2000&auto=format&fit=crop"
+                    alt="Luxury villa entrance with white marble columns and water feature" loading="lazy">
+                <div class="project-slide-overlay"></div>
+                <div class="project-slide-vignette"></div>
+                <div class="project-caption">
+                    <span class="project-caption-number">01 / 05</span>
+                    <h3 class="project-caption-name" data-ar="فيلا النخيل" data-en="Villa Al Nakheel">فيلا النخيل</h3>
+                    <div class="project-caption-location">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-ar="الرياض، المملكة العربية السعودية" data-en="Riyadh, Saudi Arabia">الرياض، المملكة
+                            العربية السعودية</span>
+                    </div>
+                    <span class="project-caption-stone" data-ar="رخام كالاكاتا الذهبي"
+                        data-en="Calacatta Gold Marble">رخام كالاكاتا الذهبي</span>
+                    <div class="project-caption-line"></div>
+                </div>
+            </article>
+            <article class="project-slide" data-project="02">
+                <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?q=80&w=2000&auto=format&fit=crop"
+                    alt="Modern penthouse living room with black granite feature wall" loading="lazy">
+                <div class="project-slide-overlay"></div>
+                <div class="project-slide-vignette"></div>
+                <div class="project-caption">
+                    <span class="project-caption-number">02 / 05</span>
+                    <h3 class="project-caption-name" data-ar="برج الزمرد" data-en="Emerald Tower Penthouse">برج الزمرد
+                    </h3>
+                    <div class="project-caption-location">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-ar="دبي، الإمارات العربية المتحدة" data-en="Dubai, UAE">دبي، الإمارات العربية
+                            المتحدة</span>
+                    </div>
+                    <span class="project-caption-stone" data-ar="جرانيت أسود مطلق"
+                        data-en="Absolute Black Granite">جرانيت أسود مطلق</span>
+                    <div class="project-caption-line"></div>
+                </div>
+            </article>
+            <article class="project-slide" data-project="03">
+                <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=2000&auto=format&fit=crop"
+                    alt="Spa wellness center with travertine walls and flooring" loading="lazy">
+                <div class="project-slide-overlay"></div>
+                <div class="project-slide-vignette"></div>
+                <div class="project-caption">
+                    <span class="project-caption-number">03 / 05</span>
+                    <h3 class="project-caption-name" data-ar="منتجع الواحة" data-en="Oasis Wellness Resort">منتجع الواحة
+                    </h3>
+                    <div class="project-caption-location">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-ar="مسقط، سلطنة عُمان" data-en="Muscat, Oman">مسقط، سلطنة عُمان</span>
+                    </div>
+                    <span class="project-caption-stone" data-ar="ترافرتين روماني" data-en="Roman Travertine">ترافرتين
+                        روماني</span>
+                    <div class="project-caption-line"></div>
+                </div>
+            </article>
+            <article class="project-slide" data-project="04">
+                <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=2000&auto=format&fit=crop"
+                    alt="Grand hotel lobby with onyx backlit reception desk" loading="lazy">
+                <div class="project-slide-overlay"></div>
+                <div class="project-slide-vignette"></div>
+                <div class="project-caption">
+                    <span class="project-caption-number">04 / 05</span>
+                    <h3 class="project-caption-name" data-ar="فندق اللؤلؤة" data-en="Pearl Grand Hotel">فندق اللؤلؤة
+                    </h3>
+                    <div class="project-caption-location">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-ar="المنامة، مملكة البحرين" data-en="Manama, Bahrain">المنامة، مملكة البحرين</span>
+                    </div>
+                    <span class="project-caption-stone" data-ar="عقيق بيضاء مضيئة" data-en="Backlit White Onyx">عقيق
+                        بيضاء مضيئة</span>
+                    <div class="project-caption-line"></div>
+                </div>
+            </article>
+            <article class="project-slide" data-project="05">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop"
+                    alt="Luxury bathroom with bookmatched marble walls" loading="lazy">
+                <div class="project-slide-overlay"></div>
+                <div class="project-slide-vignette"></div>
+                <div class="project-caption">
+                    <span class="project-caption-number">05 / 05</span>
+                    <h3 class="project-caption-name" data-ar="قصر المروج" data-en="Palace Al Murouj">قصر المروج</h3>
+                    <div class="project-caption-location">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span data-ar="أبوظبي، الإمارات العربية المتحدة" data-en="Abu Dhabi, UAE">أبوظبي، الإمارات
+                            العربية المتحدة</span>
+                    </div>
+                    <span class="project-caption-stone" data-ar="رخام ستاتuario متناظر"
+                        data-en="Bookmatched Statuario Marble">رخام ستاتuario متناظر</span>
+                    <div class="project-caption-line"></div>
+                </div>
+            </article>
+            <div class="portfolio-progress">
+                <div class="portfolio-progress-dots" id="portfolioDots">
+                    <div class="progress-dot active" data-slide="0"></div>
+                    <div class="progress-dot" data-slide="1"></div>
+                    <div class="progress-dot" data-slide="2"></div>
+                    <div class="progress-dot" data-slide="3"></div>
+                    <div class="progress-dot" data-slide="4"></div>
+                </div>
+                <div class="progress-fraction" id="portfolioFraction"><span class="current">01</span> / 05</div>
+            </div>
+            <div class="portfolio-scroll-hint">
+                <span data-ar="استمر بالتمرير" data-en="Keep scrolling">استمر بالتمرير</span>
+                <div class="portfolio-scroll-hint-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PROCESS TIMELINE (Part 06 — NEW)
+    ========================================== -->
+    <section id="process" aria-label="Our Process">
+        <div class="process-transition-line" aria-hidden="true"></div>
+
+        <div class="process-header">
+            <span class="process-eyebrow" id="processEyebrow" data-ar="رحلتنا معك" data-en="Our Journey With You">رحلتنا
+                معك</span>
+            <h2 class="process-headline" id="processHeadline">
+                <span class="headline-line"><span class="headline-inner" data-ar="من الفكرة" data-en="From Vision">من
+                        الفكرة</span></span>
+                <span class="headline-line"><span class="headline-inner" data-ar="إلى الواقع" data-en="To Reality">إلى
+                        الواقع</span></span>
+            </h2>
+            <p class="process-subheadline" id="processSubheadline"
+                data-ar="أربع خطوات بسيطة تفصلك عن تحفة حجرية تدوم العمر"
+                data-en="Four simple steps separate you from a stone masterpiece that lasts a lifetime">
+                أربع خطوات بسيطة تفصلك عن تحفة حجرية تدوم العمر
+            </p>
+        </div>
+
+        <div class="timeline-container" id="timelineContainer">
+            <!-- SVG Path -->
+            <svg class="timeline-svg" id="timelineSvg" viewBox="0 0 4 800" preserveAspectRatio="none">
+                <path d="M2,0 L2,800" id="timelinePathBg" />
+                <path d="M2,0 L2,800" class="timeline-path-active" id="timelinePathActive" />
+            </svg>
+
+            <!-- Node 01: Consultation -->
+            <div class="timeline-node" data-step="1">
+                <div class="timeline-node-content">
+                    <div class="node-card">
+                        <div class="node-card-glow"></div>
+                        <span class="node-step-label" data-ar="الخطوة الأولى" data-en="Step One">الخطوة الأولى</span>
+                        <div class="node-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="node-title" data-ar="الاستشارة والتخطيط" data-en="Consultation & Planning">الاستشارة
+                            والتخطيط</h3>
+                        <p class="node-desc"
+                            data-ar="نبدأ بفهم رؤيتك ومتطلبات مساحتك. يزورك فريقنا للقياسات الدقيقة ويقدم لك استشارة متخصصة حول أنواع الحجر الأنسب لمشروعك."
+                            data-en="We begin by understanding your vision and space requirements. Our team visits for precise measurements and provides expert consultation on the most suitable stone types for your project.">
+                            نبدأ بفهم رؤيتك ومتطلبات مساحتك. يزورك فريقنا للقياسات الدقيقة ويقدم لك استشارة متخصصة حول
+                            أنواع الحجر الأنسب لمشروعك.</p>
+                    </div>
+                </div>
+                <div class="timeline-node-marker">
+                    <div class="node-ring" id="nodeRing1">
+                        <div class="node-ring-inner"></div>
+                        <span class="node-number">01</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node 02: Material Selection -->
+            <div class="timeline-node" data-step="2">
+                <div class="timeline-node-marker">
+                    <div class="node-ring" id="nodeRing2">
+                        <div class="node-ring-inner"></div>
+                        <span class="node-number">02</span>
+                    </div>
+                </div>
+                <div class="timeline-node-content">
+                    <div class="node-card">
+                        <div class="node-card-glow"></div>
+                        <span class="node-step-label" data-ar="الخطوة الثانية" data-en="Step Two">الخطوة الثانية</span>
+                        <div class="node-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="node-title" data-ar="اختيار المواد" data-en="Material Selection">اختيار المواد</h3>
+                        <p class="node-desc"
+                            data-ar="نأخذك في جولة عبر مجموعتنا الواسعة من الأحجار الطبيعية. تشاهد العينات الحقيقية وتلمس جودتها، ونرشدك في اختيار النوع واللون والتشطيب المثالي."
+                            data-en="We take you on a tour through our extensive collection of natural stones. You see real samples and feel their quality, and we guide you in choosing the perfect type, color, and finish.">
+                            نأخذك في جولة عبر مجموعتنا الواسعة من الأحجار الطبيعية. تشاهد العينات الحقيقية وتلمس جودتها،
+                            ونرشدك في اختيار النوع واللون والتشطيب المثالي.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node 03: Fabrication -->
+            <div class="timeline-node" data-step="3">
+                <div class="timeline-node-content">
+                    <div class="node-card">
+                        <div class="node-card-glow"></div>
+                        <span class="node-step-label" data-ar="الخطوة الثالثة" data-en="Step Three">الخطوة
+                            الثالثة</span>
+                        <div class="node-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="node-title" data-ar="التصنيع والتفصيل" data-en="Fabrication & Detailing">التصنيع
+                            والتفصيل</h3>
+                        <p class="node-desc"
+                            data-ar="في ورشنا المتطورة، يحول الحرفيون المهرة الحجر الخام إلى قطع دقيقة باستخدام تقنيات CNC المتقدمة والتشطيب اليدوي الدقيق."
+                            data-en="In our advanced workshops, skilled craftsmen transform raw stone into precise pieces using advanced CNC techniques and meticulous hand finishing.">
+                            في ورشنا المتطورة، يحول الحرفيون المهرة الحجر الخام إلى قطع دقيقة باستخدام تقنيات CNC
+                            المتقدمة والتشطيب اليدوي الدقيق.</p>
+                    </div>
+                </div>
+                <div class="timeline-node-marker">
+                    <div class="node-ring" id="nodeRing3">
+                        <div class="node-ring-inner"></div>
+                        <span class="node-number">03</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Node 04: Installation -->
+            <div class="timeline-node" data-step="4">
+                <div class="timeline-node-marker">
+                    <div class="node-ring" id="nodeRing4">
+                        <div class="node-ring-inner"></div>
+                        <span class="node-number">04</span>
+                    </div>
+                </div>
+                <div class="timeline-node-content">
+                    <div class="node-card">
+                        <div class="node-card-glow"></div>
+                        <span class="node-step-label" data-ar="الخطوة الرابعة" data-en="Step Four">الخطوة الرابعة</span>
+                        <div class="node-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="node-title" data-ar="التركيب والتسليم" data-en="Installation & Handover">التركيب
+                            والتسليم</h3>
+                        <p class="node-desc"
+                            data-ar="يصل فريق التركيب المتخصص لدينا إلى موقعك وينفذ التركيب بأعلى معايير الدقة والجودة، ثم نسلمك المشروع بعد فحص نهائي شامل."
+                            data-en="Our specialized installation team arrives at your site and executes the installation with the highest standards of precision and quality, then hands over the project after a comprehensive final inspection.">
+                            يصل فريق التركيب المتخصص لدينا إلى موقعك وينفذ التركيب بأعلى معايير الدقة والجودة، ثم نسلمك
+                            المشروع بعد فحص نهائي شامل.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Diamond -->
+            <div class="timeline-end">
+                <div class="timeline-end-diamond" id="timelineEndDiamond"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS (Part 07 — NEW)
+    ========================================== -->
+    <!-- <section id="testimonials" aria-label="Client Testimonials">
+        <div class="testimonials-transition-line" aria-hidden="true"></div>
+
+        <div class="testimonials-header">
+            <span class="testimonials-eyebrow" id="testimonialsEyebrow" data-ar="آراء عملائنا"
+                data-en="Client Testimonials">آراء عملائنا</span>
+            <h2 class="testimonials-headline" id="testimonialsHeadline">
+                <span class="headline-line"><span class="headline-inner" data-ar="ثقة تُبنى" data-en="Trust Built">ثقة
+                        تُبنى</span></span>
+                <span class="headline-line"><span class="headline-inner" data-ar="بحجر واحد"
+                        data-en="Stone by Stone">بحجر واحد</span></span>
+            </h2>
+            <p class="testimonials-subheadline" id="testimonialsSubheadline"
+                data-ar="ما يقوله عملاؤنا عن تجربتهم مع ريتاج ستون"
+                data-en="What our clients say about their experience with Retag Stone">ما يقوله عملاؤنا عن تجربتهم مع
+                ريتاج ستون</p>
+        </div>
+
+        <div class="testimonials-marquee" id="testimonialsMarquee"> -->
+            <!-- Row 1 -->
+            <!-- <div class="marquee-row marquee-row-1" id="marqueeRow1">
+                <div class="marquee-track" id="marqueeTrack1">
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="تعاملنا مع ريتاج ستون في فيلتنا بالرياض، والنتيجة كانت أبهر من الخيال. جودة الرخام ودقة التركيب فاقت كل توقعاتنا."
+                            data-en="We worked with Retag Stone on our villa in Riyadh, and the result was beyond imagination. The marble quality and installation precision exceeded all our expectations.">
+                            تعاملنا مع ريتاج ستون في فيلتنا بالرياض، والنتيجة كانت أبهر من الخيال. جودة الرخام ودقة
+                            التركيب فاقت كل توقعاتنا.</blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">ف</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="فهد العتيبي" data-en="Fahad Al-Otaibi">فهد
+                                    العتيبي</span>
+                                <span class="testimonial-role" data-ar="مالك فيلا النخيل"
+                                    data-en="Owner, Villa Al Nakheel">مالك فيلا النخيل</span>
+                            </div>
+                        </div>
+                    </article> -->
+                    <!-- <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="الاحترافية في كل تفصيل. من اختيار الحجر إلى التركيب النهائي، كان الفريق ملتزماً بالمواعيد والجودة."
+                            data-en="Professionalism in every detail. From stone selection to final installation, the team was committed to deadlines and quality.">
+                            الاحترافية في كل تفصيل. من اختيار الحجر إلى التركيب النهائي، كان الفريق ملتزماً بالمواعيد
+                            والجودة.</blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">س</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="سارة القحطاني" data-en="Sarah Al-Qahtani">سارة
+                                    القحطاني</span>
+                                <span class="testimonial-role" data-ar="مصممة داخلية" data-en="Interior Designer">مصممة
+                                    داخلية</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="لقد نفذوا واجهة فندقنا بأعلى معايير الجودة. الحجر الطبيعي أضفى هوية فاخرة لا تُنسى."
+                            data-en="They executed our hotel facade with the highest quality standards. The natural stone added an unforgettable luxury identity.">
+                            لقد نفذوا واجهة فندقنا بأعلى معايير الجودة. الحجر الطبيعي أضفى هوية فاخرة لا تُنسى.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">ع</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="عبدالله المهندس"
+                                    data-en="Abdullah Al-Mohandes">عبدالله المهندس</span>
+                                <span class="testimonial-role" data-ar="مدير مشاريع" data-en="Project Manager">مدير
+                                    مشاريع</span>
+                            </div>
+                        </div>
+                    </article> -->
+                    <!-- Duplicate set for seamless loop -->
+                    <!-- <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="تعاملنا مع ريتاج ستون في فيلتنا بالرياض، والنتيجة كانت أبهر من الخيال. جودة الرخام ودقة التركيب فاقت كل توقعاتنا."
+                            data-en="We worked with Retag Stone on our villa in Riyadh, and the result was beyond imagination. The marble quality and installation precision exceeded all our expectations.">
+                            تعاملنا مع ريتاج ستون في فيلتنا بالرياض، والنتيجة كانت أبهر من الخيال. جودة الرخام ودقة
+                            التركيب فاقت كل توقعاتنا.</blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">ف</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="فهد العتيبي" data-en="Fahad Al-Otaibi">فهد
+                                    العتيبي</span>
+                                <span class="testimonial-role" data-ar="مالك فيلا النخيل"
+                                    data-en="Owner, Villa Al Nakheel">مالك فيلا النخيل</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="الاحترافية في كل تفصيل. من اختيار الحجر إلى التركيب النهائي، كان الفريق ملتزماً بالمواعيد والجودة."
+                            data-en="Professionalism in every detail. From stone selection to final installation, the team was committed to deadlines and quality.">
+                            الاحترافية في كل تفصيل. من اختيار الحجر إلى التركيب النهائي، كان الفريق ملتزماً بالمواعيد
+                            والجودة.</blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">س</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="سارة القحطاني" data-en="Sarah Al-Qahtani">سارة
+                                    القحطاني</span>
+                                <span class="testimonial-role" data-ar="مصممة داخلية" data-en="Interior Designer">مصممة
+                                    داخلية</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div> -->
+                        <!-- <blockquote class="testimonial-quote"
+                            data-ar="لقد نفذوا واجهة فندقنا بأعلى معايير الجودة. الحجر الطبيعي أضفى هوية فاخرة لا تُنسى."
+                            data-en="They executed our hotel facade with the highest quality standards. The natural stone added an unforgettable luxury identity.">
+                            لقد نفذوا واجهة فندقنا بأعلى معايير الجودة. الحجر الطبيعي أضفى هوية فاخرة لا تُنسى.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">ع</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="عبدالله المهندس"
+                                    data-en="Abdullah Al-Mohandes">عبدالله المهندس</span>
+                                <span class="testimonial-role" data-ar="مدير مشاريع" data-en="Project Manager">مدير
+                                    مشاريع</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div> -->
+
+            <!-- Row 2: scrolls opposite direction -->
+            <!-- <div class="marquee-row marquee-row-2" id="marqueeRow2">
+                <div class="marquee-track" id="marqueeTrack2">
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="مطبخنا أصبح قطعة فنية حقيقية بفضل كوارتز ريتاج. الأسطح ناعمة ومقاومة، والتصميم يخطف الأنظار."
+                            data-en="Our kitchen became a true work of art thanks to Retag quartz. The surfaces are smooth and resistant, and the design is eye-catching.">
+                            مطبخنا أصبح قطعة فنية حقيقية بفضل كوارتز ريتاج. الأسطح ناعمة ومقاومة، والتصميم يخطف الأنظار.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">ن</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="نورة الحربي" data-en="Noura Al-Harbi">نورة
+                                    الحربي</span>
+                                <span class="testimonial-role" data-ar="صاحبة منزل" data-en="Homeowner">صاحبة
+                                    منزل</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="التزامهم بالمواعيد والجودة جعلهم شريكاً موثوقاً في جميع مشاريعنا التجارية."
+                            data-en="Their commitment to deadlines and quality made them a trusted partner in all our commercial projects.">
+                            التزامهم بالمواعيد والجودة جعلهم شريكاً موثوقاً في جميع مشاريعنا التجارية.</blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">م</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="محمد الزهراني"
+                                    data-en="Mohammed Al-Zahrani">محمد الزهراني</span>
+                                <span class="testimonial-role" data-ar="مطور عقاري" data-en="Real Estate Developer">مطور
+                                    عقاري</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="العقيق المضيء الذي نفذوه لقاعة الاستقبال كان تحفة حقيقية. كل ضيف يسأل عن مصدر الحجر."
+                            data-en="The backlit onyx they installed for our reception hall was a true masterpiece. Every guest asks about the stone source.">
+                            العقيق المضيء الذي نفذوه لقاعة الاستقبال كان تحفة حقيقية. كل ضيف يسأل عن مصدر الحجر.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">ل</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="ليلى الشمري" data-en="Laila Al-Shammari">ليلى
+                                    الشمري</span>
+                                <span class="testimonial-role" data-ar="مديرة فندق" data-en="Hotel Manager">مديرة
+                                    فندق</span>
+                            </div>
+                        </div>
+                    </article> -->
+                    <!-- Duplicate set for seamless loop -->
+                    <!-- <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="مطبخنا أصبح قطعة فنية حقيقية بفضل كوارتز ريتاج. الأسطح ناعمة ومقاومة، والتصميم يخطف الأنظار."
+                            data-en="Our kitchen became a true work of art thanks to Retag quartz. The surfaces are smooth and resistant, and the design is eye-catching.">
+                            مطبخنا أصبح قطعة فنية حقيقية بفضل كوارتز ريتاج. الأسطح ناعمة ومقاومة، والتصميم يخطف الأنظار.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">ن</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="نورة الحربي" data-en="Noura Al-Harbi">نورة
+                                    الحربي</span>
+                                <span class="testimonial-role" data-ar="صاحبة منزل" data-en="Homeowner">صاحبة
+                                    منزل</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="التزامهم بالمواعيد والجودة جعلهم شريكاً موثوقاً في جميع مشاريعنا التجارية."
+                            data-en="Their commitment to deadlines and quality made them a trusted partner in all our commercial projects.">
+                            التزامهم بالمواعيد والجودة جعلهم شريكاً موثوقاً في جميع مشاريعنا التجارية.</blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">م</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="محمد الزهراني"
+                                    data-en="Mohammed Al-Zahrani">محمد الزهراني</span>
+                                <span class="testimonial-role" data-ar="مطور عقاري" data-en="Real Estate Developer">مطور
+                                    عقاري</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#B8935A">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                            </svg>
+                        </div>
+                        <blockquote class="testimonial-quote"
+                            data-ar="العقيق المضيء الذي نفذوه لقاعة الاستقبال كان تحفة حقيقية. كل ضيف يسأل عن مصدر الحجر."
+                            data-en="The backlit onyx they installed for our reception hall was a true masterpiece. Every guest asks about the stone source.">
+                            العقيق المضيء الذي نفذوه لقاعة الاستقبال كان تحفة حقيقية. كل ضيف يسأل عن مصدر الحجر.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">ل</div>
+                            <div class="testimonial-info">
+                                <span class="testimonial-name" data-ar="ليلى الشمري" data-en="Laila Al-Shammari">ليلى
+                                    الشمري</span>
+                                <span class="testimonial-role" data-ar="مديرة فندق" data-en="Hotel Manager">مديرة
+                                    فندق</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- ==========================================
+         SOCIAL STRIP (Part 08 — NEW)
+    ========================================== -->
+    <section id="social" aria-label="Social Media">
+        <div class="social-transition-line" aria-hidden="true"></div>
+
+        <div class="social-header">
+            <span class="social-eyebrow" id="socialEyebrow" data-ar="تابعنا" data-en="Follow Us">تابعنا</span>
+            <h2 class="social-headline" id="socialHeadline">
+                <span class="headline-line"><span class="headline-inner" data-ar="لحظات من" data-en="Moments of">لحظات
+                        من</span></span>
+                <span class="headline-line"><span class="headline-inner" data-ar="الحجر والإبداع"
+                        data-en="Stone & Craft">الحجر والإبداع</span></span>
+            </h2>
+            <p class="social-subheadline" id="socialSubheadline"
+                data-ar="شاهد أحدث أعمالنا وورشنا على إنستغرام وتيك توك"
+                data-en="See our latest works and workshops on Instagram and TikTok">شاهد أحدث أعمالنا وورشنا على
+                إنستغرام وتيك توك</p>
+        </div>
+
+        <div class="social-strip" id="socialStrip">
+            <div class="social-track" id="socialTrack">
+                <a href="https://instagram.com/retagstone" class="social-tile" target="_blank" rel="noopener"
+                    aria-label="Instagram post: Marble installation process">
+                    <div class="social-tile-media">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+                            alt="Marble countertop installation in progress" loading="lazy">
+                        <div class="social-tile-overlay">
+                            <div class="social-tile-play">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-tile-meta">
+                        <span class="social-tile-platform">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            Instagram
+                        </span>
+                        <span class="social-tile-views">12.4K views</span>
+                    </div>
+                </a>
+                <a href="https://tiktok.com/@retagstone" class="social-tile" target="_blank" rel="noopener"
+                    aria-label="TikTok: Onyx backlit installation">
+                    <div class="social-tile-media">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop"
+                            alt="Onyx stone backlit wall glowing warmly" loading="lazy">
+                        <div class="social-tile-overlay">
+                            <div class="social-tile-play">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-tile-meta">
+                        <span class="social-tile-platform">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path>
+                            </svg>
+                            TikTok
+                        </span>
+                        <span class="social-tile-views">28.7K views</span>
+                    </div>
+                </a>
+                <a href="https://instagram.com/retagstone" class="social-tile" target="_blank" rel="noopener"
+                    aria-label="Instagram Reel: Granite polishing process">
+                    <div class="social-tile-media">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800&auto=format&fit=crop"
+                            alt="Granite surface being polished to mirror finish" loading="lazy">
+                        <div class="social-tile-overlay">
+                            <div class="social-tile-play">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-tile-meta">
+                        <span class="social-tile-platform">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            Instagram
+                        </span>
+                        <span class="social-tile-views">8.1K views</span>
+                    </div>
+                </a>
+                <a href="https://tiktok.com/@retagstone" class="social-tile" target="_blank" rel="noopener"
+                    aria-label="TikTok: Travertine flooring time-lapse">
+                    <div class="social-tile-media">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=800&auto=format&fit=crop"
+                            alt="Travertine stone flooring pattern close-up" loading="lazy">
+                        <div class="social-tile-overlay">
+                            <div class="social-tile-play">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-tile-meta">
+                        <span class="social-tile-platform">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path>
+                            </svg>
+                            TikTok
+                        </span>
+                        <span class="social-tile-views">45.2K views</span>
+                    </div>
+                </a>
+                <a href="https://instagram.com/retagstone" class="social-tile" target="_blank" rel="noopener"
+                    aria-label="Instagram: Quartz kitchen reveal">
+                    <div class="social-tile-media">
+                        <img src="https://images.unsplash.com/photo-1615971677499-54678aaa563b?q=80&w=800&auto=format&fit=crop"
+                            alt="Quartz kitchen island with waterfall edge" loading="lazy">
+                        <div class="social-tile-overlay">
+                            <div class="social-tile-play">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-tile-meta">
+                        <span class="social-tile-platform">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            Instagram
+                        </span>
+                        <span class="social-tile-views">19.3K views</span>
+                    </div>
+                </a>
+                <a href="https://tiktok.com/@retagstone" class="social-tile" target="_blank" rel="noopener"
+                    aria-label="TikTok: Bookmatched marble wall">
+                    <div class="social-tile-media">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=800&auto=format&fit=crop"
+                            alt="Bookmatched marble feature wall in luxury bathroom" loading="lazy">
+                        <div class="social-tile-overlay">
+                            <div class="social-tile-play">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-tile-meta">
+                        <span class="social-tile-platform">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path>
+                            </svg>
+                            TikTok
+                        </span>
+                        <span class="social-tile-views">33.9K views</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="social-cta-row">
+            <a href="https://instagram.com/retagstone" class="social-cta" target="_blank" rel="noopener"
+                data-ar-text="تابعنا على إنستغرام" data-en-text="Follow on Instagram">
+                <span>تابعنا على إنستغرام</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="https://tiktok.com/@retagstone" class="social-cta social-cta-alt" target="_blank" rel="noopener"
+                data-ar-text="تابعنا على تيك توك" data-en-text="Follow on TikTok">
+                <span>تابعنا على تيك توك</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+    <!-- ==========================================
+         CONTACT / CLOSING (Part 09 — NEW)
+    ========================================== -->
+    <section id="contact" aria-label="Contact Retag Stone">
+        <div class="contact-bg" id="contactBg" role="img" aria-label="Dark marble texture background"></div>
+        <div class="contact-noise"></div>
+        <div class="contact-vignette"></div>
+
+        <div class="contact-content">
+            <div class="contact-eyebrow" id="contactEyebrow" data-ar="ابدأ مشروعك" data-en="Start Your Project">ابدأ
+                مشروعك</div>
+
+            <h2 class="contact-headline" id="contactHeadline">
+                <span class="headline-line"><span class="headline-inner" data-ar="دع الحجر" data-en="Let Stone">دع
+                        الحجر</span></span>
+                <span class="headline-line"><span class="headline-inner" data-ar="يحكي قصتك"
+                        data-en="Tell Your Story">يحكي قصتك</span></span>
+            </h2>
+
+            <p class="contact-body" id="contactBody"
+                data-ar="نحن هنا لنحول رؤيتك إلى واقع ملموس. تواصل معنا اليوم وابدأ رحلتك نحو مساحة فاخرة تدوم العمر."
+                data-en="We are here to turn your vision into tangible reality. Reach out today and begin your journey toward a luxurious space that lasts a lifetime.">
+                نحن هنا لنحول رؤيتك إلى واقع ملموس. تواصل معنا اليوم وابدأ رحلتك نحو مساحة فاخرة تدوم العمر.</p>
+
+            <div class="contact-actions">
+                <a href="mailto:info@retagstone.com" class="contact-cta-primary" id="contactCtaPrimary"
+                    data-ar-text="اطلب استشارة مجانية" data-en-text="Request Free Consultation">
+                    <span>اطلب استشارة مجانية</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="tel:+971501234567" class="contact-cta-secondary" id="contactCtaSecondary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z">
+                        </path>
+                    </svg>
+                    <span data-ar="+971 50 123 4567" data-en="+971 50 123 4567">+971 50 123 4567</span>
+                </a>
+            </div>
+
+            <div class="contact-divider" id="contactDivider"></div>
+
+            <div class="contact-details">
+                <div class="contact-detail-item" id="contactDetail1">
+                    <span class="contact-detail-label" data-ar="البريد الإلكتروني" data-en="Email">البريد
+                        الإلكتروني</span>
+                    <a href="mailto:info@retagstone.com" class="contact-detail-value">info@retagstone.com</a>
+                </div>
+                <div class="contact-detail-item" id="contactDetail2">
+                    <span class="contact-detail-label" data-ar="الموقع" data-en="Location">الموقع</span>
+                    <span class="contact-detail-value" data-ar="دبي، الإمارات العربية المتحدة" data-en="Dubai, UAE">دبي،
+                        الإمارات العربية المتحدة</span>
+                </div>
+                <div class="contact-detail-item" id="contactDetail3">
+                    <span class="contact-detail-label" data-ar="ساعات العمل" data-en="Working Hours">ساعات العمل</span>
+                    <span class="contact-detail-value" data-ar="السبت – الخميس: ٩ ص – ٦ م"
+                        data-en="Sat – Thu: 9 AM – 6 PM">السبت – الخميس: ٩ ص – ٦ م</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-scroll-top" id="scrollTopBtn" aria-label="Back to top">
+            <div class="scroll-top-line"></div>
+            <span class="scroll-top-text" data-ar="الأعلى" data-en="Top">الأعلى</span>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER (Part 10 — NEW)
+    ========================================== -->
+    <footer class="site-footer" id="siteFooter">
+        <div class="footer-top-line" aria-hidden="true"></div>
+
+        <div class="footer-main">
+            <div class="footer-wordmark">
+                <span class="footer-wordmark-en">Retag Stone</span>
+                <span class="footer-wordmark-ar" data-ar="ريتاج ستون" data-en="Retag Stone">ريتاج ستون</span>
+            </div>
+
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="#" class="footer-nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+                <a href="#about" class="footer-nav-link" data-ar="من نحن" data-en="About">من نحن</a>
+                <a href="#services" class="footer-nav-link" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+                <a href="#projects" class="footer-nav-link" data-ar="أعمالنا" data-en="Projects">أعمالنا</a>
+                <a href="#contact" class="footer-nav-link" data-ar="تواصل" data-en="Contact">تواصل</a>
+            </nav>
+
+            <div class="footer-social">
+                <a href="https://instagram.com/retagstone" class="footer-social-link" target="_blank" rel="noopener"
+                    aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://tiktok.com/@retagstone" class="footer-social-link" target="_blank" rel="noopener"
+                    aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"></path>
+                    </svg>
+                </a>
+                <a href="https://wa.me/971501234567" class="footer-social-link" target="_blank" rel="noopener"
+                    aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="footer-copyright" data-ar="© ٢٠٢٦ ريتاج ستون. جميع الحقوق محفوظة."
+                data-en="© 2026 Retag Stone. All rights reserved.">© ٢٠٢٦ ريتاج ستون. جميع الحقوق محفوظة.</span>
+            <span class="footer-tagline" data-ar="نحتُ الجمال من قلب الطبيعة"
+                data-en="We sculpt beauty from nature's heart">نحتُ الجمال من قلب الطبيعة</span>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

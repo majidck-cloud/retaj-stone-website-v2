@@ -689,6 +689,7 @@
         // CUSTOM CURSOR
         // ==========================================
         if (!CONFIG.isTouch && !CONFIG.reducedMotion) {
+            document.body.classList.add('custom-cursor');
             const cursor = document.getElementById('cursor');
             const cursorDot = document.getElementById('cursorDot');
             const cursorLabel = document.getElementById('cursorLabel');
@@ -720,16 +721,28 @@
             }
             animateCursor();
 
-            const hoverElements = document.querySelectorAll('a, button, .projects-hero-cta-primary, .projects-hero-cta-secondary');
+            const hoverElements = document.querySelectorAll('a, button, .hero-cta, .material-panel, .story-cta, .bento-tile, .progress-dot');
             hoverElements.forEach(el => {
                 el.addEventListener('mouseenter', () => {
                     cursor.classList.add('hover');
-                    if (el.classList.contains('projects-hero-cta-primary')) {
-                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'استكشف' : 'Explore';
+                    if (el.classList.contains('hero-cta')) {
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'عرض' : 'View';
                         cursorLabel.classList.add('visible');
                     }
-                    if (el.classList.contains('projects-hero-cta-secondary')) {
+                    if (el.classList.contains('material-panel')) {
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'عرض' : 'View';
+                        cursorLabel.classList.add('visible');
+                    }
+                    if (el.classList.contains('story-cta')) {
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'اكتشف' : 'Discover';
+                        cursorLabel.classList.add('visible');
+                    }
+                    if (el.classList.contains('bento-tile')) {
                         cursorLabel.textContent = CONFIG.lang === 'ar' ? 'تفاصيل' : 'Details';
+                        cursorLabel.classList.add('visible');
+                    }
+                    if (el.classList.contains('progress-dot')) {
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'انتقل' : 'Go';
                         cursorLabel.classList.add('visible');
                     }
                 });

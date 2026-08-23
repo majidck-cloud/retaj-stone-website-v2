@@ -1,6 +1,7 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+
 gsap.registerPlugin(ScrollTrigger)
 
 // ==========================================
@@ -16,6 +17,7 @@ gsap.registerPlugin(ScrollTrigger)
         // CUSTOM CURSOR
         // ==========================================
         if (!CONFIG.isTouch && !CONFIG.reducedMotion) {
+            document.body.classList.add('custom-cursor');
             const cursor = document.getElementById('cursor');
             const cursorDot = document.getElementById('cursorDot');
             const cursorLabel = document.getElementById('cursorLabel');
@@ -100,7 +102,6 @@ gsap.registerPlugin(ScrollTrigger)
                             initBentoGrid();
                             initPortfolio();
                             initProcessTimeline();
-                            initTestimonials();
                             initSocialStrip();
                             initContactSection();
                             // Inside startLoading() onComplete:
@@ -240,9 +241,9 @@ gsap.registerPlugin(ScrollTrigger)
             onLeaveBack: () => {
                 mainNav.classList.remove('scrolled');
                 if (isMobile()) {
-                    mainNav.classList.add('hidden-nav');
-                    mainNav.classList.remove('visible-nav');
-                    menuTrigger.classList.add('visible');
+                    mainNav.classList.remove('hidden-nav');
+                    mainNav.classList.add('visible-nav');
+                    menuTrigger.classList.remove('visible');
                 }
             }
         });
@@ -275,139 +276,179 @@ gsap.registerPlugin(ScrollTrigger)
         // MATERIAL STRIP (Part 02 — UNCHANGED)
         // ==========================================
         let materialStripTween = null;
+let materialStripCtx = null;
+let materialStripDirObserver = null;
 
-        function initMaterialStrip() {
-            if (CONFIG.reducedMotion) {
-                gsap.utils.toArray('.material-panel').forEach((panel, i) => {
-                    gsap.fromTo(panel, { opacity: 0, y: 40 },
-                        { opacity: 1, y: 0, duration: 0.8, delay: i * 0.1,
-                          scrollTrigger: { trigger: panel, start: 'top 85%', toggleActions: 'play none none reverse' }
-                        }
-                    );
-                });
-                return;
-            }
+function initMaterialStrip() {
+    const section = document.getElementById('materialStrip');
+    const track = document.getElementById('stripTrack');
+    if (!section || !track) return;
 
-            const section = document.getElementById('materialStrip');
-            const track = document.getElementById('stripTrack');
-            const panels = gsap.utils.toArray('.material-panel');
-            const progressBar = document.getElementById('stripProgressBar');
-            const counterCurrent = document.getElementById('stripCounterCurrent');
-            const header = document.getElementById('stripHeader');
-            const hint = document.getElementById('stripHint');
+    // FIX: tear down previous instance (language switch / re-init)
+    if (materialStripCtx) {
+        materialStripCtx.revert();
+        materialStripCtx = null;
+    }
 
-            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
-            const maxScroll = track.scrollWidth - window.innerWidth;
+    // FIX: auto re-init when the language direction changes
+    if (!materialStripDirObserver) {
+        materialStripDirObserver = new MutationObserver(() => {
+            initMaterialStrip();
+            setTimeout(() => ScrollTrigger.refresh(), 700);
+        });
+        materialStripDirObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['dir']
+        });
+    }
 
-            gsap.fromTo(header, { opacity: 0, y: -20 },
-                { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
-                  scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none reverse' }
-                }
-            );
+    materialStripCtx = gsap.context(() => {
+        const panels = gsap.utils.toArray('.material-panel');
+        const progressBar = document.getElementById('stripProgressBar');
+        const counterCurrent = document.getElementById('stripCounterCurrent');
+        const header = document.getElementById('stripHeader');
+        const hint = document.getElementById('stripHint');
 
-            if (CONFIG.isTouch && hint) {
-                gsap.fromTo(hint, { opacity: 0, y: 10 }, { opacity: 0.7, y: 0, duration: 0.6, delay: 0.5 });
-                gsap.to(hint, { opacity: 0, y: -10, duration: 0.5, delay: 3.5, ease: 'power2.in' });
-            }
+        const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
 
-            const setters = panels.map(panel => {
-                const title = panel.querySelector('.panel-title');
-                const subtitle = panel.querySelector('.panel-subtitle');
-                const desc = panel.querySelector('.panel-desc');
-                const line = panel.querySelector('.panel-line');
-                const overlay = panel.querySelector('.panel-overlay');
-                const image = panel.querySelector('.panel-image');
+        // FIX: #materialStrip is forced to direction:ltr in CSS, so scrollWidth /
+        // offsetLeft are identical in both languages. Travel direction lives ONLY here:
+        //   LTR (English): x goes 0 -> -maxScroll  (panels enter from RIGHT, move LEFT)
+        //   RTL (Arabic):  x goes -maxScroll -> 0  (panels enter from LEFT, move RIGHT)
+        const getMaxScroll = () => Math.max(0, track.scrollWidth - window.innerWidth);
+        const getXStart = () => (isRTL ? -getMaxScroll() : 0);
+        const getXEnd = () => (isRTL ? 0 : -getMaxScroll());
 
-                return {
-                    scale: gsap.quickTo(panel, 'scale', { duration: 0.5, ease: 'power2.out' }),
-                    opacity: gsap.quickTo(panel, 'opacity', { duration: 0.5, ease: 'power2.out' }),
-                    overlayOpacity: gsap.quickTo(overlay, 'opacity', { duration: 0.5, ease: 'power2.out' }),
-                    titleY: gsap.quickTo(title, 'y', { duration: 0.5, ease: 'power2.out' }),
-                    titleOpacity: gsap.quickTo(title, 'opacity', { duration: 0.5, ease: 'power2.out' }),
-                    subtitleY: gsap.quickTo(subtitle, 'y', { duration: 0.55, ease: 'power2.out' }),
-                    subtitleOpacity: gsap.quickTo(subtitle, 'opacity', { duration: 0.55, ease: 'power2.out' }),
-                    descY: gsap.quickTo(desc, 'y', { duration: 0.6, ease: 'power2.out' }),
-                    descOpacity: gsap.quickTo(desc, 'opacity', { duration: 0.6, ease: 'power2.out' }),
-                    lineScaleX: gsap.quickTo(line, 'scaleX', { duration: 0.6, ease: 'power2.out' }),
-                    imageX: gsap.quickTo(image, 'x', { duration: 0.8, ease: 'power2.out' }),
-                };
-            });
+        if (counterCurrent) counterCurrent.textContent = '01';
 
+        // Reduced motion: simple vertical reveal, no horizontal scroll
+        if (CONFIG.reducedMotion) {
             panels.forEach((panel, i) => {
-                setters[i].scale(0.88); setters[i].opacity(0.45); setters[i].overlayOpacity(0.65);
-                setters[i].titleY(45); setters[i].titleOpacity(0);
-                setters[i].subtitleY(30); setters[i].subtitleOpacity(0);
-                setters[i].descY(25); setters[i].descOpacity(0);
-                setters[i].lineScaleX(0); setters[i].imageX(0);
-            });
-
-            const xStart = isRTL ? -maxScroll : 0;
-            const xEnd = xStart + (isRTL ? maxScroll : -maxScroll);
-
-            gsap.set(track, { x: xStart });
-
-            materialStripTween = gsap.fromTo(track, { x: xStart }, {
-                x: xEnd,
-                ease: 'none',
-                scrollTrigger: {
-                    trigger: section,
-                    pin: true,
-                    scrub: 1,
-                    start: 'top top',
-                    end: () => '+=' + maxScroll,
-                    invalidateOnRefresh: true,
-                    onUpdate: (self) => {
-                        const progress = self.progress;
-                        const currentX = gsap.getProperty(track, 'x');
-                        gsap.set(progressBar, { scaleX: progress });
-
-                        let closestPanel = 0;
-                        let closestDistance = Infinity;
-
-                        panels.forEach((panel, i) => {
-                            const panelCenter = panel.offsetLeft + panel.offsetWidth / 2 + currentX;
-                            const viewportCenter = window.innerWidth / 2;
-                            const distance = Math.abs(panelCenter - viewportCenter);
-
-                            if (distance < closestDistance) {
-                                closestDistance = distance;
-                                closestPanel = i;
-                            }
-
-                            const maxDistance = window.innerWidth * 0.55;
-                            const closeness = Math.max(0, 1 - distance / maxDistance);
-
-                            setters[i].scale(0.88 + closeness * 0.12);
-                            setters[i].opacity(0.45 + closeness * 0.55);
-                            setters[i].overlayOpacity(0.65 - closeness * 0.35);
-
-                            const titleReveal = closeness > 0.15 ? Math.min(1, (closeness - 0.15) / 0.55) : 0;
-                            setters[i].titleY(45 * (1 - titleReveal));
-                            setters[i].titleOpacity(titleReveal);
-
-                            const subtitleReveal = closeness > 0.25 ? Math.min(1, (closeness - 0.25) / 0.5) : 0;
-                            setters[i].subtitleY(30 * (1 - subtitleReveal));
-                            setters[i].subtitleOpacity(subtitleReveal);
-
-                            const descReveal = closeness > 0.35 ? Math.min(1, (closeness - 0.35) / 0.45) : 0;
-                            setters[i].descY(25 * (1 - descReveal));
-                            setters[i].descOpacity(descReveal);
-
-                            const lineReveal = closeness > 0.4 ? Math.min(1, (closeness - 0.4) / 0.45) : 0;
-                            setters[i].lineScaleX(lineReveal);
-
-                            const parallaxX = (panelCenter - viewportCenter) * -0.025;
-                            setters[i].imageX(parallaxX);
-                        });
-
-                        if (counterCurrent) {
-                            counterCurrent.textContent = String(closestPanel + 1).padStart(2, '0');
-                        }
+                gsap.fromTo(panel, { opacity: 0, y: 40 },
+                    { opacity: 1, y: 0, duration: 0.8, delay: i * 0.1,
+                      scrollTrigger: { trigger: panel, start: 'top 85%', toggleActions: 'play none none reverse' }
                     }
-                }
+                );
             });
+            return;
         }
 
+        gsap.fromTo(header, { opacity: 0, y: -20 },
+            { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+              scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none reverse' }
+            }
+        );
+
+        if (CONFIG.isTouch && hint) {
+            gsap.fromTo(hint, { opacity: 0, y: 10 }, { opacity: 0.7, y: 0, duration: 0.6, delay: 0.5 });
+            gsap.to(hint, { opacity: 0, y: -10, duration: 0.5, delay: 3.5, ease: 'power2.in' });
+        }
+
+        const setters = panels.map(panel => {
+            const title = panel.querySelector('.panel-title');
+            const subtitle = panel.querySelector('.panel-subtitle');
+            const desc = panel.querySelector('.panel-desc');
+            const line = panel.querySelector('.panel-line');
+            const overlay = panel.querySelector('.panel-overlay');
+            const image = panel.querySelector('.panel-image');
+
+            return {
+                scale: gsap.quickTo(panel, 'scale', { duration: 0.5, ease: 'power2.out' }),
+                opacity: gsap.quickTo(panel, 'opacity', { duration: 0.5, ease: 'power2.out' }),
+                overlayOpacity: gsap.quickTo(overlay, 'opacity', { duration: 0.5, ease: 'power2.out' }),
+                titleY: gsap.quickTo(title, 'y', { duration: 0.5, ease: 'power2.out' }),
+                titleOpacity: gsap.quickTo(title, 'opacity', { duration: 0.5, ease: 'power2.out' }),
+                subtitleY: gsap.quickTo(subtitle, 'y', { duration: 0.55, ease: 'power2.out' }),
+                subtitleOpacity: gsap.quickTo(subtitle, 'opacity', { duration: 0.55, ease: 'power2.out' }),
+                descY: gsap.quickTo(desc, 'y', { duration: 0.6, ease: 'power2.out' }),
+                descOpacity: gsap.quickTo(desc, 'opacity', { duration: 0.6, ease: 'power2.out' }),
+                lineScaleX: gsap.quickTo(line, 'scaleX', { duration: 0.6, ease: 'power2.out' }),
+                imageX: gsap.quickTo(image, 'x', { duration: 0.8, ease: 'power2.out' }),
+            };
+        });
+
+        // Initial hidden state
+        panels.forEach((panel, i) => {
+            setters[i].scale(0.88); setters[i].opacity(0.45); setters[i].overlayOpacity(0.65);
+            setters[i].titleY(45); setters[i].titleOpacity(0);
+            setters[i].subtitleY(30); setters[i].subtitleOpacity(0);
+            setters[i].descY(25); setters[i].descOpacity(0);
+            setters[i].lineScaleX(0); setters[i].imageX(0);
+        });
+
+        gsap.set(track, { x: getXStart() });
+
+        materialStripTween = gsap.fromTo(track, { x: getXStart }, {
+            x: getXEnd,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: section,
+                pin: true,
+                scrub: 1,
+                start: 'top top',
+                end: () => '+=' + getMaxScroll(), // FIX: recalculated on every refresh
+                invalidateOnRefresh: true,
+                onUpdate: (self) => {
+                    const progress = self.progress;
+                    const currentX = Number(gsap.getProperty(track, 'x'));
+                    gsap.set(progressBar, { scaleX: progress });
+
+                    let closestPanel = 0;
+                    let closestDistance = Infinity;
+
+                    panels.forEach((panel, i) => {
+                        const panelCenter = panel.offsetLeft + panel.offsetWidth / 2 + currentX;
+                        const viewportCenter = window.innerWidth / 2;
+                        const distance = Math.abs(panelCenter - viewportCenter);
+
+                        if (distance < closestDistance) {
+                            closestDistance = distance;
+                            closestPanel = i;
+                        }
+
+                        const maxDistance = window.innerWidth * 0.55;
+                        const closeness = Math.max(0, 1 - distance / maxDistance);
+
+                        setters[i].scale(0.88 + closeness * 0.12);
+                        setters[i].opacity(0.45 + closeness * 0.55);
+                        setters[i].overlayOpacity(0.65 - closeness * 0.35);
+
+                        const titleReveal = closeness > 0.15 ? Math.min(1, (closeness - 0.15) / 0.55) : 0;
+                        setters[i].titleY(45 * (1 - titleReveal));
+                        setters[i].titleOpacity(titleReveal);
+
+                        const subtitleReveal = closeness > 0.25 ? Math.min(1, (closeness - 0.25) / 0.5) : 0;
+                        setters[i].subtitleY(30 * (1 - subtitleReveal));
+                        setters[i].subtitleOpacity(subtitleReveal);
+
+                        const descReveal = closeness > 0.35 ? Math.min(1, (closeness - 0.35) / 0.45) : 0;
+                        setters[i].descY(25 * (1 - descReveal));
+                        setters[i].descOpacity(descReveal);
+
+                        const lineReveal = closeness > 0.4 ? Math.min(1, (closeness - 0.4) / 0.45) : 0;
+                        setters[i].lineScaleX(lineReveal);
+
+                        const parallaxX = (panelCenter - viewportCenter) * -0.025;
+                        setters[i].imageX(parallaxX);
+                    });
+
+                    if (counterCurrent) {
+                        counterCurrent.textContent = String(closestPanel + 1).padStart(2, '0');
+                    }
+                }
+            }
+        });
+    });
+
+    // FIX: recalc after pin-spacer/layout settles (and once images/fonts load).
+    // sort() first: when the strip trigger is RE-created (language switch) it lands
+    // last in creation order, so about/portfolio would refresh against a layout
+    // without the strip's pin-spacer and overlap each other.
+    ScrollTrigger.sort();
+    ScrollTrigger.refresh();
+}
+
+window.addEventListener('load', () => ScrollTrigger.refresh());
         // ==========================================
         // SPLIT-SCREEN ABOUT (Part 03 — UNCHANGED)
         // ==========================================
@@ -428,15 +469,16 @@ gsap.registerPlugin(ScrollTrigger)
             const textSide = document.getElementById('splitTextSide');
             const pinnedImage = document.getElementById('aboutPinnedImage');
 
-            const pinDuration = Math.max(textSide.offsetHeight - window.innerHeight + 240, window.innerHeight * 0.5);
+            const getPinDuration = () => Math.max(textSide.offsetHeight - window.innerHeight + 240, window.innerHeight * 0.5);
 
             ScrollTrigger.create({
                 trigger: section,
                 start: 'top top',
-                end: () => '+=' + pinDuration,
+                end: () => '+=' + getPinDuration(),
                 pin: pinnedWrap,
                 pinSpacing: true,
-                anticipatePin: 1
+                anticipatePin: 1,
+                invalidateOnRefresh: true
             });
 
             gsap.fromTo('#aboutTransitionLine', { scaleY: 0, transformOrigin: 'top' },
@@ -447,7 +489,7 @@ gsap.registerPlugin(ScrollTrigger)
 
             gsap.fromTo(pinnedImage, { scale: 1.08 },
                 { scale: 1.0, ease: 'none',
-                  scrollTrigger: { trigger: section, start: 'top top', end: () => '+=' + pinDuration, scrub: true }
+                  scrollTrigger: { trigger: section, start: 'top top', end: () => '+=' + getPinDuration(), scrub: true }
                 }
             );
 
@@ -770,7 +812,7 @@ gsap.registerPlugin(ScrollTrigger)
             dots.forEach((dot, i) => {
                 dot.addEventListener('click', () => {
                     const targetScroll = slideshowTl.scrollTrigger.start + (slideshowTl.scrollTrigger.end - slideshowTl.scrollTrigger.start) * (i / totalSlides);
-                    gsap.to(window, { scrollTo: targetScroll, duration: 1, ease: 'power2.inOut' });
+                    window.scrollTo({ top: targetScroll, behavior: 'smooth' });
                 });
             });
         }
@@ -931,25 +973,18 @@ gsap.registerPlugin(ScrollTrigger)
                 });
             });
 
-            const cta = document.getElementById('heroCta');
-            const ctaSpan = cta.querySelector('span');
-            gsap.to(ctaSpan, { opacity: 0, duration: 0.2,
-                onComplete: () => {
-                    ctaSpan.textContent = cta.getAttribute(`data-${lang}-text`);
-                    gsap.to(ctaSpan, { opacity: 1, duration: 0.3 });
-                }
-            });
-
-            const storyCta = document.getElementById('storyCta');
-            if (storyCta) {
-                const storyCtaSpan = storyCta.querySelector('span');
-                gsap.to(storyCtaSpan, { opacity: 0, duration: 0.2,
+            // Generic: every element with data-ar-text/data-en-text swaps its inner <span>
+            // (hero CTA, story CTA, social CTAs, contact CTA, ...)
+            document.querySelectorAll('[data-ar-text][data-en-text]').forEach(el => {
+                const span = el.querySelector('span');
+                if (!span) return;
+                gsap.to(span, { opacity: 0, duration: 0.2,
                     onComplete: () => {
-                        storyCtaSpan.textContent = storyCta.getAttribute(`data-${lang}-text`);
-                        gsap.to(storyCtaSpan, { opacity: 1, duration: 0.3 });
+                        span.textContent = el.getAttribute(`data-${lang}-text`);
+                        gsap.to(span, { opacity: 1, duration: 0.3 });
                     }
                 });
-            }
+            });
 
             gsap.to(menuTrigger, { opacity: 0, duration: 0.2,
                 onComplete: () => {
@@ -976,41 +1011,6 @@ gsap.registerPlugin(ScrollTrigger)
 
             updateContent(newLang);
 
-            if (!CONFIG.reducedMotion) {
-                setTimeout(() => {
-                    // Kill old material strip ScrollTrigger and tween
-                    const oldTriggers = ScrollTrigger.getAll().filter(st => st.vars.trigger === '#materialStrip');
-                    oldTriggers.forEach(st => st.kill());
-                    if (materialStripTween) {
-                        materialStripTween.kill();
-                        materialStripTween = null;
-                    }
-                    // Reset track and panels to visible defaults before re-init
-                    const track = document.getElementById('stripTrack');
-                    gsap.set(track, { clearProps: 'transform' });
-                    gsap.utils.toArray('.material-panel').forEach(panel => {
-                        gsap.set(panel, { clearProps: 'all' });
-                        const img = panel.querySelector('.panel-image');
-                        if (img) gsap.set(img, { clearProps: 'transform' });
-                        const overlay = panel.querySelector('.panel-overlay');
-                        if (overlay) gsap.set(overlay, { clearProps: 'opacity' });
-                        const title = panel.querySelector('.panel-title');
-                        if (title) gsap.set(title, { clearProps: 'all' });
-                        const subtitle = panel.querySelector('.panel-subtitle');
-                        if (subtitle) gsap.set(subtitle, { clearProps: 'all' });
-                        const desc = panel.querySelector('.panel-desc');
-                        if (desc) gsap.set(desc, { clearProps: 'all' });
-                        const line = panel.querySelector('.panel-line');
-                        if (line) gsap.set(line, { clearProps: 'transform' });
-                    });
-                    const isRTL = t.dir === 'rtl';
-                    const maxScroll = track.scrollWidth - window.innerWidth;
-                    gsap.set(track, { x: isRTL ? -maxScroll : 0 });
-                    initMaterialStrip();
-                    ScrollTrigger.refresh();
-                }, 350);
-            }
-
             const headline = document.getElementById('heroHeadline');
             headline.style.fontStyle = newLang === 'en' ? 'italic' : 'normal';
         });
@@ -1036,58 +1036,6 @@ gsap.registerPlugin(ScrollTrigger)
         document.addEventListener('mousedown', () => {
             document.body.classList.remove('keyboard-nav');
         });
-
-
-        // ==========================================
-        // TESTIMONIALS (Part 07 — NEW)
-        // ==========================================
-        function initTestimonials() {
-            const section = document.getElementById('testimonials');
-            if (!section) return;
-
-            if (CONFIG.reducedMotion) {
-                gsap.utils.toArray('#testimonials .testimonials-eyebrow, #testimonials .testimonials-headline, #testimonials .testimonials-subheadline').forEach((el, i) => {
-                    gsap.fromTo(el, { opacity: 0, y: 20 },
-                        { opacity: 1, y: 0, duration: 0.6, delay: i * 0.1,
-                          scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none reverse' }
-                        }
-                    );
-                });
-                return;
-            }
-
-            gsap.fromTo('#testimonialsEyebrow', { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
-                  scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none reverse' }
-                }
-            );
-
-            const headlineLines = document.querySelectorAll('#testimonialsHeadline .headline-inner');
-            headlineLines.forEach((line, i) => {
-                gsap.fromTo(line, { y: '110%', opacity: 0 },
-                    { y: '0%', opacity: 1, duration: 1.0, ease: 'power3.out',
-                      scrollTrigger: { trigger: '#testimonialsHeadline', start: 'top 80%', toggleActions: 'play none none reverse' },
-                      delay: i * 0.12
-                    }
-                );
-            });
-
-            gsap.fromTo('#testimonialsSubheadline', { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
-                  scrollTrigger: { trigger: '#testimonialsSubheadline', start: 'top 88%', toggleActions: 'play none none reverse' }
-                }
-            );
-
-            const cards = gsap.utils.toArray('.testimonial-card');
-            cards.forEach((card, i) => {
-                gsap.fromTo(card, { opacity: 0, y: 30 },
-                    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
-                      scrollTrigger: { trigger: '#testimonialsMarquee', start: 'top 85%', toggleActions: 'play none none reverse' },
-                      delay: i * 0.06
-                    }
-                );
-            });
-        }
 
 
         // ==========================================
@@ -1249,7 +1197,7 @@ gsap.registerPlugin(ScrollTrigger)
                 );
 
                 scrollTopBtn.addEventListener('click', () => {
-                    gsap.to(window, { scrollTo: 0, duration: 2, ease: 'power3.inOut' });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
         }
@@ -1257,11 +1205,11 @@ gsap.registerPlugin(ScrollTrigger)
         // ==========================================
         // INIT
         // ==========================================
-        window.addEventListener('load', startLoading);
-        if (document.readyState === 'complete') startLoading();
-
-     
-
-
-        
-  
+        let appStarted = false;
+        function startAppOnce() {
+            if (appStarted) return; // load + readyState can both fire -> double pins/spacers
+            appStarted = true;
+            startLoading();
+        }
+        window.addEventListener('load', startAppOnce);
+        if (document.readyState === 'complete') startAppOnce();

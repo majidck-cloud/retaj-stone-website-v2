@@ -54,11 +54,11 @@ gsap.registerPlugin(ScrollTrigger)
                 el.addEventListener('mouseenter', () => {
                     cursor.classList.add('hover');
                     if (el.classList.contains('hero-cta')) {
-                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'عرض' : 'View';
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? '' : '';
                         cursorLabel.classList.add('visible');
                     }
                     if (el.classList.contains('material-panel')) {
-                        cursorLabel.textContent = CONFIG.lang === 'ar' ? 'عرض' : 'View';
+                        cursorLabel.textContent = CONFIG.lang === 'ar' ? '' : '';
                         cursorLabel.classList.add('visible');
                     }
                     if (el.classList.contains('story-cta')) {

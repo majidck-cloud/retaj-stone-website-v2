@@ -10541,7 +10541,7 @@ body {
 .services-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('/Assets/02.png');
+    background-image: url('/Assets/18.png');
     /* REPLACE WITH CLIENT PHOTO: Fabrication workshop or CNC stone-cutting background */
     background-size: cover;
     background-position: center;
@@ -10957,7 +10957,7 @@ body {
 .capabilities-image-inner {
     position: absolute;
     inset: 0;
-    background-image: url('/Assets/01.png');
+    background-image: url('/Assets/14.png');
     /* REPLACE WITH CLIENT PHOTO: Workshop or finished-project image */
     background-size: cover;
     background-position: center;

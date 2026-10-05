@@ -2883,7 +2883,7 @@ body:not(.keyboard-nav) *:focus {
 .contact-bg {
     position: absolute;
     inset: 0;
-    background-image: url('/Assets/11.png');
+    background-image: url('/Assets/07.png');
     background-size: cover;
     background-position: center;
     transform: scale(1.05);
@@ -12830,7 +12830,7 @@ body {
 .projects-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2070&auto=format&fit=crop');
+    background-image: url('/Assets/05.png');
     /* REPLACE WITH CLIENT PHOTO: Flagship finished project — luxury villa facade, lobby, or kitchen */
     background-size: cover;
     background-position: center;
@@ -13353,7 +13353,7 @@ body {
 .portfolio-intro-image-inner {
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop');
+    background-image: url('/Assets/18.png');
     /* REPLACE WITH CLIENT PHOTO: Signature finished project — villa interior or lobby */
     background-size: cover;
     background-position: center;
@@ -15826,7 +15826,7 @@ body {
 .contact-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1615971677499-5467cbab01c0?q=80&w=2070&auto=format&fit=crop');
+    background-image: url('/Assets/13.png');
     background-size: cover;
     background-position: center;
     transform: scale(1.08);

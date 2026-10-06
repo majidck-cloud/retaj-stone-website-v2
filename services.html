@@ -806,6 +806,7 @@
         // CUSTOM CURSOR
         // ==========================================
         if (!CONFIG.isTouch && !CONFIG.reducedMotion) {
+            document.body.classList.add('custom-cursor');
             const cursor = document.getElementById('cursor');
             const cursorDot = document.getElementById('cursorDot');
             const cursorLabel = document.getElementById('cursorLabel');

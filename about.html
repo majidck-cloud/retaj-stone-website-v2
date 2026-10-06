@@ -801,6 +801,7 @@
         // CUSTOM CURSOR
         // ==========================================
         if (!CONFIG.isTouch && !CONFIG.reducedMotion) {
+            document.body.classList.add('custom-cursor');
             const cursor = document.getElementById('cursor');
             const cursorDot = document.getElementById('cursorDot');
             const cursorLabel = document.getElementById('cursorLabel');
@@ -1549,9 +1550,9 @@ if (document.readyState === 'loading') {
                 // Image parallax within container
                 if (!CONFIG.reducedMotion && img) {
                     gsap.fromTo(img,
-                        { yPercent: 10 },
+                        { yPercent: 7 },
                         {
-                            yPercent: -10,
+                            yPercent: -7,
                             ease: 'none',
                             scrollTrigger: {
                                 trigger: item,

@@ -7890,7 +7890,7 @@ body {
 .bento-tile-large .bento-tile-image {
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop');
+    background-image: url('https://res.cloudinary.com/my2nq7ve/image/upload/v1791285338/17.png');
     background-size: cover;
     background-position: center;
 }
@@ -10670,7 +10670,7 @@ body {
 .services-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('/Assets/18.png');
+    background-image: url('https://res.cloudinary.com/my2nq7ve/image/upload/v1791285337/18.png');
     /* REPLACE WITH CLIENT PHOTO: Fabrication workshop or CNC stone-cutting background */
     background-size: cover;
     background-position: center;
@@ -15955,7 +15955,7 @@ body {
 .contact-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('/Assets/13.png');
+    background-image: url('https://res.cloudinary.com/my2nq7ve/image/upload/v1791285337/18.png');
     background-size: cover;
     background-position: center;
     transform: scale(1.08);

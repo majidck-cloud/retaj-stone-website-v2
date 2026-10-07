@@ -11086,7 +11086,7 @@ body {
 .capabilities-image-inner {
     position: absolute;
     inset: 0;
-    background-image: url('/Assets/14.png');
+    background-image: url('https://res.cloudinary.com/my2nq7ve/image/upload/v1791285335/14.png');
     /* REPLACE WITH CLIENT PHOTO: Workshop or finished-project image */
     background-size: cover;
     background-position: center;
@@ -12959,7 +12959,7 @@ body {
 .projects-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('/Assets/05.png');
+    background-image: url('https://res.cloudinary.com/my2nq7ve/image/upload/v1791285335/11.png');
     /* REPLACE WITH CLIENT PHOTO: Flagship finished project — luxury villa facade, lobby, or kitchen */
     background-size: cover;
     background-position: center;
@@ -13482,7 +13482,7 @@ body {
 .portfolio-intro-image-inner {
     position: absolute;
     inset: 0;
-    background-image: url('/Assets/18.png');
+    background-image: url('https://res.cloudinary.com/my2nq7ve/image/upload/v1791285337/18.png');
     /* REPLACE WITH CLIENT PHOTO: Signature finished project — villa interior or lobby */
     background-size: cover;
     background-position: center;
